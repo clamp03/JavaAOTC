@@ -1,0 +1,142 @@
+#!/bin/ksh
+# A script illustrating how the benchmarks can be run from the command
+# line without the GUI. This is not the way they can be run for reportable
+# results when the suite is released. And this script is quite contrary
+# to the spirit of Java, UNIX shell scripts being non-portable
+# to Windows 95 and MacOS for example. However, people at several
+# companies seem to be running the benchmarks this way because it's
+# easier to integrate with existing performance characterization tools.
+# So at least it should be documented by example. Feel free to modify
+# for your own needs.
+
+usage1="Usage: $0 <Benchmark> <Memory> <Test Size>"
+usage2="\tBenchmark = check/compress/jess/db/javac/mpegaudio/mtrt/jack/all"
+usage3="\tMemory = ###k or ###m"
+usage4="\tTest Size = 1/10/100 (default=100)"
+
+#######################################
+# Define benchmark groups
+if [[ $1 = "check" ]] ; then 
+    benchmark="_200_check"
+elif [[ $1 = "compress" ]]; then
+    benchmark="_201_compress"
+elif [[ $1 = "jess" ]]; then
+    benchmark="_202_jess"
+elif [[ $1 = "raytrace" ]]; then
+    benchmark="_205_raytrace"
+elif [[ $1 = "db" ]]; then
+    benchmark="_209_db"
+elif [[ $1 = "javac" ]]; then
+    benchmark="_213_javac"
+elif [[ $1 = "mpegaudio" ]]; then
+    benchmark="_222_mpegaudio"
+elif [[ $1 = "mtrt" ]]; then
+    benchmark="_227_mtrt"
+elif [[ $1 = "jack" ]]; then
+    benchmark="_228_jack"
+elif [[ $1 = "all" ]]; then
+    benchmark_all='
+	_200_check
+	_201_compress
+	_202_jess
+	_209_db
+	_213_javac
+	_222_mpegaudio
+	_227_mtrt
+	_228_jack
+	'
+else
+    echo Error: Unrecognized Benchmark \'$1\'
+    echo $usage1
+    echo $usage2
+    echo $usage3
+    echo $usage4
+    exit 1
+fi
+
+
+#######################################
+# Select options for java and for the benchmarks
+# Usage: java [cvmoptions] SpecApplication [options] [_NNN_benchmark]
+
+cvmoptions="	-Xms$2				$cvmoptions"
+#cvmoptions="	-Xgc:stat			$cvmoptions"
+
+#Perform autorun sequence on a single selected benchmark
+#options="	-a		$options"
+#Delay <number> milliseconds between autorun executions
+#options="	-d0		$options"
+#Garbage collect in between autorun executions
+#options="	-g		$options"
+#Set minimum number of executions in autorun sequence
+#options="	-m3		$options"
+#Set maximum number of executions in autorun sequence
+#options="	-M5		$options"
+#Turn on file input caching
+#options="	-n		$options"
+#Set thread priority to <number>
+#options="	-p<number>	$options"
+#Run using threads
+#options="	-t		$options"
+#Specify <filename> property file instead of props/user
+#options="	-uprops/userme	$options"
+
+#######################################
+# Finally, run the benchmarks. Three methods are shown below
+
+# This example runs all in the same JVM under the SPEC tool harness.
+# This is least convenient for data collection tools but complies with
+# the SPEC run rules. The benchmark set and SPEC options are controlled
+# by the property files, not from the command line
+#export DISPLAY=wherever_you_can_display_windows
+#java $cvmoptions SpecApplication -b
+#exit
+
+# This example runs all in the same JVM without the GUI tool harness.
+# This is somewhat more convenient than the above for running data
+# collection tools but does not follow the SPEC compliant methodology
+#java $cvmoptions SpecApplication $options $all
+#exit
+
+#
+# JDK classes
+#
+jdkclasses=./lib/rt-jdk13.jar
+
+# VM definitions
+cvmtop=../build/linux-i686
+cvm="$cvmtop/bin/cvm -Xbootclasspath=$cvmtop/lib/personal.jar:$jdkclasses -Djava.class.path=. -Djava.home=$cvmtop"
+
+#
+# And the input size
+#
+if [[ $3 = "1" ]] ; then 
+    size="-s1"
+elif [[ $3 = "10" ]]; then
+    size="-s10"
+elif [[ $3 = "100" ]]; then
+    size="-s100"
+else
+#default size: 100
+    size="-s100"
+fi
+
+#
+# Run the benchmarks. One VM invocation per benchmark
+#
+# This example runs each in a separate JVM without the GUI tool
+# harness.  This is usually most convenient for running data collection
+# tools, but farthest from the SPEC run rules.
+# echo memory: `/etc/prtconf | egrep 'Memory size' | sed -e 's/(.*)//'`
+# echo cpu: `psrinfo -v | egrep 'processor operates' | sed -e 's/.*operates//' | uniq -c`
+# echo `uname -inprv`
+
+set -x
+if [[ $1 = "all" ]] ; then 
+    for benchmark in $benchmark_all
+    do
+        $cvm $cvmoptions SpecApplication $options $size $benchmark
+    done
+else
+    $cvm $cvmoptions SpecApplication $options $size $benchmark
+fi

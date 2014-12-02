@@ -1,0 +1,9 @@
+<UL>
+<LI>JDK1.1.4 IBM build a114-19980409" (JIT: jitc)
+<LI>fixit:appletviewer -J-28ms http://fixit/javanet/jvm98/SpecApplet.html
+<LI>AIX 4.1.5
+</UL>
+<pre>
+You can use a browser or other
+http Server instead of fixit
+</pre>

@@ -1,0 +1,413 @@
+SUN MICROSYSTEMS, INC.
+
+SUN MICROSYSTEMS, INC. THROUGH ITS
+SUN LABORATORIES DIVISION ("SUN") IS
+WILLING TO LICENSE THE JAVA (tm)
+COMPILER SOFTWARE IN OBJECT CODE
+FORMAT, THE JAVA (tm) COMPILER
+COMPILER (tm) SOFTWARE IN OBJECT
+CODE FORMAT, SOFTWARE SAMPLE
+GRAMMARS, A CONFORMANCE TEST PROGRAM
+KNOWN AS "PEPTEST," AND THE
+ACCOMPANYING DOCUMENTATION
+(collectively, the "Software") TO
+LICENSEE, AS DEFINED BELOW, ONLY ON
+THE CONDITION THAT LICENSEE ACCEPTS
+ALL THE TERMS CONTAINED IN THIS
+LICENSE AGREEMENT.
+
+PLEASE READ THE TERMS CAREFULLY
+BEFORE USING THE SOFTWARE.  LICENSEE
+ACKNOWLEDGES THAT LICENSEE HAS READ
+AND UNDERSTANDS THIS AGREEMENT AND
+AGREES TO BE BOUND BY ITS TERMS AND
+CONDITIONS.  IF LICENSEE DOES NOT
+ACCEPT THESE LICENSE TERMS, SUN DOES
+NOT GRANT ANY LICENSE TO THE
+SOFTWARE.
+
+1.  LICENSE GRANT
+
+(A)  As the Software has been
+selected by the Members of the
+Standard Performance Evaluation
+Corporation ("SPEC") for
+incorporation into one of its
+benchmark suites, Sun hereby grants
+to SPEC (a "Licensee") a
+non-exclusive, non-transferable,
+royalty-free right to use, reproduce
+and distribute the Software to third
+parties for a fee or otherwise on a
+commercial basis, in object code
+format and on CD-ROM or via any
+other medium, for use by such third
+parties solely as set forth in
+Section 1(B) below.
+
+(B)  Sun grants each and every third
+party who purchases or otherwise
+acquires the Software from SPEC,
+whether by CD or via another medium,
+(each, a "Licensee") a
+non-exclusive, non-transferable,
+royalty-free right to download,
+install, compile and use this
+Software, in object code format,
+exclusively with sample grammars
+provided by Sun solely for the
+purposes of (i) using "PepTest" to
+determine whether other software and
+hardware products conform to the
+Java (TM) standards set by Sun and
+(ii) using the rest of the Software
+as a benchmark against which
+Licensee can evaluate the
+performance of such other software
+and hardware products.
+
+2.  LICENSE RESTRICTIONS
+
+This Software is licensed, not sold,
+to Licensee only under the terms of
+this Agreement, and Sun reserves all
+rights not expressly granted to
+Licensee.  Licensee may not use,
+copy, modify or transfer the
+Software or any copy thereof or
+create any derivative works
+therefrom except as expressly
+provided for in this Agreement.
+Licensee may not reverse engineer,
+disassemble, decompile or translate
+the Software or otherwise attempt to
+derive the source code of the
+Software except as allowed by law.
+Licensee may not rent, lease, loan,
+sell or distribute the Software or
+any part thereof for any purpose,
+whether commercial or otherwise,
+except as expressly provided for in
+this Agreement.
+
+THE SOFTWARE IS NOT DESIGNED OR
+INTENDED FOR USE IN ON-LINE CONTROL
+OF AIRCRAFT, AIR TRAFFIC, AIRCRAFT
+NAVIGATION OR AIRCRAFT
+COMMUNICATIONS; IN THE DESIGN,
+CONSTRUCTION, OPERATION OR
+MAINTENANCE OF ANY NUCLEAR FACILITY
+OR IN ANY LIFE-SAVING OR LIFE
+SUPPORT APPLICATION.  SUN DISCLAIMS
+ANY EXPRESS OR IMPLIED WARRANTY OF
+FITNESS FOR SUCH USES.  LICENSEE
+REPRESENTS AND WARRANTS THAT IT WILL
+NOT USE THE SOFTWARE FOR SUCH
+PURPOSES.
+
+Licensee will, at its expense,
+defend, indemnify and hold Sun
+harmless from and against any third
+party claims, including costs and
+reasonable attorneys' fees, and be
+wholly responsible for any other
+liabilities or damages arising out
+of or related to Licensee's use of
+the Software or breach of the terms
+hereof.
+
+3.  OWNERSHIP
+
+(A)  As between Sun and Licensee,
+Sun is and will be the sole and
+exclusive owner of all right, title
+and interest in and to the Software
+other than the limited rights
+granted to Licensee in this
+Agreement.
+
+(B)  The Software is protected by
+United States copyright law and
+international treaty and
+unauthorized reproduction or
+distribution is subject to civil and
+criminal penalties.  Licensee shall
+retain and reproduce all copyright
+and other proprietary notices
+presently on the Software and SPEC
+shall only name or otherwise list
+the Software by title on a CD-ROM,
+related documents or other materials
+or any other medium in a format
+identical to that used by Sun,
+including all trademark symbols.
+Java (TM) and the family of marks
+based on the word JAVA
+(collectively, the "Mark") are
+trademarks or registered trademarks
+of Sun in the U.S. and other
+countries.  No right, title or
+interest in or to any trademarks,
+service marks or trade names of Sun
+or Sun's licensors is granted
+hereunder.
+
+(C)  Accordingly, Licensee
+acknowledges that Sun owns the Mark
+and all goodwill associated
+therewith.  Licensee further
+acknowledges that it has no rights
+of any kind whatsoever anywhere in
+the world with respect to the Mark.
+Licensee agrees that all past and
+future use of the Mark by Licensee
+anywhere in the world inures to the
+sole benefit of Sun.  Licensee
+agrees that it will take no action
+anywhere in the world inconsistent
+with Sun's ownership of the Mark and
+will not attempt to register the
+Mark or any mark including the word
+JAVA anywhere in the world.
+Licensee agrees that it will not
+attack Sun's ownership in and title
+to the Mark anywhere in the world
+and that it will not attack the
+validity of the license granted
+herein.
+
+SUN MAKES NO REPRESENTATIONS OR
+WARRANTIES OF ANY KIND RESPECTING
+THE MARK, INCLUDING BUT NOT LIMITED
+TO ANY WARRANTY OF NONINFRINGEMENT
+OR OF THE VALIDITY OF SUN'S RIGHTS
+IN THE MARK IN ANY COUNTRY AND
+DISCLAIMS ANY AND ALL WARRANTIES
+RESPECTING THE MARK THAT MIGHT
+OTHERWISE BE IMPLIED BY APPLICABLE
+LAW.
+
+4.  TERM, TERMINATION AND SURVIVAL 
+
+(A)  The Agreement is effective
+until terminated.  Upon any
+termination, Licensee must
+immediately cease all use and
+distribution of the Software and
+destroy all copies of the Software
+in its possession or, upon Sun's
+request, return the Software to
+Sun.  Upon any termination, the
+parties agree that no implied
+license shall arise.
+
+(B)  Licensee may terminate this
+Agreement at any time by destroying
+all copies of the Software in its
+possession.
+
+(C)  This Agreement will immediately
+terminate without notice if Licensee
+fails to comply with any obligation
+of this Agreement.
+
+(D)  At such time as SPEC
+permanently ceases its distribution
+of the Software, this Agreement
+shall automatically terminate as to
+SPEC.
+
+(E)  All licenses granted to third
+parties pursuant to Section 1(B)
+above prior to any termination of
+this Agreement shall continue in
+accordance with their terms.
+
+(F)  The relevant provisions of
+Sections 2 through 9 shall survive
+any termination of this Agreement,
+as applicable.
+
+5.  NO WARRANTY
+
+THE SOFTWARE IS PROVIDED TO LICENSEE
+"AS IS."  ALL EXPRESS OR IMPLIED
+CONDITIONS, REPRESENTATIONS AND
+WARRANTIES, INCLUDING ANY IMPLIED
+WARRANTY OF MERCHANTABILITY,
+SATISFACTORY QUALITY, FITNESS FOR A
+PARTICULAR PURPOSE, OR
+NON-INFRINGEMENT, ARE DISCLAIMED.
+LICENSEE ACKNOWLEDGES AND AGREES
+THAT (I) THE SOFTWARE IS
+NON-COMMERCIAL, EXPERIMENTAL
+SOFTWARE; (II) THE SOFTWARE MAY
+CONTAIN ERRORS, DESIGN FLAWS OR
+OTHER PROBLEMS; (III) THE SOFTWARE
+MAY NOT FUNCTION FULLY OR ADEQUATELY
+UPON INSTALLATION; (IV) IT MAY NOT
+BE POSSIBLE TO RENDER THE SOFTWARE
+FUNCTIONAL; (V) USE OF THE SOFTWARE
+MAY RESULT IN UNEXPECTED RESULTS,
+LOSS OF DATA OR OTHER UNPREDICTABLE
+DAMAGE OR LOSS TO LICENSEE; (VI) SUN
+HAS NO OBLIGATION WHATSOEVER TO
+CONTINUE DEVELOPMENT OF THE
+SOFTWARE; AND (VII) SUN HAS NO
+OBLIGATION WHATSOEVER TO MAINTAIN OR
+SUPPORT THE SOFTWARE.
+
+6.  LIMITATION OF LIABILITY
+
+IN NO EVENT WILL SUN BE LIABLE IN
+ANY WAY FOR ANY DIRECT DAMAGES OR
+ANY INDIRECT, PUNITIVE, SPECIAL,
+INCIDENTAL OR CONSEQUENTIAL DAMAGES
+OF ANY KIND (INCLUDING LOSS OF USE
+OR DATA; LOSS OF BUSINESS, REVENUE,
+PROFITS OR OTHER ECONOMIC ADVANTAGE;
+OR PERSONAL INJURY OR PROPERTY
+DAMAGE) INCURRED BY LICENSEE OR ANY
+THIRD PARTY, WHETHER IN AN ACTION IN
+CONTRACT, TORT, BASED ON A WARRANTY
+OR OTHERWISE, ARISING OUT OF OR
+RELATED TO THIS AGREEMENT OR THE
+SOFTWARE IN ANY WAY EVEN IF SUN HAS
+BEEN PREVIOUSLY ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES OR IF
+SUCH DAMAGES ARE FORESEEABLE.
+
+7.  GOVERNMENT USERS
+
+The Software is provided with
+restricted rights.  With respect to
+any acquisition of the Software by
+or for any unit or agency of the
+U.S.  Government, the Software shall
+be classified as "commercial
+computer software" as that term is
+defined in the applicable provision
+of the Federal Acquisition
+Regulations ("FAR") and supplements
+thereto, including the Department of
+Defense (DoD) FAR Supplement
+("DFARS").  If the Software is
+supplied for use by the DoD, the
+Software is delivered subject to the
+terms of this Agreement and either
+(i) in accordance with DFARS
+227.7202-1(a) and 227.7202-3(a) or
+(ii) with restricted rights in
+accordance with DFARS
+252.227-7013(c)(1)(ii) (OCT 1988),
+as applicable.  If the Software is
+supplied for use by a federal agency
+other than the DoD, the Software is
+restricted computer software
+delivered subject to the terms of
+this Agreement and (i) FAR
+12.212(a); (ii) FAR 52.227-19; or
+(iii) FAR 52.227-14 (ALT III), as
+applicable.
+
+Sun Microsystems, Inc., 901 San Antonio Road, Palo Alto, CA  94303, USA
+
+8.  EXPORT LAW
+
+Licensee acknowledges and agrees
+that this Software and/or any
+related technology is subject to the
+U.S. Export Administration Laws and
+Regulations.  Diversion of such
+Software and/or technology contrary
+to U.S.  law is prohibited.
+Licensee agrees and certifies that
+none of this Software and/or
+technology, nor any direct product
+therefrom, is being or will be
+acquired for, shipped, transferred
+or reexported, directly or
+indirectly, to proscribed or
+embargoed countries or their
+nationals, nor be used for nuclear
+activities, chemical biological
+weapons, or missile projects or
+other purposes prohibited by U.S.
+export laws unless authorized by the
+U.S.  Government.  Proscribed
+countries are set forth in the U.S.
+Export Administration Regulations.
+Countries subject to U.S. embargo
+are:  Cuba, Iran, Iraq, Libya, North
+Korea, Syria and the Sudan.  This
+list is subject to change without
+further notice from Sun, and
+Licensee must comply with the list
+as it exists in fact.  Licensee
+certifies that it is not on the U.S.
+Department of Commerce's Denied
+Persons List or affiliated lists or
+on the U.S. Department of Treasury's
+Specially Designated Nationals
+List.
+
+Licensee agrees to comply strictly
+with all U.S. export laws and assume
+sole responsibility for obtaining
+licenses to export or reexport as
+may be required.  Licensee is
+responsible for complying with any
+applicable local laws and
+regulations, including but not
+limited to, the export and import
+laws and regulations of other
+countries.
+
+9.  MISCELLANEOUS
+
+This Agreement will be construed
+under and governed by California law
+and controlling federal law as
+applied to transactions taking place
+wholly within California between
+California residents; the United
+Nations Convention on Contracts for
+the International Sale of Goods
+shall not apply.  The parties agree
+that any action shall be brought in
+the United States District Court for
+the Northern District of California
+or the California Superior Court for
+the County of Santa Clara, as
+applicable, and the parties hereby
+submit exclusively to the personal
+jurisdiction and venue thereof.
+Licensee may not assign this
+Agreement or any of its rights and
+obligations hereunder to any party.
+The official text of this Agreement
+is in the English language and any
+interpretation or construction of
+this Agreement will be based
+thereon.  In the event that this
+Agreement or any documents or
+notices related to it are translated
+into any other language, the English
+language version will control.  This
+Agreement (i) is the entire
+agreement between Sun and Licensee
+relating to the Software, (ii)
+supersedes all prior or
+contemporaneous oral or written
+communications, proposals,
+warranties, representations or
+agreements with respect to the
+Software and (iii) will prevail over
+any conflicting or additional terms
+of any subsequent quote, order,
+acknowledgment or any other
+communications by or between the
+parties.  No modification to this
+Agreement will be binding unless in
+writing and signed by an authorized
+representative of each party.

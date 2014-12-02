@@ -1,0 +1,124 @@
+
+------- FloatingPointCheck.java -------
+4a5
+> import spec.harness.Context;
+46c47
+< 		System.out.println("Ooops: double range too big near 0");
+---
+> 		Context.out.println("Ooops: double range too big near 0");
+52c53
+< 	    System.out.println("	tiny:             " +
+---
+> 	    Context.out.println("	tiny:             " +
+54c55
+< 	    System.out.println("	tiny/small:       " +
+---
+> 	    Context.out.println("	tiny/small:       " +
+56c57
+< 	    System.out.println("	(tiny/small)*big: " +
+---
+> 	    Context.out.println("	(tiny/small)*big: " +
+58c59
+< 	    System.out.println("	MIN_VALUE*big:    " +
+---
+> 	    Context.out.println("	MIN_VALUE*big:    " +
+60c61
+< 	    System.out.println("	(tiny*big)/small: " +
+---
+> 	    Context.out.println("	(tiny*big)/small: " +
+75c76
+< 		System.out.println("Ooops: double range too big near infinity");
+---
+> 		Context.out.println("Ooops: double range too big near infinity");
+80c81
+< 	    System.out.println("	huge:             " +
+---
+> 	    Context.out.println("	huge:             " +
+82c83
+< 	    System.out.println("	huge*small:       " +
+---
+> 	    Context.out.println("	huge*small:       " +
+84c85
+< 	    System.out.println("	(huge*small)/big: " +
+---
+> 	    Context.out.println("	(huge*small)/big: " +
+95c96
+< 		System.out.println("Ooops: float range too big near 0");
+---
+> 		Context.out.println("Ooops: float range too big near 0");
+101c102
+< 	    System.out.println("	tiny:             " +
+---
+> 	    Context.out.println("	tiny:             " +
+103c104
+< 	    System.out.println("	tiny/small:       " +
+---
+> 	    Context.out.println("	tiny/small:       " +
+105c106
+< 	    System.out.println("	(tiny/small)*big: " +
+---
+> 	    Context.out.println("	(tiny/small)*big: " +
+107c108
+< 	    System.out.println("	MIN_VALUE*big:    " +
+---
+> 	    Context.out.println("	MIN_VALUE*big:    " +
+109c110
+< 	    System.out.println("	(tiny*big)/small: " +
+---
+> 	    Context.out.println("	(tiny*big)/small: " +
+116c117
+< 		System.out.println("Ooops: float range too big near infinity");
+---
+> 		Context.out.println("Ooops: float range too big near infinity");
+121c122
+< 	    System.out.println("	huge:             " +
+---
+> 	    Context.out.println("	huge:             " +
+123c124
+< 	    System.out.println("	huge*small:       " +
+---
+> 	    Context.out.println("	huge*small:       " +
+125c126
+< 	    System.out.println("	(huge*small)/big: " +
+---
+> 	    Context.out.println("	(huge*small)/big: " +
+140c141
+< 		System.out.println("Ooops: double precision too big near 1");
+---
+> 		Context.out.println("Ooops: double precision too big near 1");
+145c146
+< 	    System.out.println("	eps:	" +
+---
+> 	    Context.out.println("	eps:	" +
+147c148
+< 	    System.out.println("	eps:	0x" +
+---
+> 	    Context.out.println("	eps:	0x" +
+149c150
+< 	    System.out.println("	1+eps:	" +
+---
+> 	    Context.out.println("	1+eps:	" +
+151c152
+< 	    System.out.println("	(1+eps)-1:	" +
+---
+> 	    Context.out.println("	(1+eps)-1:	" +
+167c168
+< 		System.out.println("Ooops: float precision too big near 1");
+---
+> 		Context.out.println("Ooops: float precision too big near 1");
+172c173
+< 	    System.out.println("	eps:	" +
+---
+> 	    Context.out.println("	eps:	" +
+174c175
+< 	    System.out.println("	eps:	0x" +
+---
+> 	    Context.out.println("	eps:	0x" +
+176c177
+< 	    System.out.println("	1+eps:	" +
+---
+> 	    Context.out.println("	1+eps:	" +
+178c179
+< 	    System.out.println("	(1+eps)-1:	" +
+---
+> 	    Context.out.println("	(1+eps)-1:	" +

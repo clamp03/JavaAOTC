@@ -1,0 +1,27 @@
+#
+# Server properties file
+#
+# This is an example of a server file as it would actually be used.
+#
+
+# server hardware
+spec.server.hw.vendor=Sun Microsystems
+spec.server.hw.model=Ultra 1 Model 170
+spec.server.hw.processor=UltraSPARC
+spec.server.hw.MHz=167
+spec.server.hw.ncpu=1
+spec.server.hw.memory=64MB
+spec.server.hw.fileSystem=UFS
+spec.server.hw.disk=1 x 2GB SCSI
+spec.server.hw.other=none
+spec.server.hw.available=Nov-95
+
+# server software
+spec.server.sw.OS=Solaris 2.6
+spec.server.sw.OSavailable=Aug-98
+spec.server.sw.webServer=Java Web Server 1.0
+spec.server.sw.webAvailable=Jun-97
+spec.server.sw.tuning=none
+spec.server.sw.other=none
+spec.server.sw.otherAvailable=
+

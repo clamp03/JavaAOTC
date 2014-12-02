@@ -1,0 +1,29 @@
+Enter tuning notes here
+This is the default tuning note file. You may prefer to edit a set of
+such files with your system text editor and then enter the appropriate
+URL in the initial dialog box to minimize the editing required here.
+You may use simple HTML elements in these notes, such as
+<UL>
+<LI>lists
+<LI>of various types
+</UL>
+
+<P>
+Paragraph breaks
+<p>
+
+<h4>
+Headings. Use only small headings for readability
+</h4>
+h4 and h5
+
+<pre>
+         1         2         3         4
+1234567890123456789012345678901234567890
+And text in fixed width font
+(pre-formatted) In this case, you
+should ensure that your lines are no
+longer than about 40 columns
+or your reporting page may be too wide
+to print.
+</pre>

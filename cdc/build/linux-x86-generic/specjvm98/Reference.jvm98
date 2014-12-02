@@ -1,0 +1,32 @@
+# From jvm98/props/spec
+# Reference times (sec).
+
+spec.report._200_check.ref=1
+spec.report._201_compress.ref=1175
+spec.report._202_jess.ref=380
+spec.report._209_db.ref=505
+spec.report._213_javac.ref=425
+spec.report._222_mpegaudio.ref=1100
+spec.report._227_mtrt.ref=460
+spec.report._228_jack.ref=455
+
+Reference VM (Reference build from SPEC)
+[[SPEC Reference JVM98]]
+
+== _200_check     Starting 
+== _200_check     Finished in   1 seconds     
+== _227_mtrt      Starting 
+== _227_mtrt      Finished in  460 seconds
+== _202_jess      Starting 
+== _202_jess      Finished in  380 seconds
+== _201_compress  Starting 
+== _201_compress  Finished in 1175 seconds
+== _209_db        Starting 
+== _209_db        Finished in  505 seconds
+== _222_mpegaudio Starting 
+== _222_mpegaudio Finished in 1100 seconds
+== _228_jack      Starting 
+== _228_jack      Finished in  455 seconds
+== _213_javac     Starting 
+== _213_javac     Finished in  425 seconds
+

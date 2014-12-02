@@ -1,0 +1,85 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   ThrowStatement.java
+
+package spec.benchmarks._213_javac;
+
+import java.io.PrintStream;
+import java.util.Hashtable;
+
+// Referenced classes of package spec.benchmarks._213_javac:
+//            Statement, Assembler, ClassDeclaration, ClassDefinition, 
+//            ClassNotFound, Constants, Environment, Expression, 
+//            Node, RuntimeConstants, Type, Context
+
+public class ThrowStatement extends Statement
+{
+
+    public ThrowStatement(int i, Expression expression)
+    {
+        super(104, i);
+        expr = expression;
+    }
+
+    long check(Environment environment, Context context, long l, Hashtable hashtable)
+    {
+        try
+        {
+            l = reach(environment, l);
+            expr.checkValue(environment, context, l, hashtable);
+            if(expr.type.isType(10))
+            {
+                ClassDeclaration classdeclaration = environment.getClassDeclaration(expr.type);
+                if(hashtable.get(classdeclaration) == null)
+                    hashtable.put(classdeclaration, this);
+                ClassDefinition classdefinition = classdeclaration.getClassDefinition(environment);
+                ClassDeclaration classdeclaration1 = environment.getClassDeclaration(Constants.idJavaLangThrowable);
+                if(!classdefinition.subClassOf(environment, classdeclaration1))
+                    environment.error(super.where, "throw.not.throwable", classdefinition);
+                expr = convert(environment, context, Type.tObject, expr);
+            } else
+            if(!expr.type.isType(13))
+                environment.error(((Node) (expr)).where, "throw.not.throwable", expr.type);
+        }
+        catch(ClassNotFound classnotfound)
+        {
+            environment.error(super.where, "class.not.found", classnotfound.name, Constants.opNames[super.op]);
+        }
+        return -1L;
+    }
+
+    public Statement inline(Environment environment, Context context)
+    {
+        expr = expr.inlineValue(environment, context);
+        return this;
+    }
+
+    public Statement copyInline(Context context, boolean flag)
+    {
+        ThrowStatement throwstatement = (ThrowStatement)clone();
+        throwstatement.expr = expr.copyInline(context);
+        return throwstatement;
+    }
+
+    public int costInline(int i)
+    {
+        return 1 + expr.costInline(i);
+    }
+
+    public void code(Environment environment, Context context, Assembler assembler)
+    {
+        expr.codeValue(environment, context, assembler);
+        assembler.add(super.where, 191);
+    }
+
+    public void print(PrintStream printstream, int i)
+    {
+        super.print(printstream, i);
+        printstream.print("throw ");
+        expr.print(printstream);
+        printstream.print(":");
+    }
+
+    Expression expr;
+}

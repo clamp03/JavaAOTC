@@ -1,0 +1,70 @@
+MAKEFLAGS  = CVM_DEBUG=false CVM_AOT=false J2ME_CLASSLIB=foundation CVM_TARGET_TOOLS_PREFIX=/opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-
+CVM_HOST   = x86_64-Ubuntu-linux
+CVM_TARGET = linux-mips-cobalt
+SHELL      = sh -e
+HOST_CC    = /usr/bin/cc
+HOST_CCC   = /usr/bin/g++
+ZIP        = /usr/bin/zip
+FLEX       = /usr/bin/flex
+BISON      = /usr/bin/bison
+CVM_JAVA   = /opt/X-TOOL/tool/x86-linux/java/jdk1.4.2/bin/java
+CVM_JAVAC  = /opt/X-TOOL/tool/x86-linux/java/jdk1.4.2/bin/javac
+CVM_JAVAH  = /opt/X-TOOL/tool/x86-linux/java/jdk1.4.2/bin/javah
+CVM_JAR    = /opt/X-TOOL/tool/x86-linux/java/jdk1.4.2/bin/jar
+TARGET_CC     = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-gcc
+TARGET_CCC    = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-g++
+TARGET_AS     = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-gcc
+TARGET_LD     = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-gcc
+TARGET_AR     = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-ar
+TARGET_RANLIB = /opt/toolchains/crosstools_hf-linux-2.6.12.0_gcc-3.4.6-20_uclibc-0.9.28-20050817-20070131/bin/mipsel-linux-ranlib
+LINKFLAGS  = -Wl,-export-dynamic 
+LINKLIBS   = -lpthread -ldl -lm
+ASM_FLAGS  = -c -fno-common -mips2
+CCCFLAGS   = -fno-rtti
+CCFLAGS_SPEED  = -c -fno-common -Wall -fno-strict-aliasing -mips2  -O4
+CCFLAGS_SPACE  = -c -fno-common -Wall -fno-strict-aliasing -mips2  -O2
+CCFLAGS_LOOP   = -c -fno-common -Wall -fno-strict-aliasing -mips2  -O4 
+CCFLAGS_FDLIB  = -c -fno-common -Wall -fno-strict-aliasing -mips2  -O4 -ffloat-store
+JAVAC_OPTIONS  = -g:none -J-Xms32m -J-Xmx128m -encoding iso8859-1 -source 1.4 -target 1.4
+CVM_DEFINES    = -DCVM_OPTIMIZED -DNDEBUG -DCVM_CLASSLOADING -DCVM_SERIALIZATION -DCVM_REFLECT -DCVM_DYNAMIC_LINKING -DCVM_JIT -DCVM_JIT_REGISTER_LOCALS -DCVM_TIMESTAMPING -DJ2ME_CLASSLIB=foundation -DTARGET_CPU_FAMILY=mips -DCVM_JIT_COPY_CCMCODE_TO_CODECACHE -D_GNU_SOURCE
+host uname        = Linux acrux 2.6.38-10-server #46-Ubuntu SMP Tue Jun 28 16:31:00 UTC 2011 x86_64 x86_64 x86_64 GNU/Linux
+TARGET_CC version = 3.4.6 mipsel-linux-uclibc
+HOST_CC version   = 4.5.2 x86_64-linux-gnu
+CVM_JAVA version  = java version 1.4.2_13
+TOOLS_DIR         = /home/clamp/cgo/PhoneMeAdvanced_110914/tools
+updating /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/build_defs.mk ...
+Checking for build-time classes to compile ...
+... /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/btclasses.zip
+Checking for phoneME Advanced classes to compile ...
+Checking for test classes to compile ...
+Checking for demo classes to compile ...
+jcc romjava.c files
+fileName is /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjava
+	969 Total Classes
+		... of which 197 classes have static initializers 
+		    (9413/13745 quickening sites)
+		8839 method blocks
+		... of which 8839 blocks are writable
+		... for 868 classes
+		... of which 2950 have checkinit opcodes in the code
+		441222 bytes of Java code
+		1567 catch frames
+		3906 field blocks
+		952 inner class attribute entries
+		11426 constant pool entries
+		3737 Java strings
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/src/share/foundation/native/java/io/RandomAccessFile.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjavaAux.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjava0.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjavaJNI.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjavaAotcFunctions.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjava1.c
+cc  /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./generated/javavm/runtime/romjava2.c
+echo Linking obj/libromjava.a
+Linking obj/libromjava.a
+Linking /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./bin/cvm
+Done Linking /home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt/./bin/cvm
+make CVM_TOOLS_BUILD=true tools
+make[1]: Entering directory `/home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt'
+make[1]: Nothing to be done for `tools'.
+make[1]: Leaving directory `/home/clamp/cgo/PhoneMeAdvanced_110914/cdc/build/linux-mips-cobalt'

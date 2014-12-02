@@ -1,0 +1,1108 @@
+NUM BARRIER BYTES = 0
+NUM VIRTUAL INLINE BYTES = 0
+NUM LARGE OPCODE BYTES = 188
+NUM MAIN LINE INSTRUCTION BYTES ESTIMATE = 4820
+ESTIMATED BUFFER SIZE = 5260
+CODE BUFFER ADDRESS = 0x2bcb9500
+PC MAP TABLE ADDRESS = 0x2bcb9508
+GC CHECK PCS ADDRESS = 0x2bcb9594
+CODE ENTRY ADDRESS = 0x2bcb95c0
+          		@ Method prologue
+0x2bcb95c0	0:	addiu	a1, JSP, 80	@ Set R1 = JSP + (capacity - argsSize) * 4
+          		@ Stack limit check
+0x2bcb95c4	4:	sw	ra, 16(JFP)	@ Store LR into frame
+0x2bcb95c8	8:	sltu	t7, a1, CHUNKEND
+0x2bcb95cc	12:	bne	t7, zero, PC=0x2bcb95c0	@ goto .skip
+0x2bcb95d0	16:	nop
+0x2bcb95d4	20:	jal	PC=(0x2bcb90ac)	@ check for chunk overflow call letInterpreterDoInvoke if overflow
+0x2bcb95d8	24:	nop
+>>>>>>>>>Push Code Buffer to PC = 12 (0x2bcb95cc) >>>>>>>>
+0x2bcb95cc	12:	bne	t7, zero, PC=0x2bcb95dc	@ goto .skip
+0x2bcb95d0	16:	nop
+<<<<<<<<<Pop Code Buffer to PC = 28 (0x2bcb95dc) <<<<<<<<<
+		.skip
+          		@ Set up frame for method
+0x2bcb95dc	28:	sw	JFP, 28(JSP)	@ Store curr JFP into new frame
+0x2bcb95e0	32:	addiu	JFP, JSP, 28	@ JFP = JSP + (maxLocals - argsSize) * 4
+0x2bcb95e4	36:	sw	a0, 12(JFP)	@ Store MB into frame
+          		@ DEBUG-ONLY CODE
+0x2bcb95e8	40:	addiu	a3, zero, 0
+0x2bcb95ec	44:	sb	a3, 4(JFP)	@ Store NONE into frame.type
+0x2bcb95f0	48:	addiu	a3, zero, -1
+0x2bcb95f4	52:	sb	a3, 5(JFP)	@ Store -1 into frame.flags
+          		@ END OF DEBUG-ONLY CODE
+          		@ DEBUG-ONLY CODE FOR TRACING METHOD CALLS
+0x2bcb95f8	56:	move	a0, EE
+0x2bcb95fc	60:	move	a1, JFP	@ arg2 = JFP
+0x2bcb9600	64:	lui	t9, hi16(0x67)
+0x2bcb9604	68:	ori	t9, t9, lo16(0x673344)	@ CVMCCMtraceMethodCallGlue()
+0x2bcb9608	72:	jalr	t9
+0x2bcb960c	76:	nop
+          		@ END OF DEBUG-ONLY CODE FOR TRACING
+          		@ Interpreted -> compiled entry point
+0x2bcb9610	80:	addiu	JSP, JFP, 28	@ spill adjust goes here
+          		@ 3 words for setting up cp base register
+0x2bcb9614	84:	nop
+0x2bcb9618	88:	nop
+0x2bcb961c	92:	nop
+			@ Initial Temp REF set is 
+	L0:	96:	@ entry point for first block
+			@ Preloading incoming local(0) reg(20)
+0x2bcb9620	96:	lw	s4, -36(JFP)	@ Java local cell # 0
+          		@ MAP_PC idepth=0 javaPc=0 compiledPc=100
+
+
+          		@ Do getfield:
+0x2bcb9624	100:	lw	s7, 8(s4)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9628	104:	lw	s5, 192(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+
+
+0x2bcb962c	108:	sw	zero, -28(JFP)	@ Java local cell # 2
+0x2bcb9630	112:	sw	zero, -24(JFP)	@ Java local cell # 3
+0x2bcb9634	116:	sw	zero, -20(JFP)	@ Java local cell # 4
+0x2bcb9638	120:	sw	s5, -16(JFP)	@ Java local cell # 5
+0x2bcb963c	124:	sw	zero, -8(JFP)	@ Java local cell # 7
+0x2bcb9640	128:	sw	zero, -4(JFP)	@ Java local cell # 8
+			@ Outgoing local(0) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): not in register
+0x2bcb9644	132:	lw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(8) reg(23): not in register
+0x2bcb9648	136:	lw	s7, -4(JFP)	@ Java local cell # 8
+0x2bcb964c	140:	b	PC=0x2bcb964c	@ branch to block L1
+0x2bcb9650	144:	nop
+			@ Initial Temp REF set is 
+	L2:	148:	@ Patchable GC Check point
+0x2bcb9654	148:	jal	PC=(0x2bcb800c)	@ call CVMCCMruntimeGCRendezvousGlue
+0x2bcb9654	148:	nop
+0x2bcb9658	152:	nop
+          		@ Captured a stackmap here.
+	L2:	156:	@ entry point when locals need to be loaded
+			@ Preloading incoming local(4) reg(22)
+0x2bcb965c	156:	lw	s6, -20(JFP)	@ Java local cell # 4
+			@ Preloading incoming local(8) reg(23)
+0x2bcb9660	160:	lw	s7, -4(JFP)	@ Java local cell # 8
+	L2:	164:	@ entry point for branches
+          		@ MAP_PC idepth=0 javaPc=25 compiledPc=156
+0x2bcb9664	164:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb9668	168:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb966c	172:	lw	s4, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9670	176:	sltu	t7, s7, s4
+0x2bcb9674	180:	bne	t7, zero, PC=0x2bcb9670	@ br .skip
+0x2bcb9678	184:	nop
+0x2bcb967c	188:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9680	192:	nop
+		.skip
+--->Fixed instruction at 180(0x2bcb9674) to reference 196
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9684	196:	addu	t8, s5, s7
+0x2bcb9688	200:	lb	t9, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb968c	204:	bne	t9, zero, PC=0x2bcb968c	@ branch to block L3
+0x2bcb9690	208:	nop
+0x2bcb9694	212:	addiu	t9, s7, 8
+          		@ deferred comparison: 
+0x2bcb9698	216:	sltu	t7, t9, s4
+0x2bcb969c	220:	bne	t7, zero, PC=0x2bcb9698	@ br .skip
+0x2bcb96a0	224:	nop
+0x2bcb96a4	228:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb96a8	232:	nop
+		.skip
+--->Fixed instruction at 220(0x2bcb969c) to reference 236
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb96ac	236:	addu	t8, s5, t9
+0x2bcb96b0	240:	lb	s4, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb96b4	244:	bne	s4, zero, PC=0x2bcb96b4	@ branch to block L4
+0x2bcb96b8	248:	nop
+0x2bcb96bc	252:	addiu	s6, s6, -1
+0x2bcb96c0	256:	sw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L4:	260:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 244(0x2bcb96b4) to reference 260
+          		@ MAP_PC idepth=0 javaPc=51 compiledPc=260
+          		@ do irem by 8:
+0x2bcb96c4	260:	sra	s5, s7, 31
+0x2bcb96c8	264:	srl	t7, s5, 29
+0x2bcb96cc	268:	addu	s5, s7, t7
+0x2bcb96d0	272:	addiu	t7, zero, -8
+0x2bcb96d4	276:	and	s5, s5, t7
+0x2bcb96d8	280:	subu	s5, s7, s5
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb96dc	284:	beq	s5, zero, PC=0x2bcb96dc	@ branch to block L5
+0x2bcb96e0	288:	nop
+0x2bcb96e4	292:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb96e8	296:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb96ec	300:	addiu	s4, s7, 7
+0x2bcb96f0	304:	lw	t9, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb96f4	308:	sltu	t7, s4, t9
+0x2bcb96f8	312:	bne	t7, zero, PC=0x2bcb96f4	@ br .skip
+0x2bcb96fc	316:	nop
+0x2bcb9700	320:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9704	324:	nop
+		.skip
+--->Fixed instruction at 312(0x2bcb96f8) to reference 328
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9708	328:	addu	t8, s5, s4
+0x2bcb970c	332:	lb	t9, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9710	336:	beq	t9, zero, PC=0x2bcb9710	@ branch to block L6
+0x2bcb9714	340:	nop
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L5:	344:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 284(0x2bcb96dc) to reference 344
+          		@ MAP_PC idepth=0 javaPc=72 compiledPc=344
+          		@ do irem by 8:
+0x2bcb9718	344:	sra	s5, s7, 31
+0x2bcb971c	348:	srl	t7, s5, 29
+0x2bcb9720	352:	addu	s5, s7, t7
+0x2bcb9724	356:	addiu	t7, zero, -8
+0x2bcb9728	360:	and	s5, s5, t7
+0x2bcb972c	364:	subu	s5, s7, s5
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9730	368:	addiu	t7, zero, 7
+0x2bcb9734	372:	beq	s5, t7, PC=0x2bcb9730	@ branch to block L3
+0x2bcb9738	376:	nop
+0x2bcb973c	380:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb9740	384:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9744	388:	addiu	s4, s7, 9
+0x2bcb9748	392:	lw	t9, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb974c	396:	sltu	t7, s4, t9
+0x2bcb9750	400:	bne	t7, zero, PC=0x2bcb974c	@ br .skip
+0x2bcb9754	404:	nop
+0x2bcb9758	408:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb975c	412:	nop
+		.skip
+--->Fixed instruction at 400(0x2bcb9750) to reference 416
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9760	416:	addu	t8, s5, s4
+0x2bcb9764	420:	lb	t9, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9768	424:	bne	t9, zero, PC=0x2bcb9768	@ branch to block L3
+0x2bcb976c	428:	nop
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L6:	432:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 336(0x2bcb9710) to reference 432
+          		@ MAP_PC idepth=0 javaPc=95 compiledPc=432
+0x2bcb9770	432:	addiu	s6, s6, 1
+0x2bcb9774	436:	sw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L3:	440:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 424(0x2bcb9768) to reference 440
+--->Fixed instruction at 372(0x2bcb9734) to reference 440
+--->Fixed instruction at 204(0x2bcb968c) to reference 440
+          		@ MAP_PC idepth=0 javaPc=98 compiledPc=440
+0x2bcb9778	440:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb977c	444:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9780	448:	lw	s4, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9784	452:	sltu	t7, s7, s4
+0x2bcb9788	456:	bne	t7, zero, PC=0x2bcb9784	@ br .skip
+0x2bcb978c	460:	nop
+0x2bcb9790	464:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9794	468:	nop
+		.skip
+--->Fixed instruction at 456(0x2bcb9788) to reference 472
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9798	472:	addu	t8, s5, s7
+0x2bcb979c	476:	lb	t9, 12(t8)
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb97a0	480:	addiu	t7, zero, 6
+0x2bcb97a4	484:	bne	t9, t7, PC=0x2bcb97a0	@ branch to block L7
+0x2bcb97a8	488:	nop
+0x2bcb97ac	492:	addiu	t9, s7, -8
+          		@ deferred comparison: 
+0x2bcb97b0	496:	sltu	t7, t9, s4
+0x2bcb97b4	500:	bne	t7, zero, PC=0x2bcb97b0	@ br .skip
+0x2bcb97b8	504:	nop
+0x2bcb97bc	508:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb97c0	512:	nop
+		.skip
+--->Fixed instruction at 500(0x2bcb97b4) to reference 516
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb97c4	516:	addu	t8, s5, t9
+0x2bcb97c8	520:	lb	s4, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb97cc	524:	addiu	t7, zero, 6
+0x2bcb97d0	528:	bne	s4, t7, PC=0x2bcb97cc	@ branch to block L8
+0x2bcb97d4	532:	nop
+0x2bcb97d8	536:	addiu	s6, s6, 1
+0x2bcb97dc	540:	sw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L8:	544:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 528(0x2bcb97d0) to reference 544
+          		@ MAP_PC idepth=0 javaPc=128 compiledPc=544
+          		@ do irem by 8:
+0x2bcb97e0	544:	sra	s5, s7, 31
+0x2bcb97e4	548:	srl	t7, s5, 29
+0x2bcb97e8	552:	addu	s5, s7, t7
+0x2bcb97ec	556:	addiu	t7, zero, -8
+0x2bcb97f0	560:	and	s5, s5, t7
+0x2bcb97f4	564:	subu	s5, s7, s5
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb97f8	568:	addiu	t7, zero, 7
+0x2bcb97fc	572:	beq	s5, t7, PC=0x2bcb97f8	@ branch to block L9
+0x2bcb9800	576:	nop
+0x2bcb9804	580:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb9808	584:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb980c	588:	addiu	s4, s7, -7
+0x2bcb9810	592:	lw	t9, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9814	596:	sltu	t7, s4, t9
+0x2bcb9818	600:	bne	t7, zero, PC=0x2bcb9814	@ br .skip
+0x2bcb981c	604:	nop
+0x2bcb9820	608:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9824	612:	nop
+		.skip
+--->Fixed instruction at 600(0x2bcb9818) to reference 616
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9828	616:	addu	t8, s5, s4
+0x2bcb982c	620:	lb	t9, 12(t8)
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9830	624:	addiu	t7, zero, 6
+0x2bcb9834	628:	beq	t9, t7, PC=0x2bcb9830	@ branch to block L10
+0x2bcb9838	632:	nop
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L9:	636:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 572(0x2bcb97fc) to reference 636
+          		@ MAP_PC idepth=0 javaPc=153 compiledPc=636
+          		@ do irem by 8:
+0x2bcb983c	636:	sra	s5, s7, 31
+0x2bcb9840	640:	srl	t7, s5, 29
+0x2bcb9844	644:	addu	s5, s7, t7
+0x2bcb9848	648:	addiu	t7, zero, -8
+0x2bcb984c	652:	and	s5, s5, t7
+0x2bcb9850	656:	subu	s5, s7, s5
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9854	660:	beq	s5, zero, PC=0x2bcb9854	@ branch to block L7
+0x2bcb9858	664:	nop
+0x2bcb985c	668:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb9860	672:	lw	s5, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9864	676:	addiu	s4, s7, -9
+0x2bcb9868	680:	lw	t9, 8(s5)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb986c	684:	sltu	t7, s4, t9
+0x2bcb9870	688:	bne	t7, zero, PC=0x2bcb986c	@ br .skip
+0x2bcb9874	692:	nop
+0x2bcb9878	696:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb987c	700:	nop
+		.skip
+--->Fixed instruction at 688(0x2bcb9870) to reference 704
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb9880	704:	addu	t8, s5, s4
+0x2bcb9884	708:	lb	t9, 12(t8)
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9888	712:	addiu	t7, zero, 6
+0x2bcb988c	716:	bne	t9, t7, PC=0x2bcb9888	@ branch to block L7
+0x2bcb9890	720:	nop
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L10:	724:	@ entry point for branches
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 628(0x2bcb9834) to reference 724
+          		@ MAP_PC idepth=0 javaPc=176 compiledPc=724
+0x2bcb9894	724:	addiu	s5, s6, -1
+0x2bcb9898	728:	sw	s5, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L7:	732:	@ entry point for branches
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 716(0x2bcb988c) to reference 732
+--->Fixed instruction at 660(0x2bcb9854) to reference 732
+--->Fixed instruction at 484(0x2bcb97a4) to reference 732
+          		@ MAP_PC idepth=0 javaPc=179 compiledPc=732
+0x2bcb989c	732:	lw	ra, -32(JFP)	@ Java local cell # 1
+          		@ Do getfield:
+0x2bcb98a0	736:	lw	s6, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb98a4	740:	lw	s5, 8(s6)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb98a8	744:	sltu	t7, s7, s5
+0x2bcb98ac	748:	bne	t7, zero, PC=0x2bcb98a8	@ br .skip
+0x2bcb98b0	752:	nop
+0x2bcb98b4	756:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb98b8	760:	nop
+		.skip
+--->Fixed instruction at 748(0x2bcb98ac) to reference 764
+          		@ Do load(arrayObj, index) (elem type=7,B):
+0x2bcb98bc	764:	addu	s4, s6, s7
+0x2bcb98c0	768:	lb	s5, 12(s4)
+          		@ deferred comparison: 
+0x2bcb98c4	772:	addiu	t7, zero, 99
+0x2bcb98c8	776:	beq	s5, t7, PC=0x2bcb98c4	@ branch to block L24
+0x2bcb98cc	780:	nop
+          		@ tableswitch
+          		@ deferred comparison: 
+0x2bcb98d0	784:	addiu	t7, zero, 11
+0x2bcb98d4	788:	sltu	t7, t7, s5
+0x2bcb98d8	792:	bne	t7, zero, PC=0x2bcb98d0	@ branch to block L11
+0x2bcb98dc	796:	nop
+0x2bcb98e0	800:	lw	s6, 0(CP)
+0x2bcb98e4	804:	sll	t9, s5, 3
+0x2bcb98e8	808:	addu	t9, t9, s6
+0x2bcb98ec	812:	jr	t9
+0x2bcb98f0	816:	nop
+0x2bcb98f4	820:	b	PC=0x2bcb98f4	@ branch to block L12
+0x2bcb98f8	824:	nop
+0x2bcb98fc	828:	b	PC=0x2bcb98fc	@ branch to block L13
+0x2bcb9900	832:	nop
+0x2bcb9904	836:	b	PC=0x2bcb9904	@ branch to block L14
+0x2bcb9908	840:	nop
+0x2bcb990c	844:	b	PC=0x2bcb990c	@ branch to block L15
+0x2bcb9910	848:	nop
+0x2bcb9914	852:	b	PC=0x2bcb9914	@ branch to block L16
+0x2bcb9918	856:	nop
+0x2bcb991c	860:	b	PC=0x2bcb991c	@ branch to block L17
+0x2bcb9920	864:	nop
+0x2bcb9924	868:	b	PC=0x2bcb9924	@ branch to block L18
+0x2bcb9928	872:	nop
+0x2bcb992c	876:	b	PC=0x2bcb992c	@ branch to block L19
+0x2bcb9930	880:	nop
+0x2bcb9934	884:	b	PC=0x2bcb9934	@ branch to block L20
+0x2bcb9938	888:	nop
+0x2bcb993c	892:	b	PC=0x2bcb993c	@ branch to block L21
+0x2bcb9940	896:	nop
+0x2bcb9944	900:	b	PC=0x2bcb9944	@ branch to block L22
+0x2bcb9948	904:	nop
+0x2bcb994c	908:	b	PC=0x2bcb994c	@ branch to block L23
+0x2bcb9950	912:	nop
+			@ Initial Temp REF set is 
+	L24:	916:	@ entry point for branches
+--->Fixed instruction at 776(0x2bcb98c8) to reference 916
+          		@ MAP_PC idepth=0 javaPc=300 compiledPc=916
+0x2bcb9954	916:	b	PC=0x2bcb9954	@ branch to block L11
+0x2bcb9958	920:	nop
+			@ Initial Temp REF set is 
+	L12:	924:	@ entry point for branches
+--->Fixed instruction at 820(0x2bcb98f4) to reference 924
+          		@ MAP_PC idepth=0 javaPc=303 compiledPc=924
+0x2bcb995c	924:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9960	928:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9964	932:	lw	s6, 168(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9968	936:	lw	s7, 52(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb996c	940:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9970	944:	addu	s5, t9, s6
+0x2bcb9974	948:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9978	952:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb997c	956:	sltu	t7, t8, s6
+0x2bcb9980	960:	bne	t7, zero, PC=0x2bcb997c	@ br .skip
+0x2bcb9984	964:	nop
+0x2bcb9988	968:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb998c	972:	nop
+		.skip
+--->Fixed instruction at 960(0x2bcb9980) to reference 976
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9990	976:	sll	s4, t8, 2
+0x2bcb9994	980:	addu	s4, s7, s4
+0x2bcb9998	984:	lw	s6, 12(s4)
+0x2bcb999c	988:	addu	s7, s5, s6
+0x2bcb99a0	992:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb99a4	996:	b	PC=0x2bcb99a4	@ branch to block L11
+0x2bcb99a8	1000:	nop
+			@ Initial Temp REF set is 
+	L13:	1004:	@ entry point for branches
+--->Fixed instruction at 828(0x2bcb98fc) to reference 1004
+          		@ MAP_PC idepth=0 javaPc=330 compiledPc=1004
+0x2bcb99ac	1004:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb99b0	1008:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb99b4	1012:	lw	s6, 176(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb99b8	1016:	lw	s7, 12(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb99bc	1020:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb99c0	1024:	addu	s5, t9, s6
+0x2bcb99c4	1028:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb99c8	1032:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb99cc	1036:	sltu	t7, t8, s6
+0x2bcb99d0	1040:	bne	t7, zero, PC=0x2bcb99cc	@ br .skip
+0x2bcb99d4	1044:	nop
+0x2bcb99d8	1048:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb99dc	1052:	nop
+		.skip
+--->Fixed instruction at 1040(0x2bcb99d0) to reference 1056
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb99e0	1056:	sll	s4, t8, 2
+0x2bcb99e4	1060:	addu	s4, s7, s4
+0x2bcb99e8	1064:	lw	s6, 12(s4)
+0x2bcb99ec	1068:	addu	s7, s5, s6
+0x2bcb99f0	1072:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb99f4	1076:	b	PC=0x2bcb99f4	@ branch to block L11
+0x2bcb99f8	1080:	nop
+			@ Initial Temp REF set is 
+	L14:	1084:	@ entry point for branches
+--->Fixed instruction at 836(0x2bcb9904) to reference 1084
+          		@ MAP_PC idepth=0 javaPc=357 compiledPc=1084
+0x2bcb99fc	1084:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9a00	1088:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9a04	1092:	lw	s6, 172(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9a08	1096:	lw	s7, 20(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9a0c	1100:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9a10	1104:	addu	s5, t9, s6
+0x2bcb9a14	1108:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9a18	1112:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9a1c	1116:	sltu	t7, t8, s6
+0x2bcb9a20	1120:	bne	t7, zero, PC=0x2bcb9a1c	@ br .skip
+0x2bcb9a24	1124:	nop
+0x2bcb9a28	1128:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9a2c	1132:	nop
+		.skip
+--->Fixed instruction at 1120(0x2bcb9a20) to reference 1136
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9a30	1136:	sll	s4, t8, 2
+0x2bcb9a34	1140:	addu	s4, s7, s4
+0x2bcb9a38	1144:	lw	s6, 12(s4)
+0x2bcb9a3c	1148:	addu	s7, s5, s6
+0x2bcb9a40	1152:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9a44	1156:	b	PC=0x2bcb9a44	@ branch to block L11
+0x2bcb9a48	1160:	nop
+			@ Initial Temp REF set is 
+	L15:	1164:	@ entry point for branches
+--->Fixed instruction at 844(0x2bcb990c) to reference 1164
+          		@ MAP_PC idepth=0 javaPc=384 compiledPc=1164
+0x2bcb9a4c	1164:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9a50	1168:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9a54	1172:	lw	s6, 180(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9a58	1176:	lw	s7, 28(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9a5c	1180:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9a60	1184:	addu	s5, t9, s6
+0x2bcb9a64	1188:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9a68	1192:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9a6c	1196:	sltu	t7, t8, s6
+0x2bcb9a70	1200:	bne	t7, zero, PC=0x2bcb9a6c	@ br .skip
+0x2bcb9a74	1204:	nop
+0x2bcb9a78	1208:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9a7c	1212:	nop
+		.skip
+--->Fixed instruction at 1200(0x2bcb9a70) to reference 1216
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9a80	1216:	sll	s4, t8, 2
+0x2bcb9a84	1220:	addu	s4, s7, s4
+0x2bcb9a88	1224:	lw	s6, 12(s4)
+0x2bcb9a8c	1228:	addu	s7, s5, s6
+0x2bcb9a90	1232:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9a94	1236:	b	PC=0x2bcb9a94	@ branch to block L11
+0x2bcb9a98	1240:	nop
+			@ Initial Temp REF set is 
+	L16:	1244:	@ entry point for branches
+--->Fixed instruction at 852(0x2bcb9914) to reference 1244
+          		@ MAP_PC idepth=0 javaPc=411 compiledPc=1244
+0x2bcb9a9c	1244:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9aa0	1248:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9aa4	1252:	lw	s6, 184(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9aa8	1256:	lw	s7, 36(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9aac	1260:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9ab0	1264:	addu	s5, t9, s6
+0x2bcb9ab4	1268:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9ab8	1272:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9abc	1276:	sltu	t7, t8, s6
+0x2bcb9ac0	1280:	bne	t7, zero, PC=0x2bcb9abc	@ br .skip
+0x2bcb9ac4	1284:	nop
+0x2bcb9ac8	1288:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9acc	1292:	nop
+		.skip
+--->Fixed instruction at 1280(0x2bcb9ac0) to reference 1296
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9ad0	1296:	sll	s4, t8, 2
+0x2bcb9ad4	1300:	addu	s4, s7, s4
+0x2bcb9ad8	1304:	lw	s6, 12(s4)
+0x2bcb9adc	1308:	addu	s7, s5, s6
+0x2bcb9ae0	1312:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9ae4	1316:	b	PC=0x2bcb9ae4	@ branch to block L11
+0x2bcb9ae8	1320:	nop
+			@ Initial Temp REF set is 
+	L17:	1324:	@ entry point for branches
+--->Fixed instruction at 860(0x2bcb991c) to reference 1324
+          		@ MAP_PC idepth=0 javaPc=438 compiledPc=1324
+0x2bcb9aec	1324:	lw	s5, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9af0	1328:	lw	s7, 8(s5)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9af4	1332:	lw	s6, 56(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+0x2bcb9af8	1336:	sw	s7, 28(JFP)	@ REF spill Java temp cell # 0
+0x2bcb9afc	1340:	lw	s7, -4(JFP)	@ Java local cell # 8
+0x2bcb9b00	1344:	sw	s7, -24(JFP)	@ Java local cell # 3
+			@ Outgoing local(7) reg(20): not in register
+0x2bcb9b04	1348:	lw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9b08	1352:	addiu	t7, zero, 98
+0x2bcb9b0c	1356:	bne	s6, t7, PC=0x2bcb9b08	@ branch to block L25
+0x2bcb9b10	1360:	nop
+          		@ Do getfield:
+0x2bcb9b14	1364:	lw	ra, 28(JFP)	@ Java temp cell # 0
+0x2bcb9b18	1368:	lw	s6, 188(ra)	@ value{I|F} = getfield(obj, fieldIdx);
+0x2bcb9b1c	1372:	addu	s4, s4, s6
+0x2bcb9b20	1376:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+0x2bcb9b24	1380:	b	PC=0x2bcb9b24	@ branch to block L26
+0x2bcb9b28	1384:	nop
+			@ Initial Temp REF set is 
+	L25:	1388:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(0) to reg(21)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 1356(0x2bcb9b0c) to reference 1388
+          		@ MAP_PC idepth=0 javaPc=468 compiledPc=1388
+          		@ Do getfield:
+0x2bcb9b2c	1388:	lw	s6, 8(s5)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9b30	1392:	lw	ra, 188(s6)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ do idiv by 2:
+0x2bcb9b34	1396:	sra	s6, ra, 31
+0x2bcb9b38	1400:	srl	t7, s6, 31
+0x2bcb9b3c	1404:	addu	s6, ra, t7
+0x2bcb9b40	1408:	sra	s6, s6, 1
+0x2bcb9b44	1412:	addu	s4, s4, s6
+0x2bcb9b48	1416:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L26:	1420:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(0) to reg(21)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 1380(0x2bcb9b24) to reference 1420
+          		@ MAP_PC idepth=0 javaPc=482 compiledPc=1420
+          		@ Do getfield:
+0x2bcb9b4c	1420:	lw	s6, 44(s5)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9b50	1424:	lw	ra, 8(s6)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9b54	1428:	sltu	t7, s7, ra
+0x2bcb9b58	1432:	bne	t7, zero, PC=0x2bcb9b54	@ br .skip
+0x2bcb9b5c	1436:	nop
+0x2bcb9b60	1440:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9b64	1444:	nop
+		.skip
+--->Fixed instruction at 1432(0x2bcb9b58) to reference 1448
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9b68	1448:	sll	t9, s7, 2
+0x2bcb9b6c	1452:	addu	t9, s6, t9
+0x2bcb9b70	1456:	lw	ra, 12(t9)
+0x2bcb9b74	1460:	addu	s6, s4, ra
+0x2bcb9b78	1464:	sw	s6, -8(JFP)	@ Java local cell # 7
+0x2bcb9b7c	1468:	b	PC=0x2bcb9b7c	@ branch to block L11
+0x2bcb9b80	1472:	nop
+			@ Initial Temp REF set is 
+	L18:	1476:	@ entry point for branches
+--->Fixed instruction at 868(0x2bcb9924) to reference 1476
+          		@ MAP_PC idepth=0 javaPc=497 compiledPc=1476
+0x2bcb9b84	1476:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9b88	1480:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9b8c	1484:	lw	s6, 168(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9b90	1488:	lw	s7, 56(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9b94	1492:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9b98	1496:	subu	s5, t9, s6
+0x2bcb9b9c	1500:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9ba0	1504:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9ba4	1508:	sltu	t7, t8, s6
+0x2bcb9ba8	1512:	bne	t7, zero, PC=0x2bcb9ba4	@ br .skip
+0x2bcb9bac	1516:	nop
+0x2bcb9bb0	1520:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9bb4	1524:	nop
+		.skip
+--->Fixed instruction at 1512(0x2bcb9ba8) to reference 1528
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9bb8	1528:	sll	s4, t8, 2
+0x2bcb9bbc	1532:	addu	s4, s7, s4
+0x2bcb9bc0	1536:	lw	s6, 12(s4)
+0x2bcb9bc4	1540:	subu	s7, s5, s6
+0x2bcb9bc8	1544:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9bcc	1548:	b	PC=0x2bcb9bcc	@ branch to block L11
+0x2bcb9bd0	1552:	nop
+			@ Initial Temp REF set is 
+	L19:	1556:	@ entry point for branches
+--->Fixed instruction at 876(0x2bcb992c) to reference 1556
+          		@ MAP_PC idepth=0 javaPc=524 compiledPc=1556
+0x2bcb9bd4	1556:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9bd8	1560:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9bdc	1564:	lw	s6, 176(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9be0	1568:	lw	s7, 16(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9be4	1572:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9be8	1576:	subu	s5, t9, s6
+0x2bcb9bec	1580:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9bf0	1584:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9bf4	1588:	sltu	t7, t8, s6
+0x2bcb9bf8	1592:	bne	t7, zero, PC=0x2bcb9bf4	@ br .skip
+0x2bcb9bfc	1596:	nop
+0x2bcb9c00	1600:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9c04	1604:	nop
+		.skip
+--->Fixed instruction at 1592(0x2bcb9bf8) to reference 1608
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9c08	1608:	sll	s4, t8, 2
+0x2bcb9c0c	1612:	addu	s4, s7, s4
+0x2bcb9c10	1616:	lw	s6, 12(s4)
+0x2bcb9c14	1620:	subu	s7, s5, s6
+0x2bcb9c18	1624:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9c1c	1628:	b	PC=0x2bcb9c1c	@ branch to block L11
+0x2bcb9c20	1632:	nop
+			@ Initial Temp REF set is 
+	L20:	1636:	@ entry point for branches
+--->Fixed instruction at 884(0x2bcb9934) to reference 1636
+          		@ MAP_PC idepth=0 javaPc=551 compiledPc=1636
+0x2bcb9c24	1636:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9c28	1640:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9c2c	1644:	lw	s6, 172(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9c30	1648:	lw	s7, 24(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9c34	1652:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9c38	1656:	subu	s5, t9, s6
+0x2bcb9c3c	1660:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9c40	1664:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9c44	1668:	sltu	t7, t8, s6
+0x2bcb9c48	1672:	bne	t7, zero, PC=0x2bcb9c44	@ br .skip
+0x2bcb9c4c	1676:	nop
+0x2bcb9c50	1680:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9c54	1684:	nop
+		.skip
+--->Fixed instruction at 1672(0x2bcb9c48) to reference 1688
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9c58	1688:	sll	s4, t8, 2
+0x2bcb9c5c	1692:	addu	s4, s7, s4
+0x2bcb9c60	1696:	lw	s6, 12(s4)
+0x2bcb9c64	1700:	subu	s7, s5, s6
+0x2bcb9c68	1704:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9c6c	1708:	b	PC=0x2bcb9c6c	@ branch to block L11
+0x2bcb9c70	1712:	nop
+			@ Initial Temp REF set is 
+	L21:	1716:	@ entry point for branches
+--->Fixed instruction at 892(0x2bcb993c) to reference 1716
+          		@ MAP_PC idepth=0 javaPc=578 compiledPc=1716
+0x2bcb9c74	1716:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9c78	1720:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9c7c	1724:	lw	s6, 180(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9c80	1728:	lw	s7, 32(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9c84	1732:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9c88	1736:	subu	s5, t9, s6
+0x2bcb9c8c	1740:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9c90	1744:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9c94	1748:	sltu	t7, t8, s6
+0x2bcb9c98	1752:	bne	t7, zero, PC=0x2bcb9c94	@ br .skip
+0x2bcb9c9c	1756:	nop
+0x2bcb9ca0	1760:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9ca4	1764:	nop
+		.skip
+--->Fixed instruction at 1752(0x2bcb9c98) to reference 1768
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9ca8	1768:	sll	s4, t8, 2
+0x2bcb9cac	1772:	addu	s4, s7, s4
+0x2bcb9cb0	1776:	lw	s6, 12(s4)
+0x2bcb9cb4	1780:	subu	s7, s5, s6
+0x2bcb9cb8	1784:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9cbc	1788:	b	PC=0x2bcb9cbc	@ branch to block L11
+0x2bcb9cc0	1792:	nop
+			@ Initial Temp REF set is 
+	L22:	1796:	@ entry point for branches
+--->Fixed instruction at 900(0x2bcb9944) to reference 1796
+          		@ MAP_PC idepth=0 javaPc=605 compiledPc=1796
+0x2bcb9cc4	1796:	lw	ra, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9cc8	1800:	lw	s7, 8(ra)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9ccc	1804:	lw	s6, 184(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9cd0	1808:	lw	s7, 40(ra)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9cd4	1812:	lw	t9, -8(JFP)	@ Java local cell # 7
+0x2bcb9cd8	1816:	subu	s5, t9, s6
+0x2bcb9cdc	1820:	lw	t8, -4(JFP)	@ Java local cell # 8
+0x2bcb9ce0	1824:	lw	s6, 8(s7)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9ce4	1828:	sltu	t7, t8, s6
+0x2bcb9ce8	1832:	bne	t7, zero, PC=0x2bcb9ce4	@ br .skip
+0x2bcb9cec	1836:	nop
+0x2bcb9cf0	1840:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9cf4	1844:	nop
+		.skip
+--->Fixed instruction at 1832(0x2bcb9ce8) to reference 1848
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9cf8	1848:	sll	s4, t8, 2
+0x2bcb9cfc	1852:	addu	s4, s7, s4
+0x2bcb9d00	1856:	lw	s6, 12(s4)
+0x2bcb9d04	1860:	subu	s7, s5, s6
+0x2bcb9d08	1864:	sw	s7, -8(JFP)	@ Java local cell # 7
+0x2bcb9d0c	1868:	b	PC=0x2bcb9d0c	@ branch to block L11
+0x2bcb9d10	1872:	nop
+			@ Initial Temp REF set is 
+	L23:	1876:	@ entry point for branches
+--->Fixed instruction at 908(0x2bcb994c) to reference 1876
+          		@ MAP_PC idepth=0 javaPc=632 compiledPc=1876
+0x2bcb9d14	1876:	lw	s5, -36(JFP)	@ Java local cell # 0
+          		@ Do getfield:
+0x2bcb9d18	1880:	lw	s7, 8(s5)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9d1c	1884:	lw	s6, 56(s7)	@ value{I|F} = getfield(obj, fieldIdx);
+0x2bcb9d20	1888:	sw	s7, 28(JFP)	@ REF spill Java temp cell # 0
+0x2bcb9d24	1892:	lw	s7, -4(JFP)	@ Java local cell # 8
+0x2bcb9d28	1896:	sw	s7, -28(JFP)	@ Java local cell # 2
+			@ Outgoing local(7) reg(20): not in register
+0x2bcb9d2c	1900:	lw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9d30	1904:	addiu	t7, zero, 119
+0x2bcb9d34	1908:	bne	s6, t7, PC=0x2bcb9d30	@ branch to block L27
+0x2bcb9d38	1912:	nop
+          		@ Do getfield:
+0x2bcb9d3c	1916:	lw	ra, 28(JFP)	@ Java temp cell # 0
+0x2bcb9d40	1920:	lw	s6, 188(ra)	@ value{I|F} = getfield(obj, fieldIdx);
+0x2bcb9d44	1924:	subu	s4, s4, s6
+0x2bcb9d48	1928:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+0x2bcb9d4c	1932:	b	PC=0x2bcb9d4c	@ branch to block L28
+0x2bcb9d50	1936:	nop
+			@ Initial Temp REF set is 
+	L27:	1940:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(0) to reg(21)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 1908(0x2bcb9d34) to reference 1940
+          		@ MAP_PC idepth=0 javaPc=662 compiledPc=1940
+          		@ Do getfield:
+0x2bcb9d54	1940:	lw	s6, 8(s5)	@ valueObj = getfield(obj, fieldIdx);
+          		@ Do getfield:
+0x2bcb9d58	1944:	lw	ra, 188(s6)	@ value{I|F} = getfield(obj, fieldIdx);
+          		@ do idiv by 2:
+0x2bcb9d5c	1948:	sra	s6, ra, 31
+0x2bcb9d60	1952:	srl	t7, s6, 31
+0x2bcb9d64	1956:	addu	s6, ra, t7
+0x2bcb9d68	1960:	sra	s6, s6, 1
+0x2bcb9d6c	1964:	subu	s4, s4, s6
+0x2bcb9d70	1968:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(0) reg(21): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L28:	1972:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(0) to reg(21)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 1932(0x2bcb9d4c) to reference 1972
+          		@ MAP_PC idepth=0 javaPc=676 compiledPc=1972
+          		@ Do getfield:
+0x2bcb9d74	1972:	lw	s6, 48(s5)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9d78	1976:	lw	ra, 8(s6)	@ arraylength
+          		@ deferred comparison: 
+0x2bcb9d7c	1980:	sltu	t7, s7, ra
+0x2bcb9d80	1984:	bne	t7, zero, PC=0x2bcb9d7c	@ br .skip
+0x2bcb9d84	1988:	nop
+0x2bcb9d88	1992:	jal	PC=(0x2bcb8084)	@ ArrayIndexOutOfBounds check
+0x2bcb9d8c	1996:	nop
+		.skip
+--->Fixed instruction at 1984(0x2bcb9d80) to reference 2000
+          		@ Do load(arrayObj, index) (elem type=3,I):
+0x2bcb9d90	2000:	sll	t9, s7, 2
+0x2bcb9d94	2004:	addu	t9, s6, t9
+0x2bcb9d98	2008:	lw	ra, 12(t9)
+0x2bcb9d9c	2012:	subu	s6, s4, ra
+0x2bcb9da0	2016:	sw	s6, -8(JFP)	@ Java local cell # 7
+			@ Initial Temp REF set is 
+	L11:	2020:	@ entry point for branches
+--->Fixed instruction at 1868(0x2bcb9d0c) to reference 2020
+--->Fixed instruction at 1788(0x2bcb9cbc) to reference 2020
+--->Fixed instruction at 1708(0x2bcb9c6c) to reference 2020
+--->Fixed instruction at 1628(0x2bcb9c1c) to reference 2020
+--->Fixed instruction at 1548(0x2bcb9bcc) to reference 2020
+--->Fixed instruction at 1468(0x2bcb9b7c) to reference 2020
+--->Fixed instruction at 1316(0x2bcb9ae4) to reference 2020
+--->Fixed instruction at 1236(0x2bcb9a94) to reference 2020
+--->Fixed instruction at 1156(0x2bcb9a44) to reference 2020
+--->Fixed instruction at 1076(0x2bcb99f4) to reference 2020
+--->Fixed instruction at 996(0x2bcb99a4) to reference 2020
+--->Fixed instruction at 916(0x2bcb9954) to reference 2020
+--->Fixed instruction at 792(0x2bcb98d8) to reference 2020
+          		@ MAP_PC idepth=0 javaPc=688 compiledPc=2020
+0x2bcb9da4	2020:	lw	ra, -4(JFP)	@ Java local cell # 8
+0x2bcb9da8	2024:	addiu	s7, ra, 1
+0x2bcb9dac	2028:	sw	s7, -4(JFP)	@ Java local cell # 8
+			@ Outgoing local(0) reg(20): not in register
+0x2bcb9db0	2032:	lw	s4, -36(JFP)	@ Java local cell # 0
+			@ Outgoing local(5) reg(21): not in register
+0x2bcb9db4	2036:	lw	s5, -16(JFP)	@ Java local cell # 5
+			@ Outgoing local(4) reg(22): not in register
+0x2bcb9db8	2040:	lw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(8) reg(23): in correct register
+			@ Initial Temp REF set is 
+	L1:	2044:	@ entry point for branches
+			@ Binding Incoming Local(0) to reg(20)
+			@ Binding Incoming Local(5) to reg(21)
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(8) to reg(23)
+--->Fixed instruction at 140(0x2bcb964c) to reference 2044
+          		@ MAP_PC idepth=0 javaPc=691 compiledPc=2044
+			@ Outgoing local(4) reg(22): in correct register
+			@ Outgoing local(8) reg(23): in correct register
+          		@ deferred comparison: 
+          		@ Patchable backwards branch:
+0x2bcb9dbc	2044:	sltiu	t7, s7, 64
+0x2bcb9dc0	2048:	bne	t7, zero, PC=0x2bcb9654	@ branch to block L2
+0x2bcb9dc4	2052:	nop
+0x2bcb9dbc	2044:	sltiu	t7, s7, 64
+0x2bcb9dc0	2048:	bne	t7, zero, PC=0x2bcb9664	@ branch to block L2, skip GC
+0x2bcb9dc4	2052:	nop
+			@ Outgoing local(7) reg(20): not in register
+0x2bcb9dc8	2056:	lw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+          		@ deferred comparison: 
+0x2bcb9dcc	2060:	addiu	t7, zero, 10
+0x2bcb9dd0	2064:	slt	t7, t7, s5
+0x2bcb9dd4	2068:	beq	t7, zero, PC=0x2bcb9dcc	@ branch to block L29
+0x2bcb9dd8	2072:	nop
+          		@ Do getfield:
+0x2bcb9ddc	2076:	lw	t9, -36(JFP)	@ Java local cell # 0
+0x2bcb9de0	2080:	lw	ra, 8(t9)	@ valueObj = getfield(obj, fieldIdx);
+0x2bcb9de4	2084:	sw	t9, 0(JSP)
+0x2bcb9de8	2088:	lw	t8, -32(JFP)	@ Java local cell # 1
+0x2bcb9dec	2092:	sw	t8, 4(JSP)
+0x2bcb9df0	2096:	sw	ra, 8(JSP)
+0x2bcb9df4	2100:	lw	ra, -28(JFP)	@ Java local cell # 2
+0x2bcb9df8	2104:	sw	ra, 12(JSP)
+0x2bcb9dfc	2108:	lw	t6, -24(JFP)	@ Java local cell # 3
+0x2bcb9e00	2112:	sw	t6, 16(JSP)
+          		@ Fetch mb from vtable:
+0x2bcb9e04	2116:	lw	t5, 0(t9)	@ Get object.cb
+0x2bcb9e08	2120:	addiu	t7, zero, -4
+0x2bcb9e0c	2124:	and	t5, t5, t7
+0x2bcb9e10	2128:	lw	t5, 76(t5)	@ Get cb.vtbl
+0x2bcb9e14	2132:	lw	a0, 48(t5)	@ method = cb.vtbl[methodIdx]
+          		@ Invoke a method w/ a 32bit return type
+0x2bcb9e18	2136:	addiu	JSP, JSP, 20	@ adjust JSP before method call
+0x2bcb9e1c	2140:	lw	s7, 0(a0)	@ call method through mb
+0x2bcb9e20	2144:	jalr	s7
+0x2bcb9e24	2148:	nop
+          		@ Captured a stackmap here.
+0x2bcb9e28	2152:	addiu	JSP, JSP, -4	@ do manual pre decrement
+0x2bcb9e2c	2156:	lw	s7, 0(JSP)
+0x2bcb9e30	2160:	sw	s7, -12(JFP)	@ Java local cell # 6
+			@ Outgoing local(7) reg(20): not in register
+0x2bcb9e34	2164:	lw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(5) reg(21): not in register
+0x2bcb9e38	2168:	lw	s5, -16(JFP)	@ Java local cell # 5
+			@ Outgoing local(4) reg(22): not in register
+0x2bcb9e3c	2172:	lw	s6, -20(JFP)	@ Java local cell # 4
+			@ Outgoing local(6) reg(23): in correct register
+          		@ deferred comparison: 
+0x2bcb9e40	2176:	sltiu	t7, s7, 0
+0x2bcb9e44	2180:	beq	t7, zero, PC=0x2bcb9e40	@ branch to block L30
+0x2bcb9e48	2184:	nop
+0x2bcb9e4c	2188:	addiu	ra, s7, -1
+0x2bcb9e50	2192:	sw	ra, -12(JFP)	@ Java local cell # 6
+0x2bcb9e54	2196:	mult	ra, ra
+0x2bcb9e58	2200:	mflo	s7
+0x2bcb9e5c	2204:	nop
+0x2bcb9e60	2208:	nop
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+          		@ deferred comparison: 
+0x2bcb9e64	2212:	sltiu	t7, s7, 50
+0x2bcb9e68	2216:	beq	t7, zero, PC=0x2bcb9e64	@ branch to block L31
+0x2bcb9e6c	2220:	nop
+0x2bcb9e70	2224:	mult	ra, ra
+0x2bcb9e74	2228:	mflo	s7
+0x2bcb9e78	2232:	nop
+0x2bcb9e7c	2236:	nop
+0x2bcb9e80	2240:	subu	s4, s4, s7
+0x2bcb9e84	2244:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+0x2bcb9e88	2248:	b	PC=0x2bcb9e88	@ branch to block L29
+0x2bcb9e8c	2252:	nop
+			@ Initial Temp REF set is 
+	L31:	2256:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(5) to reg(21)
+			@ Binding Incoming Local(4) to reg(22)
+--->Fixed instruction at 2216(0x2bcb9e68) to reference 2256
+          		@ MAP_PC idepth=0 javaPc=749 compiledPc=2256
+0x2bcb9e90	2256:	addiu	s4, s4, -50
+0x2bcb9e94	2260:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+0x2bcb9e98	2264:	b	PC=0x2bcb9e98	@ branch to block L29
+0x2bcb9e9c	2268:	nop
+			@ Initial Temp REF set is 
+	L30:	2272:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(5) to reg(21)
+			@ Binding Incoming Local(4) to reg(22)
+			@ Binding Incoming Local(6) to reg(23)
+--->Fixed instruction at 2180(0x2bcb9e44) to reference 2272
+          		@ MAP_PC idepth=0 javaPc=755 compiledPc=2272
+0x2bcb9ea0	2272:	addiu	ra, s7, 1
+0x2bcb9ea4	2276:	sw	ra, -12(JFP)	@ Java local cell # 6
+0x2bcb9ea8	2280:	mult	ra, ra
+0x2bcb9eac	2284:	mflo	s7
+0x2bcb9eb0	2288:	nop
+0x2bcb9eb4	2292:	nop
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+          		@ deferred comparison: 
+0x2bcb9eb8	2296:	sltiu	t7, s7, 50
+0x2bcb9ebc	2300:	beq	t7, zero, PC=0x2bcb9eb8	@ branch to block L32
+0x2bcb9ec0	2304:	nop
+0x2bcb9ec4	2308:	mult	ra, ra
+0x2bcb9ec8	2312:	mflo	s7
+0x2bcb9ecc	2316:	nop
+0x2bcb9ed0	2320:	nop
+0x2bcb9ed4	2324:	addu	s4, s4, s7
+0x2bcb9ed8	2328:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+0x2bcb9edc	2332:	b	PC=0x2bcb9edc	@ branch to block L29
+0x2bcb9ee0	2336:	nop
+			@ Initial Temp REF set is 
+	L32:	2340:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(5) to reg(21)
+			@ Binding Incoming Local(4) to reg(22)
+--->Fixed instruction at 2300(0x2bcb9ebc) to reference 2340
+          		@ MAP_PC idepth=0 javaPc=781 compiledPc=2340
+0x2bcb9ee4	2340:	addiu	s4, s4, 50
+0x2bcb9ee8	2344:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Outgoing local(5) reg(21): in correct register
+			@ Outgoing local(4) reg(22): in correct register
+			@ Initial Temp REF set is 
+	L29:	2348:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+			@ Binding Incoming Local(5) to reg(21)
+			@ Binding Incoming Local(4) to reg(22)
+--->Fixed instruction at 2332(0x2bcb9edc) to reference 2348
+--->Fixed instruction at 2264(0x2bcb9e98) to reference 2348
+--->Fixed instruction at 2248(0x2bcb9e88) to reference 2348
+--->Fixed instruction at 2068(0x2bcb9dd4) to reference 2348
+          		@ MAP_PC idepth=0 javaPc=784 compiledPc=2348
+			@ Outgoing local(7) reg(20): in correct register
+          		@ deferred comparison: 
+0x2bcb9eec	2348:	addiu	t7, zero, 2
+0x2bcb9ef0	2352:	slt	t7, t7, s5
+0x2bcb9ef4	2356:	beq	t7, zero, PC=0x2bcb9eec	@ branch to block L33
+0x2bcb9ef8	2360:	nop
+0x2bcb9efc	2364:	sll	s7, s6, 2	@ imul by 4
+0x2bcb9f00	2368:	addu	s4, s4, s7
+0x2bcb9f04	2372:	sw	s4, -8(JFP)	@ Java local cell # 7
+			@ Outgoing local(7) reg(20): in correct register
+			@ Initial Temp REF set is 
+	L33:	2376:	@ entry point for branches
+			@ Binding Incoming Local(7) to reg(20)
+--->Fixed instruction at 2356(0x2bcb9ef4) to reference 2376
+          		@ MAP_PC idepth=0 javaPc=799 compiledPc=2376
+0x2bcb9f08	2376:	sw	s4, -36(JFP)	@ Java local cell # 0
+0x2bcb9f0c	2380:	addiu	JSP, JFP, -32
+0x2bcb9f10	2384:	lw	t8, 0(JFP)	@ PREV(t8) = frame.prevX for return helper to use
+0x2bcb9f14	2388:	b	PC=0x2bcb9178	@ goto CVMCCMreturnFromMethod
+0x2bcb9f18	2392:	nop
+0x2bcb9f1c	2396:	.word	734763252
+--->Fixed instruction at 800(0x2bcb98e0) to reference 2396
+>>>>>>>>>Push Code Buffer to PC = 0 (0x2bcb95c0) >>>>>>>>
+          		@ Capacity is 23 word(s)
+0x2bcb95c0	0:	addiu	a1, JSP, 84
+<<<<<<<<<Pop Code Buffer to PC = 2400 (0x2bcb9f20) <<<<<<<<<
+>>>>>>>>>Push Code Buffer to PC = 80 (0x2bcb9610) >>>>>>>>
+          		@ spillSize is 1 word(s), add to JFP+28
+0x2bcb9610	80:	addiu	JSP, JFP, 32
+          		@ setup cp base register
+0x2bcb9614	84:	lui	CP, hi16(0x2bcb)
+0x2bcb9618	88:	ori	CP, CP, lo16(0x2bcb9f1c)
+0x2bcb961c	92:	sw	CP, 24(JFP)	@ save to frame->cpBaseRegX
+<<<<<<<<<Pop Code Buffer to PC = 2400 (0x2bcb9f20) <<<<<<<<<

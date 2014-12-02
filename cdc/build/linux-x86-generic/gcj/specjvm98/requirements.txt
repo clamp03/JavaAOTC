@@ -1,0 +1,88 @@
+[<b>SPEC</b>] JVM Client98
+Help                                                     System Requirements
+
+SPEC intends that this benchmark suite be applicable to networked and
+standalone Java client computers, either with disk (e.g., PC, workstation)
+or without disk (e.g., network computer) executing programs in an ordinary
+Java platform environment. Specific system requirements are:
+
+Java Virtual Machine
+
+A JVM compatible with Java version 1.1 or later or required. These
+benchmarks will not run on 1.0.2 based systems. These benchmarks are
+relatively stressful, and may expose bugs in a JVM which have not previously
+been noted. In such case some of the benchmarks may fail to run or may give
+incorrect results. SPECjvm98 metrics for such systems may not be reported
+until the bugs are corrected and a valid run is made.
+
+The InstallShield installation program is looking for a JVM with version
+number 1.1 (or 1.1.X). If you are using a JVM version 1.2, it may complain
+that you don't have an up-to-date JVM. You should be able to select it
+anyway and continue successfully with the installation. However, in case
+that fails, there are two work-arounds: 1) install the benchmarks with
+version 1.1 and then proceed to run them with 1.2; or 2) install the
+benchmarks from the install.tar.gz archive.
+
+The benchmark suite is run as an applet from a web browser or applet viewer;
+see Using the Benchmarks. Some of the products that have been tested with
+this suite are:
+
+   * Java Development Kit (JDK) 1.1.X
+   * Microsoft Internet Explorer 4.01
+   * Netscape Navigator 4.05 (See Common Problems)
+   * Sun HotJava 1.X
+
+Memory
+
+The benchmarks generally require a system with about 32MB of memory.
+Different Java implementations may require more or less memory, and
+different operating systems may require different amounts of additional
+memory. Systems with less memory may be able to run the benchmarks, albeit
+with some performance penalty if additional garbage collection is required.
+Correspondingly, systems with a great deal more memory may be able to run
+the benchmarks faster.
+
+Accordingly SPEC reports results in three categories of physical memory
+sizes:
+
+   * 0 through 48MB
+   * from 48MB through 256 MB
+   * greater than 256MB
+
+Disk
+
+No local disk is required.
+
+Processor and Speed
+
+No particular processor or speed is required. However, your patience to wait
+for results may impose some practical limit on processor speed. A typical
+(three executions of each benchmark) run of the suite on the reference
+machine, a 133MHz PowerPC 604, takes four to five hours elapsed time.
+
+Operating System
+
+No particular type of operating system is required. However, refer the the
+Common Problems section of the Users Guide for a bug in this version
+affecting MacOS and mainframe operating systems.
+
+Web Server
+
+For reportable results a web server is required to store the benchmark
+suite, and to serve class and data files to the benchmark applet. This web
+server may be on another machine networked to the client system under test,
+or the web server may be located on the client machine (http://localhost) in
+which case no network is required.
+
+For research purposes the benchmarks may be run directly from local disk
+either as an applet or as an application.
+
+Graphics
+
+Reportable results require use of the SPEC tool harness which requires a
+graphics display. For research purposes the benchmarks may be run from the
+command line in which case the tool harness will not use an interactive GUI.
+
+  ------------------------------------------------------------------------
+
+[Image] Next topic: Using the Benchmarks

@@ -1,0 +1,1026 @@
+This is a rough document that gives advice on how to determine the best
+amount of lookahead for a particular Jack grammar.
+
+First, some background:
+
+Jack works as a combination of a lexical engine and a parser engine.  The
+lexemes (or tokens) are defined by constructs within angular brackets <...>
+in the Jack input file.  These are collected together and handled in a
+manner very similar to traditional lexical engines such as lex.  However,
+Jack allows an extra capability - to categorize tokens as IGNORE_IN_BNF
+which means they are not sent to the parser engine.  Otherwise the tokens
+are sent to the parser engine.
+
+The parser engine works from this sequence of tokens and attempts to match
+it to the productions in the Jack grammar.  At various choice points, the
+parser engine needs to determine which choice to take, and it does this by
+"looking ahead" at the token stream as much as necessary to make this
+determination.  Unfortunately, this process of looking ahead too many tokens
+is expensive and traditional parsers such as yacc limit this lookahead to
+just one token.  This works out well in most cases, but sometimes one may
+have to rewrite a production or two to make this single token lookahead
+possible.  This causes the grammar to be counter-intuitive and possibly
+may cause it to go out of sync with the official and more human readable
+BNF grammar.
+
+Lookahead in Jack:
+
+In Jack, the parser engine is capable of handling any amount of lookahead,
+and furthermore, the lookahead can be different for different choice
+points (where a choice of expansion needs to be made).  Hence, the grammar
+can be maintained in a more human readable manner.
+
+The way the lookahead is specified in Jack is as follows:
+
+1. Specify the default lookahead amount.  This can be done at the beginning
+   of the Jack input file, or as a command line option.  If this is not
+   specified, Jack assumes a default lookahead of 1.
+
+2. Then at various choice points where the default lookahead is not
+   applicable, a local lookahead specification can be used to modify the
+   default for this choice point only.  A local lookahead specification
+   can specify one of two items:
+
+   a. The number of tokens to lookahead.  This is specified using as
+      "LOOKAHEAD(4)" for example.  Here the lookahead is modified to
+      look ahead 4 tokens.
+
+   b. A special lookahead production.  This is specified as
+      "LOOKAHEAD(some-bnf).  Here the lookahead is a successful match
+      of "some-bnf".  An unlimited number of tokens will be used to
+      attempt this match.
+
+These concepts explained below using the Java grammar that comes with
+this Jack release.  The grammar is annotated with English text.  Searching
+for "LOOKAHEAD" will take you to all the relevant portions of this grammar.
+
+First, an explanation of the choice points.
+
+In a Jack input grammar, the following are choice points:
+
+1. Any place where there is:  E1 | E2 | ...  where a choice between
+   E1, E2, etc. need to be made.  With the specified lookahead, the
+   first successful match is used.
+
+2. Any occurrence of ( E )*, ( E )+, ( E )?, or [ E ].  In each of these
+   cases, the parser engine has to determine whether or not to match the
+   input token stream to E, or the to the following rules in the grammar.
+
+The Java grammar follows.  Please search for "LOOKAHEAD" to locate all the
+included explanations.
+
+Running Jack with the SANITY_CHECK option set to true will cause Jack to
+study the entire grammar and will report to you all choice points where
+a lookahead of 1 is insufficient to make an unambiguous choice.  In some
+cases (such as the dangling else feature), leaving this as is is the
+correct decision, but in most cases, you should go from this report to
+the grammar and insert the lookahead information manually.
+
+
+LOOKAHEAD(1)
+
+****   The above look ahead specification sets the default lookahead
+****   amount for all choice points to 1 unless the lookahead has been
+****   explicitly modified at the choice points in the grammar.  In
+****   this grammar, this explicit modification does happen at a few
+****   points below.
+
+PARSER_BEGIN(JavaParser)
+
+class JavaParser {}
+
+PARSER_END(JavaParser)
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| <COMMENT_A: "//" (~["\n","\r"])* ("\n"|"\r\n")>
+| <COMMENT_B: "/*" (~["*"])* "*" (~["/"] (~["*"])* "*")* "/">
+}
+
+TOKEN : /* KEYWORDS */
+{}
+{
+  < ABSTRACT: "abstract" >
+| < BOOLEAN: "boolean" >
+| < BREAK: "break" >
+| < BYTE: "byte" >
+| < CASE: "case" >
+| < CAST: "cast" >
+| < CATCH: "catch" >
+| < CHAR: "char" >
+| < CLASS: "class" >
+| < CONST: "const" >
+| < CONTINUE: "continue" >
+| < DEFAULT: "default" >
+| < DO: "do" >
+| < DOUBLE: "double" >
+| < ELSE: "else" >
+| < EXTENDS: "extends" >
+| < FINAL: "final" >
+| < FINALLY: "finally" >
+| < FLOAT: "float" >
+| < FOR: "for" >
+| < FUTURE: "future" >
+| < GENERIC: "generic" >
+| < GOTO: "goto" >
+| < IF: "if" >
+| < IMPLEMENTS: "implements" >
+| < IMPORT: "import" >
+| < INNER: "inner" >
+| < INSTANCEOF: "instanceof" >
+| < INT: "int" >
+| < INTERFACE: "interface" >
+| < LONG: "long" >
+| < NATIVE: "native" >
+| < NEW: "new" >
+| < NULL: "null" >
+| < OPERATOR: "operator" >
+| < OUTER: "outer" >
+| < PACKAGE: "package">
+| < PRIVATE: "private" >
+| < PROTECTED: "protected" >
+| < PUBLIC: "public" >
+| < REST: "rest" >
+| < RETURN: "return" >
+| < SHORT: "short" >
+| < STATIC: "static" >
+| < SUPER: "super" >
+| < SWITCH: "switch" >
+| < SYNCHRONIZED: "synchronized" >
+| < THIS: "this" >
+| < THROW: "throw" >
+| < THROWS: "throws" >
+| < TRANSIENT: "transient" >
+| < TRY: "try" >
+| < VAR: "var" >
+| < VOID: "void" >
+| < VOLATILE: "volatile" >
+| < WHILE: "while" >
+}
+
+TOKEN : /* LITERALS */
+{}
+{
+  < LITERAL:
+        <INTEGER_LITERAL>
+      | <FLOATING_POINT_LITERAL>
+      | <BOOLEAN_LITERAL>
+      | <CHARACTER_LITERAL>
+      | <STRING_LITERAL>
+  >
+|
+  < #INTEGER_LITERAL:
+        <DECIMAL_LITERAL> (["l","L"])?
+      | <HEX_LITERAL> (["l","L"])?
+      | <OCTAL_LITERAL> (["l","L"])?
+  >
+|
+  < #DECIMAL_LITERAL: ["1"-"9"] (["0"-"9"])* >
+|
+  < #HEX_LITERAL: "0" ["x","X"] (["0"-"9","a"-"f","A"-"F"])+ >
+|
+  < #OCTAL_LITERAL: "0" (["0"-"7"])* >
+|
+  < #FLOATING_POINT_LITERAL:
+        (["0"-"9"])+ "." (["0"-"9"])* (<EXPONENT>)? (["f","F","d","D"])?
+      | "." (["0"-"9"])+ (<EXPONENT>)? (["f","F","d","D"])?
+      | (["0"-"9"])+ (<EXPONENT>)? (["f","F","d","D"])?
+  >
+|
+  < #EXPONENT: ["e","E"] (["+","-"])? (["0"-"9"])+ >
+|
+  < #BOOLEAN_LITERAL: "true" | "false" >
+|
+  < #CHARACTER_LITERAL:
+      "'"
+      (   (~["'","\\","\n","\r"])
+        | ("\\" ["n","t","b","r","f","\\","'","\""])
+      )
+      "'"
+  >
+|
+  < #STRING_LITERAL:
+      "\""
+      (   (~["\"","\\","\n","\r"])
+        | ("\\" ["n","t","b","r","f","\\","'","\""])
+      )*
+      "\""
+  >
+}
+
+TOKEN : /* IDENTIFIERS */
+{}
+{
+  < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>)* >
+|
+  < #LETTER:
+      [
+       "\u0024",
+       "\u0041"-"\u005a",
+       "\u005f",
+       "\u0061"-"\u007a",
+       "\u00c0"-"\u00d6",
+       "\u00d8"-"\u00f6",
+       "\u00f8"-"\u00ff",
+       "\u0100"-"\u1fff",
+       "\u3040"-"\u318f",
+       "\u3300"-"\u337f",
+       "\u3400"-"\u3d2d",
+       "\u4e00"-"\u9fff",
+       "\uf900"-"\ufaff"
+      ]
+  >
+|
+  < #DIGIT:
+      [
+       "\u0030"-"\u0039",
+       "\u0660"-"\u0669",
+       "\u06f0"-"\u06f9",
+       "\u0966"-"\u096f",
+       "\u09e6"-"\u09ef",
+       "\u0a66"-"\u0a6f",
+       "\u0ae6"-"\u0aef",
+       "\u0b66"-"\u0b6f",
+       "\u0be7"-"\u0bef",
+       "\u0c66"-"\u0c6f",
+       "\u0ce6"-"\u0cef",
+       "\u0d66"-"\u0d6f",
+       "\u0e50"-"\u0e59",
+       "\u0ed0"-"\u0ed9",
+       "\u1040"-"\u1049"
+      ]
+  >
+}
+
+TOKEN : /* SEPERATORS */
+{}
+{
+  < LPAREN: "(" >
+| < RPAREN: ")" >
+| < LBRACE: "{" >
+| < RBRACE: "}" >
+| < LBRACKET: "[" >
+| < RBRACKET: "]" >
+| < SEMICOLON: ";" >
+| < COMMA: "," >
+| < DOT: "." >
+}
+
+TOKEN : /* OPERATORS */
+{}
+{
+  < ASSIGN: "=" >
+| < GT: ">" >
+| < LT: "<" >
+| < BANG: "!" >
+| < TILDE: "~" >
+| < HOOK: "?" >
+| < COLON: ":" >
+| < EQ: "==" >
+| < LE: "<=" >
+| < GE: ">=" >
+| < NE: "!=" >
+| < SC_OR: "||" >
+| < SC_AND: "&&" >
+| < INCR: "++" >
+| < DECR: "--" >
+| < PLUS: "+" >
+| < MINUS: "-" >
+| < STAR: "*" >
+| < SLASH: "/" >
+| < BIT_AND: "&" >
+| < BIT_OR: "|" >
+| < XOR: "^" >
+| < REM: "%" >
+| < LSHIFT: "<<" >
+| < RSHIFT: ">>" >
+| < RSIGNSHIFT: ">>>" >
+| < PLUSASSIGN: "+=" >
+| < MINUSASSIGN: "-=" >
+| < STARASSIGN: "*=" >
+| < SLASHASSIGN: "/=" >
+| < ANDASSIGN: "&=" >
+| < ORASSIGN: "|=" >
+| < XORASSIGN: "^=" >
+| < REMASSIGN: "%=" >
+| < LSHIFTASSIGN: "<<=" >
+| < RSHIFTASSIGN: ">>=" >
+| < RSIGNSHIFTASSIGN: ">>>=" >
+}
+
+
+/*****************************************
+ * THE JAVA LANGUAGE GRAMMAR STARTS HERE *
+ *****************************************/
+
+
+/*
+ * Program structuring syntax follows.
+ */
+
+void CompilationUnit() :
+{
+}
+{
+  ( PackageStatement() )?
+  ( ImportStatement() )*
+  ( TypeDeclaration() )*
+  <EOF>
+}
+
+void PackageStatement() :
+{}
+{
+  "package" Name() ";"
+}
+
+void ImportStatement() :
+{}
+{
+  "import" Name() [ "." "*" ] ";"
+}
+
+void TypeDeclaration() :
+{}
+{
+  LOOKAHEAD( ( "abstract" | "final" | "public" )* "class" )
+  ClassDeclaration()
+|
+  InterfaceDeclaration()
+}
+
+****   The production above for TypeDeclaration expands to either
+****   ClassDeclaration or InterfaceDeclaration.  Unfortunately, by
+****   simply looking ahead one token, it is not possible to make a
+****   decision as to which choice to take.  If the lookahead were
+****   restricted to 1, the parser engine would choose the first
+****   production always, which is wrong.  Even more unfortunate in
+****   this example is that (theoretically) any amount of lookahead is
+****   insufficient to make this determination since the grammar for
+****   the two choices allow for an uneding list of prefixes (such as
+****   abstract and public) before the token that disambiguates the
+****   two - namely "class" or "interface".  The lookahead specified
+****   above for the first choice is the form that takes a grammar
+****   rule.  In this case, it takes the grammar that specifies zero
+****   or more occurrences of "abstract", "final", and "public"
+****   finally followed by "class".  Basically, it says that if the
+****   engine looks ahead and matches this pattern, then the choice
+****   ClassDeclaration is taken.  Otherwise, the other choice,
+****   InterfaceDeclaration, is taken.  While theoretically, the
+****   number of tokens to lookahead can be very large, in practice,
+****   it is usually very small and therefore there is no performance
+****   overhead to pay for this in practice.  This form of lookahead
+****   is usually referred to as "infinite lookahead".  Note that the
+****   following lookahead specification could also have worked:
+****   LOOKAHEAD(ClassDeclaration).  That is the rule to lookahead is
+****   basically to try parsing the choice all the way and then really
+****   parse it.  While this works, it is less efficient than the
+****   version used above since the version used above stops after
+****   seeing the token "class".
+
+
+/*
+ * Declaration syntax follows.
+ */
+
+void ClassDeclaration() :
+{}
+{
+  ( "abstract" | "final" | "public" )*
+  "class" <IDENTIFIER>
+  [ "extends" Name() ]
+  [ "implements" NameList() ]
+  "{" ( ClassFieldDeclaration() )* "}"
+}
+
+void ClassFieldDeclaration() :
+{}
+{
+  LOOKAHEAD(2)
+  StaticInitializer()
+|
+  LOOKAHEAD( [ "public" | "protected" | "private" ] Name() "(" )
+  ConstructorDeclaration()
+|
+  LOOKAHEAD( MethodDeclarationLookahead() )
+  MethodDeclaration()
+|
+  FieldVariableDeclaration()
+}
+
+****   Here we have another example of lookahead rules for
+****   ClassFieldDeclaration.  The choice of StaticInitializer is
+****   prefixed by LOOKAHEAD(2).  This is because one token lookahead
+****   is not sufficient to decide on this choice, but two tokens
+****   "static {" is sufficient.  The second choice in this
+****   production, ConstructorDeclaration also requires more than one
+****   token of lookahead to differentiate it from the choices that
+****   follow it.  Its only after seeing the "(" immediately after the
+****   type name that we can say for sure that it is a constructor.
+****   For the third choice, we decided that the lookahead
+****   specification was too complicated to place inline and so we
+****   defined a new non-terminal MethodDeclarationLookahead.  This
+****   non-terminal is used only for lookahead determination and is
+****   defined below.
+
+// This production is to determine lookahead only.
+void MethodDeclarationLookahead() :
+{}
+{
+  ( "public" | "protected" | "private" | "static" | "abstract" | "final" | "native" | "synchronized" )*
+  ResultType() DeclaratorName() "("
+}
+
+void InterfaceDeclaration() :
+{}
+{
+  ( "abstract" | "public" )*
+  "interface" <IDENTIFIER>
+  ( "extends" Name() )*
+  "{" ( InterfaceFieldDeclaration() )* "}"
+}
+
+void InterfaceFieldDeclaration() :
+{}
+{
+  LOOKAHEAD( MethodDeclarationLookahead() )
+  MethodDeclaration()
+|
+  FieldVariableDeclaration()
+}
+
+****   The lookahead specification above is the same as in the case of
+****   the third choice of ClassFieldDeclaration since its use is
+****   identical.
+
+void FieldVariableDeclaration() :
+{}
+{
+  ( "public" | "protected" | "private" | "static" | "final" | "transient" | "volatile" )*
+  Type()
+  VariableDeclarator() ( "," VariableDeclarator() )*
+  ";"
+}
+
+void VariableDeclarator() :
+{}
+{
+  DeclaratorName() [ "=" VariableInitializer() ]
+}
+
+void DeclaratorName() :
+{}
+{
+  <IDENTIFIER> ( "[" "]" )*
+}
+
+void VariableInitializer() :
+{}
+{
+  "{" [ VariableInitializer() ( LOOKAHEAD(2) "," VariableInitializer() )* [ "," ] ] "}"
+|
+  Expression()
+}
+
+****   Above is an interesting use of lookahead.  Since Java allows a
+****   comma to appear at the end of an array variable initializer,
+****   the parser engine cannot say by simply looking at the comma
+****   whether or not another variable initializer is going to appear.
+****   Hence a lookahead of 2 is required here to disambiguate the
+****   choice.  This is a point at which you may start wondering how
+****   you can ever get all lookaheads specified accurately in your
+****   input grammar.  For example, if you miss the above lookahead
+****   specification, you may never realize it unless you actually try
+****   to parse a Java program with a trailing comma in its
+****   initializer list.  Fortunately, we will soon be building a tool
+****   that will go through your grammar and let you know where more
+****   lookahead may be required.  Sometimes you may wish to ignore
+****   the recommendation of this tool as in the case of the dangling
+****   else resolution that is automatically done (see below).
+
+void MethodDeclaration() :
+{}
+{
+  ( "public" | "protected" | "private" | "static" | "abstract" | "final" | "native" | "synchronized" )*
+  ResultType()
+  MethodDeclarator()
+  [ "throws" NameList() ]
+  ( Block() | ";" )
+}
+
+void MethodDeclarator() :
+{}
+{
+  DeclaratorName() ParameterPart() ( "[" "]" )*
+}
+
+void ParameterPart() :
+{}
+{
+  "(" [ Parameter() ( "," Parameter() )* ] ")"
+}
+
+void Parameter() :
+{}
+{
+  Type() DeclaratorName()
+}
+
+void ConstructorDeclaration() :
+{}
+{
+  [ "public" | "protected" | "private" ]
+  Name() ParameterPart()
+  [ "throws" NameList() ]
+  "{" [ ConstructorCallStatement() ] BlockBody() "}"
+}
+
+void ConstructorCallStatement() :
+{}
+{
+  "this" "(" [ ArgumentList() ] ")" ";"
+|
+  "super" "(" [ ArgumentList() ] ")" ";"
+}
+
+void StaticInitializer() :
+{}
+{
+  "static" Block()
+}
+
+
+/*
+ * Type, name and expression syntax follows.
+ */
+
+void Type() :
+{}
+{
+  ( PrimitiveType() | Name() ) ( "[" "]" )*
+}
+
+void PrimitiveType() :
+{}
+{
+  "boolean" | "char" | "byte" | "short" | "int" | "long" | "float" | "double"
+}
+
+void ResultType() :
+{}
+{
+  "void"
+|
+  Type()
+}
+
+void Name() :
+{}
+{
+  <IDENTIFIER> ( LOOKAHEAD(2) "." <IDENTIFIER> )*
+}
+
+****   A lookahead of 2 is required below since "Name" can be followed
+****   by a ".*" when used in the context of an "ImportStatement".
+****   Hence looking at just the "." does not give the parser engine
+****   enough information to make a choice.
+
+void NameList() :
+{}
+{
+  Name() ( "," Name() )*
+}
+
+
+/*
+ * Expression syntax follows.
+ */
+
+void Expression() :
+{}
+{
+  LOOKAHEAD( UnaryExpression() AssignmentOperator() )
+  Assignment()
+|
+  ConditionalExpression()
+}
+
+****   The above lookahead specifies that the choice of Assignment may
+****   be made only if the parser engine can successfully lookahead
+****   and match an unary expression followed by an assignment
+****   operator.  At this point, it must be mentioned that top down
+****   parsers are not creating these problems of lookahead, and in
+****   fact in bottom up parsers, some modification to the grammar
+****   will be necessary to help the parser generator.  We believe
+****   that leaving the grammar as human readable as possible at the
+****   cost of making some extra lookahead specifications is worth it.
+****   And remember that in top-down parsers, actions can pass values
+****   un and down the parse tree rather than only up the tree as in
+****   the case of bottom-up parsers.
+
+void Assignment() :
+{}
+{
+  PrimaryExpression() AssignmentOperator() Expression()
+}
+
+void AssignmentOperator() :
+{}
+{
+  "=" | "*=" | "/=" | "%=" | "+=" | "-=" | "<<=" | ">>=" | ">>>=" | "&=" | "^=" | "|="
+}
+
+void ConditionalExpression() :
+{}
+{
+  ConditionalOrExpression() [ "?" Expression() ":" ConditionalExpression() ]
+}
+
+void ConditionalOrExpression() :
+{}
+{
+  ConditionalAndExpression() ( "||" ConditionalAndExpression() )*
+}
+
+void ConditionalAndExpression() :
+{}
+{
+  InclusiveOrExpression() ( "&&" InclusiveOrExpression() )*
+}
+
+void InclusiveOrExpression() :
+{}
+{
+  ExclusiveOrExpression() ( "|" ExclusiveOrExpression() )*
+}
+
+void ExclusiveOrExpression() :
+{}
+{
+  AndExpression() ( "^" AndExpression() )*
+}
+
+void AndExpression() :
+{}
+{
+  EqualityExpression() ( "&" EqualityExpression() )*
+}
+
+void EqualityExpression() :
+{}
+{
+  InstanceOfExpression() ( ( "==" | "!=" ) InstanceOfExpression() )*
+}
+
+void InstanceOfExpression() :
+{}
+{
+  RelationalExpression() [ "instanceof" Type() ]
+}
+
+void RelationalExpression() :
+{}
+{
+  ShiftExpression() ( ( "<" | ">" | "<=" | ">=" ) ShiftExpression() )*
+}
+
+void ShiftExpression() :
+{}
+{
+  AdditiveExpression() ( ( "<<" | ">>" | ">>>" ) AdditiveExpression() )*
+}
+
+void AdditiveExpression() :
+{}
+{
+  MultiplicativeExpression() ( ( "+" | "-" ) MultiplicativeExpression() )*
+}
+
+void MultiplicativeExpression() :
+{}
+{
+  UnaryExpression() ( ( "*" | "/" | "%" ) UnaryExpression() )*
+}
+
+void UnaryExpression() :
+{}
+{
+  ( "+" | "-" ) UnaryExpression()
+|
+  PreIncrement()
+|
+  PreDecrement()
+|
+  UnaryExpressionNotPlusMinus()
+}
+
+void PreIncrement() :
+{}
+{
+  "++" PrimaryExpression()
+}
+
+void PreDecrement() :
+{}
+{
+  "--" PrimaryExpression()
+}
+
+void UnaryExpressionNotPlusMinus() :
+{}
+{
+  ( "~" | "!" ) UnaryExpression()
+|
+  LOOKAHEAD( CastLookahead() )
+  CastExpression()
+|
+  PostIncrementOrDecrement()
+}
+
+****   The grammar for casts in Java is already complex.  And to do it
+****   with just a lookahead of 1 is impossible.  Here we specify a
+****   lookahead to make sure that we really have a cast expression
+****   and not a parenthesized expression before the CastExpression
+****   choice is taken.
+
+// This production is to determine lookahead only.
+void CastLookahead() :
+{}
+{
+  "(" PrimitiveType()
+|
+  "(" Name() "[" "]"
+|
+  "(" Name() ")" ( "~" | "!" | "(" | <IDENTIFIER> | "this" | "super" | "new" )
+}
+
+void PostIncrementOrDecrement() :
+{}
+{
+  PrimaryExpression() [ "++" | "--" ]
+}
+
+void CastExpression() :
+{}
+{
+  LOOKAHEAD(2)
+  "(" PrimitiveType() ( "[" "]" )* ")" UnaryExpression()
+|
+  "(" Name() ( "[" "]" )* ")" UnaryExpressionNotPlusMinus()
+}
+
+****   In the case of CastExpression it is quite obvious why a
+****   lookahead of 2 is required - both choices start with the token
+****   "(", so we need a second token to make the decision.
+  
+void PrimaryExpression() :
+{}
+{
+  PrimaryPrefix() ( PrimarySuffix() )*
+|
+  "null"
+|
+  <LITERAL>
+}
+
+void PrimaryPrefix() :
+{}
+{
+  Name()
+|
+  "this"
+|
+  "super"
+|
+  "(" Expression() ")"
+|
+  AllocationExpression()
+}
+
+void PrimarySuffix() :
+{}
+{
+  "[" Expression() "]"
+|
+  "." <IDENTIFIER>
+|
+  "(" [ ArgumentList() ] ")"
+}
+
+void ArgumentList() :
+{}
+{
+  Expression() ( "," Expression() )*
+}
+
+void AllocationExpression() :
+{}
+{
+  LOOKAHEAD(2)
+  "new" PrimitiveType() ArrayDimensions()
+|
+  "new" Name() ( Arguments() | ArrayDimensions() )
+}
+
+****   Here, again it is quite obvious why a lookahead of 2 is
+****   required - both choices start with the token "new", so we need
+****   a second token to make the decision.
+  
+void Arguments() :
+{}
+{
+  "(" [ ArgumentList() ] ")"
+}
+
+void ArrayDimensions() :
+{}
+{
+  ( LOOKAHEAD(2) "[" Expression() "]" )+ ( "[" "]" )*
+}
+
+****   In the above case, array dimensions are specified as having a
+****   sequence of 1 or more "[ expression ]"s followed by 0 or more
+****   "[]"s.  Just looking at the token "[" cannot determine which of
+****   these two choices the parser engine must take.  But a lookahead
+****   of 2 is sufficient.
+
+
+/*
+ * Statement syntax follows.
+ */
+
+void Block() :
+{}
+{
+  "{" BlockBody() "}"
+}
+
+void BlockBody() :
+{}
+{
+  ( LOOKAHEAD(Type() <IDENTIFIER>) LocalVariableDeclaration() | Statement() )*
+}
+
+****   Take a careful look at the above lookahead specification.  It
+****   occurs inside the (...)*.  This means it is used to
+****   disambiguate between the choice of LocalVariableDeclaration and
+****   Statement.  A type followed by an identifier is sufficient to
+****   uniquely determine that the choice of LocalVariableDeclaration
+****   is what must be taken.
+
+void LocalVariableDeclaration() :
+{}
+{
+  Type() VariableDeclarator() ( "," VariableDeclarator() )* ";"
+}
+
+void Statement() :
+{}
+{
+  EmptyStatement()
+|
+  LOOKAHEAD(2)
+  LabeledStatement()
+|
+  SelectionStatement()
+|
+  IterationStatement()
+|
+  JumpStatement()
+|
+  SynchronizedStatement()
+|
+  TryStatement()
+|
+  Block()
+|
+  ExpressionStatement() ";"
+}
+
+****   In the labeled statement choice above, a lookahead of two
+****   tokens take the parser engine to the ":" of the label and
+****   uniquely identifies this as the choice.
+
+void ExpressionStatement() :
+{}
+{
+  PreIncrement()
+|
+  PreDecrement()
+|
+  Assignment()
+|
+  PrimaryExpression() [ "++" | "--" ]
+}
+
+void EmptyStatement() :
+{}
+{
+  ";"
+}
+
+void LabeledStatement() :
+{}
+{
+  <IDENTIFIER> ":" Statement()
+|
+  "case" Expression() ":" Statement()
+|
+  "default" ":" Statement()
+}
+
+void SelectionStatement() :
+{}
+{
+  "if" "(" Expression() ")" Statement() [ "else" Statement() ]
+
+****   No LOOKAHEAD specification here.  In the above case, we have an
+****   ambiguous grammar production and therefore any amount of
+****   lookahead will not solve our problem.  However, the Java
+****   language defines a disambiguating rule - that the "else" parts
+****   bind to the innermost "if" statements.  The parser engine
+****   automatically makes use of this rule to do the right thing
+****   because when it sees the "else" token, it goes with the current
+****   [...] which is in the innermost production.
+
+|
+  "switch" "(" Expression() ")" Block()
+}
+
+void IterationStatement() :
+{}
+{
+  "while" "(" Expression() ")" Statement()
+|
+  "do" Statement() "while" "(" Expression() ")"
+|
+  "for" "(" ForInit() [ Expression() ] ";" [ ForIncr() ] ")" Statement()
+}
+
+void ForInit() :
+{}
+{
+  LOOKAHEAD( Type() <IDENTIFIER> )
+  LocalVariableDeclaration()
+|
+  ExpressionStatements()
+}
+
+****   The lookahead specification above exists for the same reason as
+****   in the case of choosing between LocalVariableDeclaration and
+****   Statement earlier.
+
+void ExpressionStatements() :
+{}
+{
+  ExpressionStatement() ( "," ExpressionStatement() )*
+}
+
+void ForIncr() :
+{}
+{
+  ExpressionStatements()
+}
+
+void JumpStatement() :
+{}
+{
+  "break" [ <IDENTIFIER> ] ";"
+|
+  "continue" [ <IDENTIFIER> ] ";"
+|
+  "return" [ Expression() ] ";"
+|
+  "throw" Expression() ";"
+}
+
+void SynchronizedStatement() :
+{}
+{
+  "synchronized" "(" Expression() ")" Statement()
+}
+
+void TryStatement() :
+{}
+{
+  "try" Block()
+  ( "catch" "(" Type() <IDENTIFIER> ")" Block() )*
+  [ "finally" Block() ]
+}
+
+
+****   Final comments on LOOKAHEAD: Since the tool to determine
+****   insufficient lookahead does not exist as of yet, the best way
+****   to do things for now is to try to figure out as much as
+****   possible by visually inspecting the grammar and then using as
+****   large a lookahead as you can while not affecting performance
+****   too much.  Then as you use the grammar to parse input, you
+****   could end up having parse errors due to insufficient lookahead
+****   information.  Simply turn the debug option on and you should
+****   get enough information about what the parser did to realize
+****   where things went wrong and how to correct it.

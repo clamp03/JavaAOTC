@@ -1,0 +1,1168 @@
+----------------------------------------------------------------------
+
+            THE JACK USER GUIDE AND REFERENCE DOCUMENT
+
+                         Sriram Sankar
+                 Sun Microsystems Laboratories
+                       2550 Garcia Avenue
+                Mountain View, California 94043
+                            U.S.A.
+
+                     sriram.sankar@sun.com
+                        1-415-336-6230
+
+----------------------------------------------------------------------
+
+CREDITS:
+
+I would like to express here my sincere appreciation for the work done
+by Sreenivasa Viswanadha.  He is responsible for the lexical analyzer
+and spent a lot of time over the summer of 1996 extracting all
+possible performance out of it.  Sreeni was at Sun Laboratories as a
+summer intern.  He is a PhD student at the State University of New
+York (SUNY) at Albany, and you may contact him directly by email at:
+
+		sreeni@cs.albany.edu
+
+In addition, I thank all the early users who provided valuable
+feedback that has made Jack the tool it is today.  It is still
+improving and feedback is always welcome.
+
+						- Sriram Sankar
+
+----------------------------------------------------------------------
+
+JACK MARKETING BLURB:
+
+Jack is a parser generator that produces parsers written in Java from
+grammar specifications written in a lex/yacc-like manner.  Besides its
+use in bootstrapping itself, Jack has been used in approximately 20
+different projects both within and outside Sun.  The Jack release
+comes with a ready to use grammar for Java.
+
+Features:
+
+. Completely in Java: Jack is fully developed in Java and all
+  generated code is Java.
+
+. Lexical and Parser Specifications in One File as One Integral
+  Grammar Specification: This makes the grammar more user friendly and
+  more maintainable.  Jack automatically splits the information to
+  build the lexical and parser engines.
+
+. Fully Internationalized: Jack uses UNICODE in the same way Java does
+  to handle internationalization.  In addition to the partial
+  internationalization that a couple of parsers offer where they allow
+  internationalized input, Jack also allows the grammar specification
+  to include the full UNICODE character set.  As an example, please
+  take a look at the rules for IDENTIFIER in the included Java
+  grammar.
+
+. Top-Down Parsing: Jack's parsing algorithm is similar to that of
+  PCCTS, a popular parser generator built by Terence Parr at Purdue.
+
+. Can parse with respect to any non-terminal: This is one of the
+  advantages of top-down parsing.  You may choose any non-terminal (or
+  start symbol) to parse to.  Bottom-up parsers typically require the
+  specification of a start symbol at parser generation time to avoid
+  too many tables from being generated.
+
+. Grammar specification may contain constructs such as "(...)*" for
+  zero or more occurrences of "...", "[...]" for optional "...".
+  These constructs eliminate the need for writing left-recursive
+  grammars which are not amenable to top-down parsing.
+
+. Highly Customizable: The default is to generate a customized lexical
+  and parser engine for the input grammar assuming ASCII files as
+  input.  This can be modified to accept UNICODE files, and also to
+  accept ASCII/UNICODE files with Java's \u... escape sequences.  This
+  may be replaced by a user provided input stream reader.
+  Furthermore, the lexical engine may be used independently of the
+  parser engine, and the parser engine may be built for use with user
+  developed lexical engines.
+
+. Offers Both Inherited and Synthesized Attributes: More simply,
+  information can be moved both down (inherited) and up (synthesized)
+  the parse tree during the execution of actions in the grammar.  This
+  is a significant advantage of top-down parsers over bottom-up
+  parsers which offer only synthesized attributes.
+
+. Variable Lookahead: Different parts of the grammar may be specified
+  to have different amounts of lookahead.  A method of specifying
+  unbounded lookahead is also possible.  This eliminates the need to
+  left-factor the grammar, and hence keep the grammar human readable.
+  Variable lookahead allows the parser to remain efficient.  Jack
+  comes with an algorithm to aid you in inserting the necessary lookahead
+  information, so there is no need to guess.
+
+. Comes with a Java Grammar Specification: This is ready to use to
+  build any of your favorite Java processing tools.
+
+----------------------------------------------------------------------
+
+INTRODUCTION AND VERSION INFORMATION:
+
+Jack is a top-down parser generator which takes input in a form
+similar to the popular PCCTS parser generator built by Terence Parr.
+Jack has been developed at Sun Microsystems Laboratories by Sriram
+Sankar.  The lexical analyzer generator was developed by Sreenivasa
+Viswanadha, a summer intern from SUNY, Albany.  It is possible that
+lex/yacc/yacc++ like input syntax will be accepted in the future.
+
+As the name suggests, Jack has been designed for use with Java.  Jack
+takes as input any grammar file in its input syntax, and generates a
+parser in Java.  Jack may also be used to generate lexical analyzers.
+
+This is a roughly written user guide and reference for Version 0.4.5
+of Jack, currently the latest version.
+
+Please send your comments and questions to the Jack email address:
+    jack-help@asap.eng.sun.com
+
+To add yourself to the Jack mailing list, please send a message to:
+    jack-request@asap.eng.sun.com
+
+To post to the Jack mailing list, please send your message to:
+    jack-interest@asap.eng.sun.com
+
+(Note: The mailing lists are also maintained on the machine
+       "schizophrenia.eng.sun.com", but "asap" is easier to type.)
+
+THE FOLLOWING RELEASE NOTES WILL ALL BE COALESCED INTO THE DOCUMENT
+WHEN VERSION 0.5 (THE FIRST PUBLIC VERSION) IS RELEASED.
+
+Improvements over Version 0.4 are:
+
+	Three new options and functionalities have been added:
+	. BUILD_PARSER (default true): Can be set to false to disable
+	  parser building.
+	. BUILD_TOKEN_MANAGER (default true): Can be set false to
+	  disable token manager building.
+	. SANITY_CHECK (default true, but may change): Performs a
+	  bunch of checks on the input grammar.  While these checks
+	  are not necessary, it is advisable to do this everytime the
+	  grammar is changed.  The checks performed are:
+	  - loops in lexical specification
+	  - left recursion in grammar specification
+	  - empty expansions within [...], (...)*, and (...)+
+	  - insufficient lookahead
+	  The last check (insufficient lookahead) performs a basic
+	  inspection of the input grammar and gives you pointers to
+	  places where a lookahead of more than 1 is required.  Once
+	  you get the pointers, you must still insert a lookahead
+	  specification.  Currently, if SANITY_CHECK is true, this
+	  check is performed *even if you have already inserted
+	  lookahead information*.  We will fix this in the next
+	  release.  Note that the insufficient lookahead algorithm
+	  is extremely fragile and we request (and anticipate) a lot
+	  of feedback from you.
+
+	  (remember that you can always disable this extra checking)
+
+	User defined error reporting for the lexical analyzer has been
+	added (in addition to user defined error reporting for the parser.
+	Please look at the file UserErrorHandling.txt in the doc directory.
+
+	Generation of fixed content files (such as Token.java) will take
+	place only if those files are missing from your directory.  This
+	prevents any modifications you make to these files from being
+	overwritten when Jack is run again.  Modifications to these files
+	may be performed to customize your token streams, for example.
+
+Improvements over Version 0.3.1 are:
+
+	Superior error and warning reporting during parser generation.
+
+	A provision for user defined error reporting during parsing.
+	Please look at the file UserErrorHandling.txt in the doc directory.
+
+	Two more files have been added to the doc directory - one that
+	describes a capability to embed native Java code to parse some
+	productions - see JavaCode.txt, and the other is a PostScript
+	file that is the beginning of a real Jack Reference Manual.  Right
+	now it contains only the grammar.
+
+Improvements over Version 0.3 are:
+
+	A faster lexical analyzer.  The lexical analyzer has also
+	become more independent of the parser - in an effort to
+	ensure that Jack generates a proper standalone lexical
+	analyzer.
+
+	The ReInit method has been included in both the generated
+	parser and lexical analyzer.  This has the same signature
+	as the constructors for these classes and may be called to
+	reinitialize the current parser rather than calling the
+	constructor to create a new one.  ReInit is especially
+	necessary for static parsers (generated with option STATIC=true
+	which is the default).  Calling constructors a second time
+        with static parsers now generates an error message.
+
+	This version does not work on some of the older versions of
+	Sun's JDK.  We use version 1.0.2, which is available from
+	www.javasoft.com, and it makes sense to upgrade to this
+	version anyway.  In case you are using a Java environment from
+	another vendor and have problems, please contact us.
+
+	All files required for parsing are generated into the target
+	directory where the parser files are generated.  This means
+	that you are no longer dependent on the Jack package (directory).
+	However, this also mean that you must get rid of all references
+	to COM.SunLabs.Jack in your files (if you used earlier versions
+	of Jack).  For example, COM.SunLabs.Token is replaced by
+	a Token class in the directory within which you generate the
+	parser.
+
+	The Jack package name has been changed from COM.SunLabs.Jack to
+	COM.sun.labs.jack - which has finally been accepted as the
+	standard for our organization.  However, given the change
+	mentioned in the previous paragraph, this should not affect you.
+
+Improvements over Version 0.2 are:
+
+	Significant performance improvements have taken place.
+
+	The exception "TokenException" does not exist anymore.  This
+	is replaced by a special token that is returned when an
+	attempt is made to obtain a token beyond the end of file or
+        before the earliest available token.  This has been done to
+	improve performance.
+
+	A bunch of options have been added that may be specified
+	either within the Jack input file or from the command line
+	(this takes precedence).  The old option syntax which handled
+	three kinds of options - LOOKAHEAD, STACK_TRACE, and
+	TOKEN_TRACE has been changed to allow for a more general
+	syntax.  Running jack with no arguments will describe how to
+	specify options at the command line.
+
+	Tokens that are defined solely for the purpose of defining
+	other tokens can be specified as such by placing a '#' before
+	their names.  This produces a faster lexical analyzer as well
+	as improves the expressability of the input grammar.
+
+	Tokens in the Jack grammar file have the same definitions as
+	in Java.  For example, identifiers may contain any Unicode
+	letters and numbers.
+
+	Regular expressions now return values of type "Token".  Hence,
+	one may say, for example, "t=<IDENTIFIER>" where "t" is of
+	type "Token".
+
+	The constructors for the lexical analyzer and parser now take
+	java.io.InputStream as argument rather than
+	java.io.DataInputStream.
+
+	This version includes a *complete* Java grammar written in
+	Jack.  This grammar fully conforms to the October 1995 version
+	of the Java language specification.  You may wish to use this
+	as the starting point for building your Java tool.
+
+	This document is very much improved and may be used as a
+	user guide and reference.  There is still a long way to go
+	however for a professional reference.
+
+Improvements over Version 0.1 are:
+
+	The parser now allows lookahead modifications during parsing
+	and allows PCCTS like "infinite lookahead".
+
+	The parser produces very elegant error messages on parse
+	errors.  The parser generator error messages are still not
+	very good.
+
+CURRENT WISH LIST:
+
+	Currently, the syntax of what may appear on the left hand side
+	of the "=" sign in return value assignments for regular
+	expressions and non-terminals must be a single identifier.
+	This will be expanded to allow more complex Java L-values.
+
+	Rules/actions are only allowed in the BNF part of the Jack
+	grammar file.  No rules/actions are currently allowed in the
+	regular expressions (i.e., during token recognition).  Such
+	rules will be added.
+
+	Automatic construction of parse trees is a feature that we may
+	add.
+
+	IGNORE_IN_BNF tokens currently disappear.  In the future, there
+	may be a way to make use of them within lexical and parser
+	actions.
+
+----------------------------------------------------------------------
+
+BASIC INSTALLATION:
+
+(For PC and other non-UNIX users: I apologize for providing UNIX
+ specific installation instructions.)
+
+It is assumed that you have already installed JDK version 1.0.2 or
+later on your system.
+
+Step 1:
+
+Copy the self extracting Java class file by following the download
+directions in the Web page (www.suntest.com/Jack).  Call this file
+"install.class".
+
+Now, run "java install" after changing directory to a convenient
+location on your disk.  The Jack installation is extracted into a
+subdirectory called Jack in this directory.
+
+*** PC users, please remember that from now on the installation
+*** instructions are only guidelines.  These will become more
+*** precise later on.  Send us mail for any clarifications.
+
+Step 2:
+
+Change directory to Jack.  Here you will see a file called
+"install.sh".  Run "install.sh" from the command line.  The executable
+"jack" is created in the "bin" directory.  You may move this
+executable to any convenient location of your choice.  Whatever you
+do, please make sure the location of the "jack" executable is in your
+path.  You must, however, leave the "java" directory intact in the
+current location.
+
+	cd Jack
+	./install.sh     -- see warning below!!
+	mv bin/jack <convenient-location>   (optional)
+	setenv PATH $PATH:<location of jack>   (example of how to set your path)
+
+***********BEGIN-WARNING BEGIN-WARNING BEGIN-WARNING BEGIN-WARNING***********
+
+Please take a look at the file bin/jack before moving it to a convenient
+location (the last step above).  When I install Jack, the file generated
+is:
+
+#!/bin/csh -f
+setenv CLASSPATH /export/vol2/sriram/Jack; java COM.sun.labs.jack.Main $*
+
+This file has a problem in that the CLASSPATH setting is not network
+transparent.  It will work so long as you run Jack from the same machine
+you use to install it, but may not work over the network.  In my case,
+I have to hand tweak this file to be:
+
+#!/bin/csh -f
+setenv CLASSPATH /net/asap.eng/export/vol2/sriram/Jack; java COM.sun.labs.jack.Main $*
+
+You may have to do this at your end also.  I do not know a clean solution
+to this, but since you have to do it only once, I hope it is not too big
+a problem.
+
+*********END WARNING END WARNING END WARNING END WARNING END WARNING*********
+
+This completes the basic installation process.  Please note that the
+default installation process creates files that are readable (and
+executable in case of scripts, etc.) by everybody.  If you wish to
+have more restricted access, please modify the protection of the Jack
+directory and the bin/jack script appropriately.
+
+The installation creates an "examples" directory under which are some
+simple examples.  A README file in this directory shows you how you can
+do something with them.  However, read the documentation below for an
+in-depth explanation of these examples.
+
+----------------------------------------------------------------------
+
+ADVANCED INSTALLATION:
+
+Follow the advanced installation instructions if you wish to augment
+an existing Java class directory with the Jack classes.
+
+Complete Step 1 of the basic installation process.  Instead of
+Step 2, do the following:
+
+Change directory to "Jack/java".
+
+	cd Jack/java
+
+Recursively copy the contents of this directory to any location in
+your Java class path.
+
+	cp -R . <a-directory-in-your-classpath>
+
+You can now run Jack using the main program in COM.sun.labs.jack.Main.
+
+You may create a script to make it easier to run Jack by performing
+Step 3 of the basic installation.  However, you will have to edit the
+resulting script bin/jack and replace the classpath reference to your
+own classpath.
+
+----------------------------------------------------------------------
+
+JACK USAGE:
+
+Assuming you have installed Jack and created the script "jack" which
+you have then placed somewhere in your UNIX path, you can invoke Jack
+in one of the following ways (here foo.jack is the grammar input
+file):
+
+	jack options foo.jack
+Or:
+	jack options - < foo.jack
+
+Options are of the form -<name>=<value>, where <name> is an option name
+and <value> is the value it is set to.  The available options are:
+
+. STATIC: This is a boolean option whose default value is true.  If
+  true, all methods and class variables are specified as static in the
+  generated parser.  This allows only one parser object to be present,
+  but it improves the performance of the parser.  To perform multiple
+  parses during one run of your Java program, you will have to call
+  the ReInit() method to reinitialize your parser if it is static.
+  If the parser is non-static, you may use the "new" operator to
+  construct as many parsers as you wish.  They can all be used
+  simultaneously.
+
+. LOOKAHEAD: The number of tokens to look ahead before making a
+  decision at a choice point during parsing.  The default value is 1.
+  The smaller this number, the faster the parser.  This number may be
+  overridden for specific productions within the grammar.  See the
+  file LookAheadTips.txt for more information on the use of lookahead.
+
+. DEBUG: This is a boolean option whose default value is false.  This
+  option is used to obtain debugging information from the generated
+  parser.  Currently, setting this option to true causes parser and
+  lexical analyzer tracing to take place.  Tracing may be disabled by
+  calling the methods "disable_tracing()" in the generated parser
+  class.  Tracing may be subsequently enabled by calling the method
+  "enable_tracing()".
+
+. ERROR_REPORTING: This is a boolean option whose default value is
+  true.  Setting it to false causes errors due to parse errors to be
+  reported in a little less detail.  The only reason to set this
+  option to false is to improve performance.
+
+. USER_TOKEN_MANAGER: This is a boolean option whose default value is
+  false.  The default action is to generate a lexical analyzer (or
+  token manager) that works on the specified grammar tokens.  If this
+  option is set to true, then the parser is generated to accept tokens
+  from any lexical analyzer of type "TokenManager" - this interface
+  is generated into the generated parser directory.
+
+. USER_CHAR_STREAM: This is a boolean option whose default value is
+  false.  The default action is to generate a character stream reader
+  as specified by the options JAVA_UNICODE_ESCAPE and UNICODE_INPUT
+  (see below).  The generated lexical analyzer receives characters
+  from this stream reader.  If this option is set to true, then the
+  lexical analyzer is generated to read characters from any character
+  stream reader of type "CharStream.java".  This file is generated
+  into the generate parser directory.  This option is ignored if
+  USER_TOKEN_MANAGER is set to true.
+
+. JAVA_UNICODE_ESCAPE: This is a boolean option whose default value is
+  false.  When set to true, the constructor of the parser is generated
+  to use an input stream object that processes Java Unicode escapes
+  (\u...) before sending characters to the lexical analyzer.  By
+  default, Java Unicode escapes are not processed.  This option is
+  ignored if either of options USER_TOKEN_MANAGER, USER_CHAR_STREAM is
+  set to true.
+
+. UNICODE_INPUT: This is a boolean option whose default value is
+  false.  When set to true, the constructor of the parser is generated
+  to use an input stream object that reads Unicode files.  By default,
+  ASCII files are assumed.  This option is ignored if either of
+  options USER_TOKEN_MANAGER, USER_CHAR_STREAM is set to true.
+
+. BUILD_PARSER: This is a boolean option whose default value is true.
+  When set to false, the parser files are not generated.
+
+. BUILD_TOKEN_MANAGER: This is a boolean option whose default value is
+  true.  When set to false, the lexical analyzer (token manager) files
+  are not generated.
+
+The rest of this document takes you through the steps required to
+build your grammar input files.
+
+If you are already familiar with the Jack input syntax, you may skip
+over to the HINTS and WARNINGS section at the end of this document.
+
+----------------------------------------------------------------------
+
+BREAKING ICE:
+
+We shall now create a Java parser using the Java grammar that comes
+with this release of Jack.
+
+Step 1: Change directory to where you installed Jack.  Now go to the
+  java directory (type "cd java").  Please make sure this directory
+  is in your class path.  If not, add it.  One way to do this is:
+
+	setenv CLASSPATH ${CLASSPATH}:${PWD}
+
+Step 2: Change directory to COM/sun/labs/javaparser (type
+  "cd COM/sun/labs/javaparser").  In this directory, you will see a
+  README file and the file Java.jack.  Take a look at the README file,
+  or follow instructions below.
+
+Step 3: Invoke Jack on Java.jack (type "jack Java.jack").  This causes
+  the generation of three files:
+
+  JavaParser.java                - the parser for Java
+  JavaParserTokenManager.java    - the lexical analyzer for Java
+  JavaParserConstants.java       - a bunch of internal constants
+  ASCII_UCodeESC_CharStream.java - an ASCII stream reader that understands
+                                   the Java "\u..." escape sequence
+  Token.java                     - The type specification of "Token".
+  ParseError.java                - The exception that is thrown whenever
+                                   a problem is detected.
+
+  The prefix "JavaParser" of the first three file names is determined
+  from the PARSER_BEGIN and PARSER_END directives in the Java.jack
+  file.  Take a peek at this file if you wish, but this will be
+  described in detail shortly.
+
+Step 4:  Compile these Java files (type "javac *.java").
+
+You now have a Java parser all ready to use.  To use this parser to
+parse your Java programs, type one of the following from any directory
+on your computer (suppose you wish to parse file foo.java):
+
+	java COM.sun.labs.javaparser.JavaParser foo.java
+	java COM.sun.labs.javaparser.JavaParser < foo.java
+
+Try inserting syntax errors in your Java files to get an idea of the
+form of error messages produced by parsers generated by Jack.  Since
+Jack has been generated using Jack itself, you will see similar error
+messages if you have syntax errors in your original Jack grammar file
+(e.g., Java.jack).
+
+----------------------------------------------------------------------
+
+THE FORMAT OF A SIMPLE JACK GRAMMAR INPUT FILE:
+
+This section explains the structure of a simple Jack grammar input
+file.  Once you've covered this section, you should be able to write
+quite complex grammars and build parsers for them.  Advanced usage
+which includes features such as writing Java code for some productions
+instead of Jack BNF, building a standalone lexical analyzer, or
+writing your own stream input routine that feeds characters to the
+lexical analyzer, etc. are discussed in the next section.
+
+The following is a simple Jack grammar that recognizes a set of left
+braces followed by the same number of right braces and finally
+followed by a carriage return and the end of file.  Examples of legal
+strings in this grammar are:
+
+  "{}", "{{{{{}}}}}", etc.
+
+Examples of illegal strings are:
+
+  "{{{{", "{}{}", "{}}", "{{}{}}", etc.
+
+The Jack grammar starts after this paragraph.  This grammar is also
+available in the file Simple1.jack in the "examples" directory.
+
+options {
+  STATIC = true;
+  LOOKAHEAD = 1;
+  DEBUG = false;
+  ERROR_REPORTING = true;
+  USER_TOKEN_MANAGER = false;
+  USER_CHAR_STREAM = false;
+  JAVA_UNICODE_ESCAPE = false;
+  UNICODE_INPUT = false;
+}
+
+PARSER_BEGIN(Simple1)
+
+public class Simple1 {
+
+  public static void main(String args[]) throws ParseError {
+    Simple1 parser = new Simple1(System.in);
+    parser.Input();
+  }
+
+}
+
+PARSER_END(Simple1)
+
+void Input() :
+{}
+{
+  MatchedBraces() "\n" <EOF>
+}
+
+void MatchedBraces() :
+{}
+{
+  "{" [ MatchedBraces() ] "}"
+}
+
+// This is the end of the Jack grammar.
+
+This grammar file starts with settings for all the options offered by
+Jack.  In this case the option settings are their default values.
+Hence these option settings were really not necessary.  One could as
+well have completely omitted the options section, or omitted one or
+more of the individual option settings.  The individual options were
+described earlier in this document.
+
+Following this is a Java compilation unit enclosed between
+"PARSER_BEGIN(name)" and "PARSER_END(name)".  This compilation unit
+can be of arbitrary complexity.  The only constraint on this
+compilation unit is that it must define a class called "name" - the
+same as the arguments to PARSER_BEGIN and PARSER_END.  This is the
+name that is used as the prefix for the Java files generated by the
+parser generator.  The parser code that is generated is inserted
+immediately before the closing brace of the class called "name".
+
+In the above example, the class in which the parser is generated
+contains a main program.  This main program creates an instance of the
+parser object (an object of type Simple1) by using a constructor that
+takes one argument of type java.io.InputStream ("System.in" in this
+case).
+
+The main program then makes a call to the non-terminal in the grammar
+that it would like to parse - "Input" in this case.  All non-terminals
+have equal status in a Jack produced parser, and hence one may parse
+with respect to any grammar non-terminal.
+
+Following this is a list of productions.  In this example, there are
+two productions, that define the non-terminals "Input" and
+"MatchedBraces" respectively.  In Jack grammars, non-terminals are
+written and implemented (by Jack) as Java methods.  When the
+non-terminal is used on the left-hand side of a production, it is
+considered to be declared and its syntax follows the Java syntax.  On
+the right-hand side its use is similar to a method call in Java.
+
+Each production defines its left-hand side non-terminal followed by a
+colon.  This is followed by a bunch of declarations and statements
+within braces (in both cases in the above example, there are no
+declarations and hence this appears as "{}") which are generated as
+common declarations and statements into the generated method.  This is
+then followed by a set of expansions also enclosed within braces.
+
+Lexical tokens (or regular expressions) in a Jack input grammar are
+either simple strings ("{", "}", and "\n" in the above example), or a
+more complex regular expression.  In our example above, there is one
+such regular expression "<EOF>" which is matched by the end of file.
+All complex regular expressions are enclosed within angular brackets.
+
+The first production above says that the non-terminal "Input" expands
+to the non-terminal "MethodBraces" followed by a carriage return and
+then the end of file.
+
+The second production above says that the non-terminal "MatchedBraces"
+expands to the token "{" followed by an optional nested expansion of
+"MatchedBraces" followed by the token "}".  Square brackets [...]
+in a Jack input file indicate that the ... is optional.
+
+[...] may also be written as (...)?.  These two forms are equivalent.
+Other structures that may appear in expansions are:
+
+   e1 | e2 | e3 | ... : A choice of e1, e2, e3, etc.
+   ( e )+             : One or more occurrences of e
+   ( e )*             : Zero or more occurrences of e
+
+Note that these may be nested within each other, so we can have
+something like:
+
+   (( e1 | e2 )* [ e3 ] ) | e4
+
+To build this parser, simply run Jack on this file and compile the
+resulting Java files:
+
+	jack Simple1.jack
+	javac *.java
+
+Now you should be able to run the generated parser.  Make sure that
+the current directory is in your classpath and type:
+
+	java Simple1
+
+Now type a sequence of matching braces followed by a carriage return
+and an end of file (CTRL-D on UNIX machines).  If this is a problem on
+your machine, you can create a file and pipe it as input to the
+generated parser in this manner:
+
+	java Simple1 < myfile
+
+Also try entering illegal sequences such as mismatched braces, spaces,
+and carriage returns between braces as well as other characters and
+take a look at the error messages produced by the parser.
+
+The second example of a Jack input file follows below and is a minor
+modification to the above file to allow white space characters to be
+interspersed among the braces.  So then input such as:
+
+	"{{  }\n}\n\n"
+
+will now be legal.  The file follows (this grammar is also available
+in the file Simple2.jack in the "examples" directory).  Note that the
+options are omitted in this file:
+
+PARSER_BEGIN(Simple2)
+
+public class Simple2 {
+
+  public static void main(String args[]) throws ParseError {
+    Simple2 parser = new Simple2(System.in);
+    parser.Input();
+  }
+
+}
+
+PARSER_END(Simple2)
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+void Input() :
+{}
+{
+  MatchedBraces() <EOF>
+}
+
+void MatchedBraces() :
+{}
+{
+  "{" [ MatchedBraces() ] "}"
+}
+
+This example has the additional production whose left-hand side is the
+special symbol "IGNORE_IN_BNF".  The right-hand side of this production
+has to be a set of regular expressions.  Any match to these regular
+expressions is quietly eaten up by the lexical analyzer and not sent on
+to the parser.
+
+Now you may build Simple2 and invoke the generated parser with input
+from the keyboard as standard input.
+
+You can also try generating the parser with the DEBUG option turned on
+and see what the output looks like.  To do this type:
+
+	jack -DEBUG=true Simple2.jack
+	javac Simple2*.java
+	java Simple2
+
+The third version of this grammar demonstrates the use of the special
+production symbol TOKEN.  Here, the tokens "{" and "}" are named and
+their names are used in subsequent expansions.  The TOKEN production
+allows one to collect all regular expressions into one location and also
+allows the imposition of a particular priority order on the tokens in
+case one wishes that it is to be different from the order of appearance
+in the productions.
+
+This version also includes actions that counts the number of braces and
+prints the result at the end.  Note that actions are enclosed within
+braces.  In this example, also note that the declarations are used to
+declare variables.
+
+This grammar is also available in the file Simple3.jack in the
+"examples" directory.
+
+PARSER_BEGIN(Simple3)
+
+public class Simple3 {
+
+  public static void main(String args[]) throws ParseError {
+    Simple3 parser = new Simple3(System.in);
+    parser.Input();
+  }
+
+}
+
+PARSER_END(Simple3)
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+TOKEN :
+{}
+{
+  <LBRACE: "{">
+| <RBRACE: "}">
+}
+
+void Input() :
+{ int count; }
+{
+  count=MatchedBraces() <EOF>
+  { System.out.println("The levels of nesting is " + count); }
+}
+
+int MatchedBraces() :
+{ int nested_count=0; }
+{
+  <LBRACE> [ nested_count=MatchedBraces() ] <RBRACE>
+  { return ++nested_count; }
+}
+
+The next example goes into the details of writing regular expressions
+in Jack grammar files.  This example describes a simple expression
+syntax and its rules create an English translation of the expressions
+input to the generated parser.  This grammar is also available in the
+file NL_Xlator.jack in the "examples" directory.
+
+PARSER_BEGIN(NL_Xlator)
+
+public class NL_Xlator {
+
+  public static void main(String args[]) throws ParseError {
+    NL_Xlator parser = new NL_Xlator(System.in);
+    parser.ExpressionList();
+  }
+
+}
+
+PARSER_END(NL_Xlator)
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+TOKEN :
+{}
+{
+  < ID: ["a"-"z","A"-"Z","_"] ( ["a"-"z","A"-"Z","_","0"-"9"] )* >
+|
+  < NUM: ( ["0"-"9"] )+ >
+}
+
+void ExpressionList() :
+{
+	String s;
+}
+{
+	{
+	  System.out.println("Please type in an expression followed by a \";\" or ^D to quit:\n");
+	}
+  ( s=Expression() ";"
+	{
+	  System.out.println(s);
+	  System.out.println("\nPlease type in another expression followed by a \";\" or ^D to quit:\n");
+	}
+  )*
+  <EOF>
+}
+
+String Expression() :
+{
+	java.util.Vector termimage = new java.util.Vector();
+	String s;
+}
+{
+  s=Term()
+	{
+	  termimage.addElement(s);
+	}
+  ( "+" s=Term()
+	{
+	  termimage.addElement(s);
+	}
+  )*
+	{
+	  if (termimage.size() == 1) {
+	    return (String)termimage.elementAt(0);
+          } else {
+            s = "the sum of " + (String)termimage.elementAt(0);
+	    for (int i = 1; i < termimage.size()-1; i++) {
+	      s += ", " + (String)termimage.elementAt(i);
+	    }
+	    if (termimage.size() > 2) {
+	      s += ",";
+	    }
+	    s += " and " + (String)termimage.elementAt(termimage.size()-1);
+            return s;
+          }
+	}
+}
+
+String Term() :
+{
+	java.util.Vector factorimage = new java.util.Vector();
+	String s;
+}
+{
+  s=Factor()
+	{
+	  factorimage.addElement(s);
+	}
+  ( "*" s=Factor()
+	{
+	  factorimage.addElement(s);
+	}
+  )*
+	{
+	  if (factorimage.size() == 1) {
+	    return (String)factorimage.elementAt(0);
+          } else {
+            s = "the product of " + (String)factorimage.elementAt(0);
+	    for (int i = 1; i < factorimage.size()-1; i++) {
+	      s += ", " + (String)factorimage.elementAt(i);
+	    }
+	    if (factorimage.size() > 2) {
+	      s += ",";
+	    }
+	    s += " and " + (String)factorimage.elementAt(factorimage.size()-1);
+            return s;
+          }
+	}
+}
+
+String Factor() :
+{
+	Token t;
+	String s;
+}
+{
+  t=<ID>
+	{
+	  return t.image;
+	}
+|
+  t=<NUM>
+	{
+	  return t.image;
+	}
+|
+  "(" s=Expression() ")"
+	{
+	  return s;
+	}
+}
+
+The new concept in the above example is the use of more complex
+regular expressions.  The regular expression:
+
+  < ID: ["a"-"z","A"-"Z","_"] ( ["a"-"z","A"-"Z","_","0"-"9"] )* >
+
+Creates a new regular expression whose name is ID.  This can be
+referred anywhere else in the grammar simply as <ID>.  What follows in
+square brackets are a set of allowable characters - in this case it is
+any of the lower or upper case letters or the underscore.  This is
+followed by 0 or more occurrences of any of the lower or upper case
+letters, digits, or the underscore.
+
+Other constructs that may appear in regular expressions are:
+
+  ( ... )+	: One or more occurrences of ...
+  ( ... )?	: An optional occurrence of ... (Note that in the case
+                  of lexical tokens, (...)? and [...] are not equivalent)
+  ( r1 | r2 | ... ) : Any one of r1, r2, ...
+
+A construct of the form [...] is a pattern that is matched by the
+characters specified in ... .  These characters can be individual
+characters or character ranges.  A "~" before this construct is a
+pattern that matches any character not specified in ... .  Therefore:
+
+  ["a"-"z"] matches all lower case letters
+  ~[] matches any character
+  ~["\n","\r"] matches any character except the new line characters
+
+When a regular expression is used in an expansion, it takes a value of
+type "Token".  This is generated into the generated parser directory
+as "Token.java".  In the above example, we have defined a variable of
+type "Token" and assigned the value of the regular expression to it.
+
+An important point to note is that the tokens defined in the
+IGNORE_IN_BNF section are only ignored *between tokens* and not
+*within tokens*.  Consider the following grammar ("Simple4.jack" in
+the "examples" directory) that accepts any sequence of identifiers
+with white space in between:
+
+PARSER_BEGIN(Simple4)
+
+public class Simple4 {
+
+  public static void main(String args[]) throws ParseError {
+    Simple4 parser = new Simple4(System.in);
+    parser.Input();
+  }
+
+}
+
+PARSER_END(Simple4)
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+}
+
+TOKEN :
+{}
+{
+  < Id: ["a"-"z","A"-"Z"] ( ["a"-"z","A"-"Z","0"-"9"] )* >
+}
+
+void Input() :
+{}
+{
+  ( <Id> )+ <EOF>
+}
+
+A legal input for this grammar is;
+
+"abc xyz123 A B C \t\n aaa"
+
+This is because any number of the IGNORE_IN_BNF tokens are allowed in
+between consecutive <Id>'s.  However, the following is not allowed:
+
+"xyz 123"
+
+This is because the space character after "xyz" is in the
+IGNORE_IN_BNF category and therefore causes one token to end and
+another to begin.  This requires "123" to be a separate token and
+hence does not match the grammar.
+
+As a corollary, one must define as tokens anything within which
+characters such as white space characters must not be present.  In the
+above example, if <Id> was defined as a grammar production rather than
+a lexical token as shown below this paragraph, then "xyz 123" would
+have been recognized as a legitimate identifier (wrongly).
+
+void Id() :
+{}
+{
+  <["a"-"z","A"-"Z"]> ( <["a"-"z","A"-"Z","0"-"9"]> )*
+}
+
+Note in the above definition of non-terminal Id that it is made up of
+a sequence of single character tokens (note the location of <...>s),
+and hence white space is allowed between these characters.
+
+******************
+
+  This section is incomplete.  Hopefully, the information presented
+  here will be sufficient for you to get started.  Please take a look
+  at the Java grammar for an advanced example and also contact us
+  for more detailed help.  This document will keep being updated.
+
+******************
+
+----------------------------------------------------------------------
+
+ADVANCED FEATURES:
+
+This section has not been written yet.  But please take a look at
+other files in the same directory for more information.
+
+----------------------------------------------------------------------
+
+HINTS AND WARNINGS:
+
+Since Jack is still a very young tool, there are bound to be many of
+the standard problems - bugs, inefficiency, and poor reporting or the
+absence of reporting of errors in your input grammar specification.
+
+Some hints follow to help you out - but remember that you can always
+come by my office or contact me by telephone or email for help.
+
+. How does one decide whether to make a rule a lexical rule (within
+  angular brackets) or a parser rule?  This bullet offers some tips.
+  First, lexical rules will offer better performance - a lexical
+  engine is a finite state automaton, while a parse engine is a
+  push down automaton - hence there is no way parsing can ever be
+  faster than "lexing".  This suggests moving as many items as possible
+  to the lexical rules.  The other more important consideration is that
+  the parser rules accept a sequence of tokens (which may have ignored
+  tokens such as comments inbetween).  Lexical rules accept a sequence
+  of characters, which it then converts into tokens for the parser.
+
+  As an example to illustrate this difference, consider:
+
+  IGNORE_IN_BNF :
+  {}
+  {
+    " "  // i.e., Ignore all spaces when creating tokens for the parser
+  }
+
+  <LEX_ID: (["a"-"z"])+>
+    // LEX_ID is a lexical token which recognizes a sequence of 1 or
+    // more lower-case letters.
+
+  void PARSE_ID() :
+  {}
+  {
+    (<["a"-"z"]>)+
+  }
+    // PARSE_ID is a definition similar to LEX_ID.
+
+  The significant difference between LEX_ID and PARSE_ID is that
+  PARSE_ID will allow spaces in between the characters since space
+  has been specified as something to ignore.  i.e., "a b c" will
+  be accepted as a single PARSE_ID, but as three LEX_ID's.
+
+. Determining the best lookahead amounts:  Please take a look at the
+  file LookaheadTips.txt in this directory.  It contains a Java
+  grammar with annotations that describe the choice of lookaheads.
+
+. Left recursion is not permitted since this is a recursive descent
+  parser.  In the future, left-recursion may be factored out.  But in
+  this version, left-recursion is not even detected, and the only
+  symptom you will see is that the parser goes into an infinite
+  recursion that will cause a stack overflow.  However, you will
+  usually not see the need to have left-recursive constructs in your
+  grammar specification given the richness of the Jack input syntax.
+  For example, instead of:
+
+    void idlist() :
+    {}
+    {
+      id()
+    |
+      idlist() "," id()
+    }
+
+  you could simply say:
+
+    void idlist() :
+    {}
+    {
+      id() ( "," id() )*
+    }
+
+. Ambiguity in your grammar is resolved by using the following rules
+  (quite similar to PCCTS):
+
+  * For lexical tokens, whenever there are multiple matches, the
+    longest one is considered.  If there is still an ambiguity, the
+    lexical token defined earliest (physically) in the grammar
+    specification file is used.
+
+  * Given a production:
+
+      void p() : {}{ p1() | p2() | ... }
+
+    If there are multiple right hand sides that remain viable
+    candidates after looking ahead the specified number of tokens, the
+    first one is considered.  Even if the first one fails on reading
+    subsequent tokens, backtracking is not performed.  Instead you
+    should consider using a larger lookahead or "infinite lookahead".
+
+  * Given a production of one of the following forms:
+
+      void p() : {}{ ( p1() )? p2() }  // p1 is optional
+
+      void p() : {}{ ( p1() )* p2() }  // zero or more p1's
+
+      void p() : {}{ ( p1() )+ p2() }  // one or more p1's
+
+    If both "p1" and "p2" are viable expansions after looking ahead
+    the specified number of tokens, "p1" is considered for further
+    parsing.  Here again, no backtracking takes place.
+
+----------------------------------------------------------------------

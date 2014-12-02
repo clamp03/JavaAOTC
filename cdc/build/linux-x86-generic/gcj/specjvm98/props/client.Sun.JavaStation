@@ -1,0 +1,46 @@
+#
+# Client properties file
+#
+
+# client hardware
+spec.client.hw.vendor=Sun Microsystems
+spec.client.hw.vendor.url=http://www.sun.com
+spec.client.hw.model=JavaStation NC
+spec.client.hw.processor=microSPARC-IIep
+spec.client.hw.MHz=100
+spec.client.hw.ncpu=1
+spec.client.hw.memory=REQUIRED
+spec.client.hw.primaryCache=16KBI+8KBD on chip
+spec.client.hw.secondaryCache=none
+spec.client.hw.otherCache=none
+spec.client.hw.memoryConfig=
+spec.client.hw.fileSystem=none
+spec.client.hw.disk=none
+spec.client.hw.nonVolatile=8MB flash memory (optional)
+spec.client.hw.other=none
+spec.client.hw.network=100Base-T
+spec.client.hw.available=Jun-98
+
+# client software
+spec.client.sw.vendor=Sun Microsystems
+spec.client.sw.vendor.url=http://www.sun.com
+spec.client.sw.JVM=JDK 1.1.4
+spec.client.sw.JVMavailable=Jan-98
+spec.client.sw.JVMmemory=REQUIRED
+spec.client.sw.OS=JavaOS 1.1
+spec.client.sw.OSavailable=Jun-98
+spec.client.sw.systemState=normal
+spec.client.sw.other=HotJava Browser 1.1
+spec.client.sw.otherAvailable=Jun-98
+
+# other information
+spec.other.testedBy=REQUIRED
+spec.other.testedByName=OPTIONAL
+spec.other.internalReference=OPTIONAL
+spec.other.specLicense=REQUIRED
+spec.other.testLocation=REQUIRED
+
+spec.other.emailTo=REQUIRED
+spec.other.emailReturn=REQUIRED
+spec.other.mailHost=REQUIRED
+

@@ -1,0 +1,117 @@
+This file provides an overview of the JAVACODE feature of Jack.
+
+First, though, it is useful to know about some objects and methods
+available for use in actions:
+
+	...TokenManager token_source;
+
+"token_source" is the reference to the source of tokens for the
+parser.  Depending on the option USER_TOKEN_MANAGER setting, the
+type of "token_source" is set appropriately.  Its best not to use
+this directly, but instead use one of the methods below:
+
+	Token getNextToken() throws ParseError
+
+Returns the next token in the token stream and moves the token
+pointer.
+
+	Token getToken(int index) throws ParseError
+
+Returns the i-th token in the token stream.  The location of the
+token pointer is index 0.  This method does not modify the token
+pointer.  To elaborate more on the index,
+
+	t1 = getNextToken();
+	// followed by
+	t2 = getToken(0);
+
+results in t1 and t2 being references to the same token.  In fact
+the following code also results in the exact same behavior:
+
+	t1 = getNextToken();
+	t2 = t1;
+
+since getToken does not modify the token pointer.
+
+The JAVACODE feature of Jack is a way to write Java code for some
+productions if necessary instead of the usual BNF specification.
+Here's an example from the Jack input grammar where we don't care
+what's within the braces that contain the actions:
+
+JAVACODE
+void java_declarations_and_code(java.util.Vector tokens) {
+  Token tok;
+  int nesting = 1;
+  while (true) {
+    tok = getToken(1);
+    if (tok.kind == 0) throw new ParseError();
+    if (tok.kind == LBRACE) nesting++;
+    if (tok.kind == RBRACE) {
+      nesting--;
+      if (nesting == 0) break;
+    }
+    tok = getNextToken();
+    tokens.addElement(tok);
+  }
+}
+
+In this case, the non-terminal "java_declarations_and_code" gets
+called when a "{" has been matched by the calling non-terminal.
+This production simply eats up all tokens between this "{" and the
+matching close "}", but does not consume the "}".
+
+One more piece of information from this example is that the end
+of file token is of kind 0, hence the statement:
+
+    if (tok.kind == 0) throw new ParseError();
+
+which throws the exception if a premature end of file is detected.
+Note that "throws ParseError" is implicit in all JAVACODE productions.
+
+The above non-terminal may be called from another production as
+shown below:
+
+void JackAction() :
+{
+  java.util.Vector actionTokens = new java.util.Vector();
+}
+{
+  "{" java_declarations_and_code(actionTokens) "}"
+}
+
+Whenever a Jack parser encounters a JAVACODE non-terminal, it simply
+parses with respect to it without performing any lookahead work.
+Hence, care must be taken to position JAVACODE non-terminals only
+at places where choices need not be made.
+
+For example, if we extend the above production as follows (assuming
+a global lookahead of 2 to disambiguate the "{"):
+
+void JackAction() :
+{
+  java.util.Vector actionTokens = new java.util.Vector();
+}
+{
+  "{" java_declarations_and_code(actionTokens) "}"
+|
+  "{" "pragma" pragma_parameters() "}"
+}
+
+The above productions may be used when braces can include either
+any arbitrary Java code or a pragma specification.  Unfortunately,
+the parser will always use the first expansion above.
+
+However, if reverse the above expansions as in:
+
+void JackAction() :
+{
+  java.util.Vector actionTokens = new java.util.Vector();
+}
+{
+  "{" "pragma" pragma_parameters() "}"
+|
+  "{" java_declarations_and_code(actionTokens) "}"
+}
+
+Then the second expansion is considered when the token after the
+"{" is not "pragma".

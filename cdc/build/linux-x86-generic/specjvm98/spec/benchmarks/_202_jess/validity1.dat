@@ -1,0 +1,48 @@
+1
+1Jess, the Java Expert System Shell
+1Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+1Jess Version 3.2 11/8/97
+1
+1Monkey jumps off the green-couch onto the floor.
+1Monkey walks to t2-2.
+1Monkey climbs onto the red-couch.
+1Monkey climbs onto the big-pillow.
+1Monkey grabs the red-chest.
+1Monkey throws the red-chest off the big-pillow onto the floor.
+1Monkey jumps off the big-pillow onto the floor.
+1Monkey walks to t1-3.
+1Monkey grabs the red-key.
+1Monkey walks to t2-2 holding the red-key.
+1Monkey opens the red-chest with the red-key revealing the ladder.
+1Monkey drops the red-key.
+1Monkey climbs onto the red-chest.
+1Monkey grabs the ladder.
+1Monkey jumps off the red-chest onto the floor.
+1Monkey walks to t7-7 holding the ladder.
+1Monkey drops the ladder.
+1Monkey climbs onto the ladder.
+1Monkey grabs the blue-chest.
+1Monkey throws the blue-chest off the ladder onto the floor.
+1Monkey jumps off the ladder onto the floor.
+1Monkey grabs the ladder.
+1Monkey walks to t8-8 holding the ladder.
+1Monkey drops the ladder.
+1Monkey climbs onto the ladder.
+1Monkey grabs the green-chest.
+1Monkey throws the green-chest off the ladder onto the floor.
+1Monkey jumps off the ladder onto the floor.
+1Monkey walks to t2-2.
+1Monkey grabs the red-key.
+1Monkey walks to t8-8 holding the red-key.
+1Monkey opens the green-chest with the red-key revealing the blue-key.
+1Monkey drops the red-key.
+1Monkey climbs onto the green-chest.
+1Monkey grabs the blue-key.
+1Monkey jumps off the green-chest onto the floor.
+1Monkey walks to t7-7 holding the blue-key.
+1Monkey opens the blue-chest with the blue-key revealing the bananas.
+1Monkey drops the blue-key.
+1Monkey climbs onto the blue-chest.
+1Monkey grabs the bananas.
+1Monkey eats the bananas.
+1File output byte count = 0 checksum = 0

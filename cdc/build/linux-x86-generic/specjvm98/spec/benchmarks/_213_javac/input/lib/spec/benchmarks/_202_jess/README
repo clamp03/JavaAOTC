@@ -1,0 +1,468 @@
+----------------------------------------------------------------------
+                                 Jess
+                     The Java Expert System Shell
+                         Version 2.2 (5/13/96)
+
+    (C) 1996 Ernest Friedman-Hill and Sandia National Laboratories
+                  http://herzberg.ca.sandia.gov/jess
+----------------------------------------------------------------------
+
+Jess is a clone of the popular CLIPS expert system shell written
+entirely in Java. With Jess, you can conveniently give your applets
+the ability to 'reason'. In describing Jess, I am going to assume
+great familiarity with CLIPS itself. This 'manual' will describe the
+differences between Jess and CLIPS. The reader should have a copy of
+the CLIPS User's Manual available. See the WWW site
+http://www.jsc.nasa.gov/~clips/CLIPS.html for more information about
+CLIPS.
+
+Jess is a work in progress - more features should be added sometime
+soon.  The order will be determined in part by what folks seem to want
+most, what I need Jess to do, and how much time I have to spend on it.
+
+This is the first version of a Jess manual. It is woefully
+inadequate now, but hopefully will improve over time. *Please* take
+the time to contribute by sending suggestions, inaccuracies, or even
+(gasp) contributions of additional text to the author at
+ejfried@herzberg.ca.sandia.gov. 
+
+One more note - in the interest of size and speed, Jess assumes that
+your input code is largely correct CLIPS code. As a result, if your
+CLIPS code is syntacticly invalid, Jess's error messages may be less
+than helpful. It certainly would help you develop Jess code if you had
+a copy of CLIPS to test on.
+
+----------------------------------------------------------------------
+                      GETTING STARTED WITH JESS
+----------------------------------------------------------------------
+
+Jess comes fully compiled and ready-to-run. There are several example
+programs for you to try. They are called fullmab.clp, zebra.clp, and
+wordgame.clp. fullmab.clp is the Monkey and Bananas problem featured
+at the Jess web site. To run it yourself from the command line, just
+type
+
+        java Jess fullmab.clp
+
+and the problem should run, producing a few screensfull of output. Any
+file of CLIPS code (given that it contains only CLIPS constructs and
+functions implemented by Jess, as described in this document) can be
+run this way. Note that giving Jess a file name on the command line is
+like using the 'batch' command in CLIPS; therefore, you need to make
+sure that the file ends with 
+
+(reset)
+(run)
+
+or nothing will happen.
+
+Zebra.clp and wordgame.clp are two other classic CLIPS examples,
+slightly modified to run under Jess. Both of these examples were
+selected to show how Jess deals with tough situations. These examples
+both generate huge numbers of partial pattern matches, so they are
+slow and use up a lot of memory. They may each take several minutes to
+run, depending on your computer, but they will run.
+
+To create your own graphical applets using the Jess classes, read on,
+and check out the sections about calling Jess from Java and vice-versa.
+
+----------------------------------------------------------------------
+                         MAJOR JESS FEATURES
+----------------------------------------------------------------------
+
+Jess implements the following constructs from CLIPS: defrules,
+deffunctions, defglobals, deffacts, and deftemplates. Jess has none of
+the object-oriented CLIPS extensions: defclass, defgeneric, etc. are
+*not* included. Jess does not implement modules, either. However,
+since Jess is object-oriented, you can instantiate multiple Jess
+systems and get them to communicate via the external function
+interface (see below).
+
+Jess supports the following basic data types: SYMBOL, STRING, INTEGER,
+FLOAT, FACT_ID, and EXTERNAL_ADDRESS. In addition, values of the
+following types are used internally by Jess: VARIABLE, FUNCALL,
+ORDERED_FACT, UNORDERED_FACT, LIST, DESCRIPTOR, INTARRAY, and
+NONE. Note that all Jess numbers obtained via scanning textual input
+become FLOATs. INTEGERs may be returned by functions, however.
+
+Jess implements only a small subset of CLIPS intrinsic functions. All
+of these have been designed to function as much like their CLIPS
+counterparts as possible. The currently supported intrinsic functions
+are: return, assert, retract, printout, read, while, if, bind, modify,
+and, or, not, eq, =, <>, >, <, >=, <=, neq, +, *, -, /, mod, sym-cat,
+reset, run, facts, rules, watch, unwatch, gensym*, readline,
+load-facts, save-facts, jess-version-string, jess-version-number.
+
+The load-facts and save-facts functions act differently depending on
+whether they are called in a Jess applet or application. If they are
+called from an applet, the will try to load/save the facts to a remote
+file using the java DocumentBase() call as the location; In this way,
+facts can be loaded over the Web. Save-facts really doesn't work from
+an applet at this time, but does not return an error.  From an
+application, load- and save- facts go directly to a file in the
+current directory, just like CLIPS.
+
+The CLIPS router system is not implemented. Only the 't' router is
+recognized by 'printout', 'read', and 'readline'.
+
+The last two functions are not part of CLIPS: in Jess, they return a
+STRING and a FLOAT, respectively, which represent the version of Jess
+that is running.
+
+Jess does not implement multifields or multislots in any context.
+
+----------------------------------------------------------------------
+                   THINGS NOT IMPLEMENTED IN JESS
+----------------------------------------------------------------------
+
+Jess does not implement all features of all constructs. This list
+tries to explain some of what's missing from Jess.
+
+DEFRULES:
+
+* Jess now implements the simplest form of rule salience. Salience
+values must be *fixed* integers between -10000 and 10000.
+
+* The 'and' and 'or' conditional elements are not supported on rule
+LHSs. 'not' is supported, however. You can generally use multiple
+rules to simulate the effect of an 'and' or 'or' CE.
+
+* The '|' connective constraint is not supported. '&', '~', and
+predicate constaints are all supported. Note that instead of
+writing a pattern like
+
+        (foo bar|baz) 
+
+you can write
+
+        (foo ?X&:(or (eq ?X bar) (eq ?X baz)))
+
+to achieve the same effect in Jess.
+
+* The 'test' conditional element is not supported, but it can generally
+be replaced by a predicate constraint attached to another pattern, i.e,
+
+(foo ?X ?Y)
+(test (eq ?X (+ ?Y 3)))
+
+can be translated into
+
+(foo ?X ?Y&:(eq ?X (+ ?Y 3))).
+
+
+DEFFUNCTIONS:
+
+* Only function calls are allowed in deffunctions. CLIPS allows
+symbols to be placed at the end of a deffunction, and the value of
+that symbol will become the return value of the deffunction. *You can't
+do this in Jess*. To return a value from a deffunction, us the explicit
+'return' function call.
+
+* Forward declarations of mutually recursive functions are not needed
+in Jess and will not parse.
+
+DEFTEMPLATES:
+
+* The only supported slot attribute in Jess is the 'default'
+attribute. In particular, 'type' is not supported.
+
+----------------------------------------------------------------------
+                      USING JESS FROM JAVA CODE
+----------------------------------------------------------------------
+
+Using Jess from Java code is simple. The Rete class contains the
+expert system engine. The Jesp class contains the Jess parser. To
+execute a file of CLIPS code in Jess (like the CLIPS 'batch' command),
+simply create a Rete object and a Jesp object, tell the Jesp object
+about the file, and call Jesp.parse():
+
+    // See info about the Display classes below
+    NullDisplay nd = new NullDisplay();
+    // Create a Jess engine
+    Rete rete = new Rete(nd);
+    // Open the file test.clp
+    FileInputStream fis = new FileInputStream("test.clp");
+    // Create a parser for the file
+    Jesp j = new Jesp(fis, rete);
+    try {
+      // parse and execute the code
+      j.parse();
+    } catch (ReteException re) {
+      // Jess errors are reported as 'ReteException's.
+      re.printStackTrace(nd.stderr());
+    }
+
+Note that if the file 'test.clp' contains the CLIPS (reset) and (run)
+commands, the Jess engine will run to completion during the parse() call.
+
+For more control over Jess from your applet, you can use the
+Rete.ExecuteCommand(String) method. For example, after the above code,
+you could include the following:
+
+    try {
+      rete.ExecuteCommand("(reset)");
+      rete.ExecuteCommand("(assert (foo bar foo)");
+      rete.ExecuteCommand("(run)");
+    } catch (Throwable ex) {
+      System.err.println("Foo bar error.");
+    }
+
+I made an effort to make Jess 'sort-of' threadsafe. Sort-of is not
+nearly good enough, however, so be careful how you use Jess in a
+multithreaded application. One major difference between Jess and CLIPS
+is that you can call (run) from a rule RHS and have a new rule fired
+up in the middle of RHS execution! This is because Jess is much more
+reentrant and object-oriented than CLIPS.
+
+Jess provides an interface 'ReteDisplay' that provides hooks into the
+engine's internal workings. The Display provides two types of
+functions: functions that return an input, output, and error stream to
+the engine, and functions that are called by the engine whenever an
+event occurs (events here meaning a construct is parsed, fact is
+asserted, rule is activated, etc.) You can implement ReteDisplay as a
+simple way of providing a GUI for your Jess application. The fancy
+multicolored display for the Jess home page is implemented in the
+class LostDisplay.  Writing a ReteDisplay is the simplest way to
+customize Jess. See the next section for more info about ReteDisplay.
+
+See the file Jess.java for ideas on how to implement Jess applets and
+applications. 
+
+----------------------------------------------------------------------
+                 CAPTURING AND PROCESSING JESS OUTPUT
+----------------------------------------------------------------------
+
+One simple way to use CLIPS as part of a larger system is to capture
+and process what CLIPS prints on its standard output.  This is also
+possible in Jess. This sections explains how to use the ReteDisplay
+class to do this.
+
+This is actually very easy to do, but maybe hard to describe.  Jess
+stdin and stdout are Java streams. Jess gets these streams by calling
+the methods ReteDisplay.stdin() and stdout(). To capture Jess's
+output, then, all you need to do is to subclass ReteDisplay so that it
+returns a custom output stream that captures and processes the
+information in some way. There is an example of this in the Jess
+distribution, as described below.
+
+Observe that the Jess 'monkey' applet's output appears in a scrolling
+window. How is this done?  The scrolling window is created using an
+instance of the class TextAreaOutputStream (part of Jess.)
+TextAreaOutputStream is a subclass of OutputStream that implements all
+the OutputStream methods such that the data appears in a TextArea
+Component.
+
+In the distributed 'monkey' applet, Jess.init() creates a TextArea
+widget, then a TextAreaOutputStream using that widget, then a
+PrintStream from the TextAreaOutputStream. It then uses this
+PrintStream to construct a LostDisplay object (a subclass of
+ReteDisplay) and then uses that LostDisplay to construct a Rete
+engine.  As a result, the output from the Rete engine ends up in the
+TextArea.
+
+So, to capture and process the printed output from Jess, you need to: 
+
+1) Implement an OutputStream class which does what you want to do to
+the stream of Jess output text.  Look at TextAreaOutputStream to see
+how. If you want to also print the output as well as process it, you
+can do that in this class (see the class java.io.FilterOutputStream
+for an elegant way of chaining streams together.)
+
+2) Implement a ReteDisplay class. NullDisplay is a very, very simple
+one which just hands out System.out as stdout(), System.in as stdin(),
+etc. To create your custom version, you can copy NullDisplay and just
+add a constructor which lets you pass in your custom streams.
+
+3) In your mainline code, construct an instance of your ReteDisplay
+using an instance of your OutputStream (remember to coerce it to a
+PrintStream first).  Then use this ReteDisplay to consruct your Rete
+engine. When you run Jess, the printed output will be captured by your
+stream class.
+
+----------------------------------------------------------------------
+             EXTENDING JESS WITH COMMANDS WRITTEN IN JAVA
+----------------------------------------------------------------------
+
+I've made it as easy as possible to add user-defined functions to
+Jess. There is no system type-checking on arguments, so you don't need
+to tell the system about your arguments, and values are
+self-describing, so you don't need to tell the system what type you
+return. You do, however, need to understand two basic Jess data
+structures: class Value and class ValueVector. Look at the source for
+these classes if the following discussion isn't clear.
+
+A Value is a self-describing data object. Once it is constructed, its
+type and value cannot be changed. Value supports the type() function,
+which returns one of the type constants in the class RU:
+
+  final public static int ATOM             =    1;
+  final public static int STRING           =    2;
+  final public static int INTEGER          =    4;
+  final public static int VARIABLE         =    8;
+  final public static int FACT_ID          =   16;
+  final public static int FLOAT            =   32;
+  final public static int FUNCALL          =   64;
+  final public static int ORDERED_FACT     =  128;
+  final public static int UNORDERED_FACT   =  256;
+  final public static int LIST             =  512;
+  final public static int DESCRIPTOR       = 1024;
+  final public static int EXTERNAL_ADDRESS = 2048;
+  final public static int INTARRAY         = 4096;
+
+Value supports a number of functions to get the actual data out of a
+Value object. These have names like IntValue() and StringValue() (look
+at the source for a full list.)  If you try to convert random values
+by creating a Value and retrieving it as some other type, you'll
+generally get a ReteException. Value has many constructors, mostly of
+the form Value(<object>, <type>) where type is one of the above
+codes. The constructors validate that the object can be interpreted as
+belonging to the given type.
+
+Note that Jess stores all strings, symbols ("atoms") and variable
+names as integers, which are used as indexes into a hashtable. Thus if
+Value.type() returns RU.ATOM or RU.STRING, you can call either
+RU.AtomValue() (which returns that integer) or RU.StringValue() (which
+returns a Java String object.) To convert a String to an appropriate
+integer, call int RU.putAtom(String). To get the String that goes with
+an integer, call String RU.getAtom(int).
+
+Facts, function calls, lists, etc. are stored by Jess in objects of
+class ValueVector. ValueVector is an extensible array of Value
+objects. You set an element with set(Value, int) and get an element
+with get(Value, int). set() will throw an exception if the index
+you're accessing is past the end of the current array. You can add a
+value to the end of a ValueVector with add() (which can extend the
+length of the internal data structures.) ValueVector.size() returns
+the actual number of Values in the ValueVector. set_length() lets you
+cheat by extending the length of a ValueVector to include null
+Values. (This is necessary sometimes to allow filling in many elements
+in random order.)
+
+Facts (type RU.ORDERED_FACT or RU.UNORDERED_FACT) are stored as a
+value vector with the slots filled in a special way, as follows (the
+constants representing slot numbers MUST be used, as they may change)
+
+   SLOT NUMBER         TYPE             DESCRIPTION
+     RU.CLASS         RU.ATOM         The 'head' or first field of the fact
+     RU.ID            RU.FACT_ID      The fact-id of this fact
+     RU.DESC          RU.DESCRIPTOR   One of RU.ORDERED_FACT or RU.UNORDERED_FACT
+     RU.FIRST_SLOT       (ANY)        Value of the first slot of this fact
+     RU.FIRST_SLOT + 1   (ANY)                     second
+       .....
+
+
+Note that for ordered facts, the slots are stored in order, but in
+unordered facts, they appear in the order given in the corresponding
+deftemplate. 
+
+
+Function calls (RU.FUNCALL's) are simpler; the first slot is the
+functor as an RU.ATOM, and all remaining slots are arguments. WHen
+your user function is called, the first argument to the Java Call
+function will be a ValueVector representation of the Jess code that
+evoked your function.
+
+Now, on to writing a user function.  First, create a class that
+implements the interface Userfunction. A listing is worth a 1000
+words:
+
+// A user function that implements the modulo operation.
+
+public class ModFunction implements Userfunction {
+
+  int _name = RU.putAtom("my-mod");
+
+  public int name() {
+    return _name;
+  }
+  
+  public Value Call(ValueVector vv, Context context) throws ReteException {
+    
+     // get the first arguments; accept any numeric value, convert to integer.
+     int d1 = (int) vv.get(1).NumericValue();
+     int d2 = (int) vv.get(2).NumericValue();
+
+     // create a new Value to hold the result.
+     return new Value(d1 % d2, RU.INTEGER);
+
+  }       
+}
+
+
+Then in your mainline code, simply call Rete.AddUserfunction() with an
+instance of your new class as an argument, and the function will be
+available from Jess code. Adding to our mainline code from the last
+section: 
+
+rete.AddUserfunction(new ModFunction());
+rete.ExecuteCommand("(printout t (my-mod 10 3) crlf)");
+
+will print "1".
+
+See the example class StringFunctions for an efficient way to
+implement multiple functions in one object.
+
+----------------------------------------------------------------------
+                              LAST WORDS
+----------------------------------------------------------------------
+
+Version 2.2.1:
+
+Ken Bertapelle found another bug, which has been squashed, in the
+pattern network.
+
+Version 2.2:
+
+Jess 2.2 adds a few new function calls (load-facts, save-facts) and
+fixes a serious bug (thanks to Ken Bertapelle for pointing it out!)
+which caused Jess to crash when predicate constraints were used in a
+certain way. Another bugfix corrected the fact that 'retract' only
+retracted the first of a list of facts. Jess used to give a truly
+inscrutable error message if a variable was first used in a not CE (a
+syntax error); the current error message is much easier to
+understand. I also clarified a few points in the documentation.
+
+Thanks for your feedback, and I hope you're enjoying Jess!
+
+Version 2.1:
+
+Jess 2.1 is *much* faster than version 2.0. The Monkey example runs in
+about half the time as under Jess 2.0, and for some inputs, the
+speed has increased by an order of magnitude!  This is probably the
+last big speed increase I'll get. For Java/Rete weenies, this speed
+increase came from banishing the use of java.lang.Vector in Tokens and
+in two-input node memories. Jess is now within a believeable
+Java/C++ speed ratio range of about 30:1.
+
+Jess 2.1 now includes rule salience. It also implements a few
+additional intrinsic functions: gensym*, mod, readline. Jess 2.1 fixes
+a bug in the way predicate constraints were parsed under some
+conditions by Jess 2.0. The parser now reports line numbers when it
+encounters an error.
+
+Version 2.0:
+
+Jess 2.0 is intrinsically about 30% faster than version 1.0. The
+internal data structures changed quite a bit. The Rete network now
+shares nodes in the Join network instead of just in the pattern
+network. The current data structures should allow for continued
+improvement. 
+
+Impassioned plea: if anyone writes an emulation of a CLIPS function
+that Jess omits, *please* send it to me and I'll include it in the
+next release (with credit to you, of course.)
+
+I was pleased by the response to the first release of Jess. If you use
+Jess, or if you have comments, questions, or concerns, please don't
+hesitate to ask.
+
+Finally, thanks to Gary Riley and the gang at NASA for writing the
+marvelous CLIPS in the first place!
+
+----------------------------------------------------------------------
+Ernest Friedman-Hill                        Phone: (510) 294-2154
+Scientific Computing                        FAX:   (510) 294-2234
+Sandia National Labs                        ejfried@ca.sandia.gov
+Org. 8117, MS 9214                  http://herzberg.ca.sandia.gov
+PO Box 969
+Livermore, CA 94550

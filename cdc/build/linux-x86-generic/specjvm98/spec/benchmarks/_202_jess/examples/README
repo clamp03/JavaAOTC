@@ -1,0 +1,7 @@
+----------------------------------------------------------------------
+                       README for Jess examples
+----------------------------------------------------------------------
+
+Most of these files are just tiny snippets of code used for testing
+various Jess features. A few of them are entire programs (zebra.clp,
+wordgame.clp, fullmab.clp). Don't read too much into them!

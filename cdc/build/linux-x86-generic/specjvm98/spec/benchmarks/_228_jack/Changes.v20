@@ -1,0 +1,25 @@
+Make date a constant string so varying formats and internationalization
+won't cause different byte counts and spurious validation errors.
+
+------- Jack_the_Parser_Generator_Internals.java -------
+254c254,255
+<     java.util.Date date = new java.util.Date();
+---
+>     //java.util.Date date = new java.util.Date();
+>     String date = "Tue Apr 28 11:24:13 PDT 1998";
+
+------- LexGen.java -------
+32c32,33
+<     java.util.Date date = new java.util.Date();
+---
+>     //java.util.Date date = new java.util.Date();
+>     String date = "Tue Apr 28 11:24:13 PDT 1998";
+
+Reduce iteration count.
+
+------- Main.java -------
+32c32
+<       for (int i = 0 ; i <= Context.getSpeed()/4 ; i++) {
+---
+>       for (int i = 0 ; i <= Context.getSpeed()/6 ; i++) {
+

@@ -1,0 +1,7 @@
+      ostr.println("/*");
+      ostr.println(" * Copyright (c) 1996,1997 Sun Microsystems, Inc. All rights reserved.");
+      ostr.println(" *");
+      ostr.println(" * THIS SOFTWARE MAY BE USED ONLY ON");
+      ostr.println(" * THE CONDITION THAT LICENSEE ACCEPTS ALL THE TERMS CONTAINED IN THE");
+      ostr.println(" * ACCOMPANYING LICENSE AGREEMENT CONTAINED IN THE FILE 'LICENSE'.");
+      ostr.println(" */");

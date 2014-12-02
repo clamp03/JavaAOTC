@@ -1,0 +1,37 @@
+echo $1
+../bin/$1 -Xms32m SpecApplication -s100 _201_compress >> $1
+echo 201 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _201_compress >> $1
+echo 201 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _201_compress >> $1
+echo 201 3/3
+../bin/$1 -Xms32m SpecApplication -s100 _202_jess >> $1
+echo 202 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _202_jess >> $1
+echo 202 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _202_jess >> $1
+echo 202 3/3
+../bin/$1 -Xms32m SpecApplication -s100 _209_db >> $1
+echo 209 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _209_db >> $1
+echo 209 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _209_db >> $1
+echo 209 3/3
+../bin/$1 -Xms32m SpecApplication -s100 _213_javac >> $1
+echo 213 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _213_javac >> $1
+echo 213 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _213_javac >> $1
+echo 213 3/3
+../bin/$1 -Xms32m SpecApplication -s100 _228_jack >> $1
+echo 228 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _228_jack >> $1
+echo 228 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _228_jack >> $1
+echo 228 3/3
+../bin/$1 -Xms32m SpecApplication -s100 _227_mtrt >> $1
+echo 227 1/3
+../bin/$1 -Xms32m SpecApplication -s100 _227_mtrt >> $1
+echo 227 2/3
+../bin/$1 -Xms32m SpecApplication -s100 _227_mtrt >> $1
+echo 227 3/3

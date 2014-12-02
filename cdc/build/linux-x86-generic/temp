@@ -1,0 +1,27 @@
+/* Loop Header :   */
+/* 0: aload_0	targets:s0_ref operands:cls
+Eliminated by BPC:1
+IN CHECK: []
+live OUT:[cls]
+NonNull : cls  
+GC_CHECKED = true */
+
+/* Loop Header :   */
+/* 1: getfield_quick 2 0	targets:s0_int operands:cls,2
+Operand changed from: s0_ref to cls
+IN CHECK: []
+live OUT:[]
+NonNull : cls  
+
+Null Check Eliminated
+GC_CHECKED = true */
+CVMD_fieldReadInt(cls, 2, s0_int);
+
+/* Loop Header :   */
+/* 4: ireturn	targets: operands:s0_int
+IN CHECK: []
+live OUT:[]
+NonNull : cls  
+GC_CHECKED = true */
+goto EXIT;
+

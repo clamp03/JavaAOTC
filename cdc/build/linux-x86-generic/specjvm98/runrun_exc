@@ -1,0 +1,39 @@
+echo Num1 > cvm
+tar xvfz ../exception_0_inline.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num2 >> cvm
+tar xvfz ../exception_0_noInline.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num3 >> cvm
+tar xvfz ../exception_1_inline_5_10.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num4 >> cvm
+tar xvfz ../exception_1_noInline_5_10.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num5 >> cvm
+tar xvfz ../exception_2_inline_5_7.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num6 >> cvm
+tar xvfz ../exception_2_noInline_5_7.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num7 >> cvm
+tar xvfz ../exception_0s_inline.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num8 >> cvm
+tar xvfz ../exception_0s_noInline.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num9 >> cvm
+tar xvfz ../exception_info_inline_5_7.tar.gz --directory /home/clamp/test
+runrun100 cvm
+
+echo Num10 >> cvm
+tar xvfz ../exception_info_noInline_5_7.tar.gz --directory /home/clamp/test
+runrun100 cvm

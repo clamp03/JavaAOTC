@@ -1,0 +1,88 @@
+#
+# User properties file
+# Properties used to control benchmark operation.
+#
+
+# The setup screen where you enter/edit your configuration for reporting,
+# adjusts itself to the size of your screen. If it doesn't do so correctly,
+# you can set this property to further limit the number of rows displayed
+# per pane
+spec.initial.maxRows=99
+
+# Select tolerance for auto-run specified in percent times 100
+# I.e., 200 means 2.0%. If successive runs do not improve by at least
+# this amount, then terminate an autorun sequence
+spec.initial.percentTimes100=200
+
+# Minimum number of executions to perform in an autorun sequence
+# even if the tolerance parameter above indicates it should terminate
+spec.initial.automin=2
+
+# Maximum number of executions to perform in an autorun sequence
+# even if the tolerance parameter above indicates it should continue
+spec.initial.automax=5
+
+# milliseconds of delay in between executions in an autorun sequence
+spec.initial.autodelay=500
+
+# whether to perform gc in between executions in an autorun sequence
+spec.initial.autogc=true
+
+# If true, the console button is enabled. Until you press this button,
+# any output from individual benchmarks is discarded. If you press the
+# button, output from that time on is displayed in a new scrolling text
+# window.  Then, even if you later close that window, output is still
+# retained and can be viewed later by pressing the console button again.
+# If this property is false, the console button is disabled and all
+# output from individual benchmarks is sent to your Java console from
+# where, depending on your JVM, you may be able to capture it in a local
+# file
+spec.initial.console=true
+
+# relative location of client and server files of properties
+# describing your test configuration
+spec.initial.clientFile=props/client
+spec.initial.serverFile=props/server
+spec.initial.noteFile=props/notes
+
+# If 'interactive' is true, the benchmark runs in interactive mode. If
+# false, it automatically selects all of the benchmarks in the
+# 'default.group' and the size specified by 'default.size', and performs
+# an auto-run of those benchmarks.  When the benchmark run is complete,
+# it emails the results to the address you specify below in the 'emailTo'
+# property. If resultDelay is set then it specifies how many minutes
+# to delay after finishing the benchmarks before sending results.
+# This is to give the user a chance to look at the results on the
+# screen if [s]he happens to be there. After sending the results, if
+# the benchmarks are running in standalone application mode, the program
+# exits. If they are running in applet mode, it does not exit (of course).
+spec.initial.interactive=true
+spec.initial.resultDelay=0
+
+# Specify which benchmark group and which size are selected by default.
+# In interactive mode you can always change these to something else,
+# but in batch mode this is the only place you can specify these values
+# If not set, then the compliant group and size are selected
+spec.initial.default.group=All
+spec.initial.default.size=100
+
+# You can make your own benchmark groups for test purposes
+# You should use the group numbers next in sequence after the last group
+# defined in 'props/spec'
+#spec.benchmarkGroup3.00=MyTest
+#spec.benchmarkGroup3.01=_213_javac
+#spec.benchmarkGroup3.02=_202_jess
+
+# Make sure you get the email address right!
+# *especially* if you run in batch / non-interactive mode
+# This is where your test results are automatically mailed at the
+# conclusion of a batch run, and the default address used for an
+# interactive run, which you can override.
+spec.testx.emailTo=root@localhost
+spec.testx.emailReturn=jvm-client@localhost
+spec.testx.mailHost=localhost
+
+# If "true" then format dates according to the locale of the SPEC office
+# instead of the local date format
+spec.initial.specDates=false
+

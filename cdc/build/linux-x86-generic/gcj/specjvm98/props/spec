@@ -1,0 +1,159 @@
+#
+# SPEC JVM Client98 properties file
+# @(#)spec	2.4 12/13/00
+# Properties in this file are specified by SPEC and may not be modified.
+# You may change properties in the 'user', 'client', and 'server' files.
+# Please refer to the documentation for more information
+
+spec.report.suiteName=JVM Client98
+spec.report.version= members test version 1.04_01
+spec.report.versionDate=2000-12-13
+
+spec.initial.titleFile=props/title
+spec.initial.message1=SPEC JVM Client98 benchmark suite
+spec.initial.message2=www.spec.org   +1 (703) 331-0180  info@spec.org
+spec.initial.logo=spec-sm.gif
+spec.initial.bgcolor=eeeeff
+spec.initial.compliant.group=All
+# milliseconds of delay in between executions in an autorun sequence
+# maximum allowable by SPEC run rules
+spec.initial.autodelaymax=1000
+
+# Location of SPEC office
+# These are ISO two character codes. See java.util.Locale documentation
+spec.initial.language=en
+spec.initial.country=US
+
+# List of benchmarks which may be selected by group.
+# Group 1 is all benchmarks which must be run for a reportable
+# result, and this group may not be modified. Group 2 contains the
+# two programs that check your environment and installation.
+# Additional benchmark groups are for test purposes only, for
+# convenience of the benchmark user, and may be modified. These are
+# located in the 'user' file.
+
+spec.benchmarkGroup1.00=All
+spec.benchmarkGroup1.01=_200_check
+spec.benchmarkGroup1.02=_227_mtrt
+spec.benchmarkGroup1.03=_202_jess
+spec.benchmarkGroup1.04=_201_compress
+spec.benchmarkGroup1.05=_209_db
+spec.benchmarkGroup1.06=_222_mpegaudio
+spec.benchmarkGroup1.07=_228_jack
+spec.benchmarkGroup1.08=_213_javac
+
+spec.benchmarkGroup2.00=Check
+spec.benchmarkGroup2.01=_200_check
+spec.benchmarkGroup2.02=_999_checkit
+
+# Default validity check codes
+# The data send to the console window is also used for verification. The
+# way this is done is governed by a set of verification rules. Each line
+# written to Context.out has a rule associated with it. The rules are
+# coded thus:
+# 0 - Validity checking is not performed at all.
+# 1 - Validity check all the data
+# 2 - Remove '/' and '\' characters before validity checking.
+# 3 - Remove numbers before validity checking.
+# 4 - Rules 2 and 3 together.
+spec.validity._200_check=1
+spec.validity._201_compress=1
+spec.validity._202_jess=1
+spec.validity._209_db=1
+spec.validity._213_javac=0
+spec.validity._222_mpegaudio=3
+spec.validity._224_richards=1
+spec.validity._227_mtrt=0
+spec.validity._228_jack=1
+spec.validity._999_checkit=1
+
+# If property is set to false, checksumming is turned off on validity
+# checking, i.e. only output bytes and any validity checks internal
+# to the benchmark itself are performed.
+# This is intended to allow 80-bit intermediate values
+# _222_mpegaudio: OK because it is a commercial application
+spec.validity.checksum._222_mpegaudio=false
+
+# whether initial setting of file cache is on
+# SPEC run rules require that it be off
+spec.initial.cache=false
+
+# Report settings
+
+# Determine the three categories of memory sizes
+spec.report.cat1=48
+spec.report.cat2=256
+# How wide is the bar chart?
+spec.report.maxBarWidth=350
+# Number of decimal places on the reporting page
+spec.report.ratioDecimals=1
+# This level of indirection specifies which properties are used in
+# bulding the page, to accomodate use of the report generation program
+# by multiple suites. That generality has since been abandoned.
+spec.report.pageTitle0=spec.report.suiteName
+spec.report.pageTitle1=spec.client.hw.vendor
+spec.report.pageTitle2=spec.client.sw.vendor
+# Color of the reporting page background
+spec.report.bodyAttributes=bgcolor="f0f0f0"
+# These properties provide the capability, not used in JVM Client98,
+# for a weighted geometric mean of the benchmark ratios
+spec.report._200_check.weight=0
+spec.report._201_compress.weight=1
+spec.report._202_jess.weight=1
+spec.report._209_db.weight=1
+spec.report._213_javac.weight=1
+spec.report._222_mpegaudio.weight=1
+spec.report._224_richards.weight=1
+spec.report._227_mtrt.weight=1
+spec.report._228_jack.weight=1
+
+# Reference Machine:
+# Architecture: PowerPC, Implementation: 604
+# CPU Clock Speed: 133 MHz
+# Number of CPU's: 1
+# Separate I & D caches
+# L1 icache:  16KB, 4-way associative, 32 Byte block size, 32 Byte line size
+# L1 dcache:  16KB, 4-way associative, 32 Byte block size, 32 Byte line size
+# L2  cache: 512KB, 1-way associative
+# Separate I & D TLB's
+#   ITLB size: 128, 2-way associative
+#   DTLB size: 128, 2-way associativea
+# Memory: 96MB
+# Disks:  2 x 2.2 GB  
+# Operating System: AIX 4.1.5.0
+# JDK Version:       JDK1.1.4  (JIT: off)
+# Executed with options: -ms16m
+#
+# Reference times (sec).
+
+spec.report._200_check.ref=1
+spec.report._201_compress.ref=1175
+spec.report._202_jess.ref=380
+spec.report._209_db.ref=505
+spec.report._213_javac.ref=425
+spec.report._222_mpegaudio.ref=1100
+spec.report._224_richards.ref=720
+spec.report._227_mtrt.ref=460
+spec.report._228_jack.ref=455
+
+# Help file locations
+
+spec.help.Button.Auto_Run=doc/auto.html
+spec.help.Button.Console_On=doc/console.html
+spec.help.Button.Console_Off=doc/console.html
+spec.help.Button.Quit=doc/quit.html
+spec.help.Button.Report=doc/report.html
+spec.help.Button.Select_All=doc/select.html
+spec.help.Button.Unselect_All=doc/select.html
+spec.help.Button.Setup=doc/setup.html
+spec.help.Button.Start=doc/start.html
+spec.help.Button.Stop=doc/stop.html
+spec.help.Button.>>help<<=doc/help.html
+spec.help.Choice.1=doc/size.html
+spec.help.Choice.10=doc/size.html
+spec.help.Choice.100=doc/size.html
+spec.help.Choice.Cache_Off=doc/cache.html
+spec.help.Choice.Cache_On=doc/cache.html
+spec.help.benchmarks=doc/benchmarks
+spec.help.initial=doc/initial.html
+

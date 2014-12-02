@@ -1,0 +1,105 @@
+1
+1Jess, the Java Expert System Shell
+1Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+1Jess Version 3.2 11/8/97
+1
+1There are five houses, each of a different color, inhabited by men of
+1different nationalities, with different pets, drinks, and cigarettes.
+1
+1The Englishman lives in the red house.  The Spaniard owns the dog.
+1The ivory house is immediately to the left of the green house, where
+1the coffee drinker lives.  The milk drinker lives in the middle house.
+1The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+1tea.  The Norwegian resides in the first house on the left.  The
+1Chesterfields smoker lives next door to the fox owner.  The Lucky
+1Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+1The horse owner lives next to the Kools smoker, whose house is yellow.
+1The Norwegian lives next to the blue house.
+1
+1Now, who drinks water?  And who owns the zebra?
+1
+1HOUSE | Nationality Color Pet Drink Smokes
+1--------------------------------------------------------------------
+1  1   |norwegian yellow fox water kools
+1  2   |ukrainian blue horse tea chesterfields
+1  3   |englishman red snails milk old-golds
+1  4   |spaniard ivory dog orange-juice lucky-strikes
+1  5   |japanese green zebra coffee parliaments
+1
+1
+1The problem is
+1   GERALD
+1 + DONALD
+1   ------
+1 = ROBERT
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #2= 15
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #3= 16
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #4= 17
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #5= 18
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #6= 19
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #7= 20
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #8= 21
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #9= 22
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #10= 23
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #11= 24
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #12= 25
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #13= 26
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #14= 27
+1   1 9 7 4 8 5
+1 + 5 2 6 4 8 5
+1   ------
+1 = 7 2 3 9 7 0
+1check #15= 28
+1File output byte count = 0 checksum = 0

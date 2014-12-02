@@ -1,0 +1,7 @@
+cp ~clamp/backup_110503/home2/backup/specjvm98/java/io/LineNumberInputStream.class btclasses/java/io/
+cp ~clamp/backup_110503/home2/backup/specjvm98/java/io/StringBufferInputStream.class btclasses/java/io/
+cp ~clamp/backup_110503/home2/backup/specjvm98/java/util/Observable.class btclasses/java/util/
+cp ~clamp/backup_110503/home2/backup/specjvm98/java/util/Observer.class btclasses/java/util/
+cp ~clamp/backup_110503/home2/backup/specjvm98/java/net/HttpURLConnection.class btclasses/java/net/
+cp ./foundation_classes/java/io/RandomAccessFile.class btclasses/java/io/
+rm btclasses.zip

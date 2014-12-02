@@ -1,0 +1,26 @@
+./eembc.out  -r 1 -t 0
+./eembc.out  -r 1 -t 0
+./eembc.out  -r 1 -t 0
+
+./eembc.out  -r 1 -t 1
+./eembc.out  -r 1 -t 1
+./eembc.out  -r 1 -t 1
+
+./eembc.out  -r 1 -t 2
+./eembc.out  -r 1 -t 2
+./eembc.out  -r 1 -t 2
+
+./eembc.out  -r 1 -t 3
+./eembc.out  -r 1 -t 3
+./eembc.out  -r 1 -t 3
+
+./eembc.out  -r 1 -t 4
+./eembc.out  -r 1 -t 4
+./eembc.out  -r 1 -t 4
+
+./eembc.out  -r 1 -t 5
+./eembc.out  -r 1 -t 5
+./eembc.out  -r 1 -t 5
+
+cd specjvm98
+./gcjall

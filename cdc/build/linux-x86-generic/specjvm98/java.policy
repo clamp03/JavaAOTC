@@ -1,0 +1,4 @@
+grant codeBase "file:/home/cdc/testsuites/SpecJVM98" {
+      permission java.security.AllPermission;
+};
+

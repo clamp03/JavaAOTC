@@ -1,0 +1,46 @@
+#
+# Client properties file
+#
+
+# client hardware
+spec.client.hw.vendor=Sun Microsystems
+spec.client.hw.vendor.url=http://www.sun.com
+spec.client.hw.model=Ultra 2 Creator (3D) Model 1300
+spec.client.hw.processor=UltraSPARC-II
+spec.client.hw.MHz=300
+spec.client.hw.ncpu=1
+spec.client.hw.memory=REQUIRED
+spec.client.hw.primaryCache=16KBI+16KBD on chip
+spec.client.hw.secondaryCache=2MB(I+D) off chip
+spec.client.hw.otherCache=none
+spec.client.hw.memoryConfig=
+spec.client.hw.fileSystem=UFS
+spec.client.hw.disk=REQUIRED
+spec.client.hw.nonVolatile=none
+spec.client.hw.other=none
+spec.client.hw.network=10Base-T
+spec.client.hw.available=Apr-97
+
+# client software
+spec.client.sw.vendor=Sun Microsystems
+spec.client.sw.vendor.url=http://www.sun.com
+spec.client.sw.JVM=REQUIRED
+spec.client.sw.JVMavailable=REQUIRED
+spec.client.sw.JVMmemory=REQUIRED
+spec.client.sw.OS=Solaris 2.6
+spec.client.sw.OSavailable=Aug-97
+spec.client.sw.systemState=normal
+spec.client.sw.other=
+spec.client.sw.otherAvailable=
+
+# other information
+spec.other.testedBy=REQUIRED
+spec.other.testedByName=OPTIONAL
+spec.other.internalReference=OPTIONAL
+spec.other.specLicense=REQUIRED
+spec.other.testLocation=REQUIRED
+
+spec.other.emailTo=REQUIRED
+spec.other.emailReturn=REQUIRED
+spec.other.mailHost=localhost
+

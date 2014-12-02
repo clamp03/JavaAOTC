@@ -1,0 +1,9 @@
+<UL>
+<LI>JVM 1.1.4 (No JIT)
+<LI>rsh java -ms32m -mx32m -ss128k sun.applet.AppletViewer http://fixit.austin.ibm.com/javanet/jvm98/SpecApplet.html
+<LI>
+</UL>
+<pre>
+You can use a browser or other
+http Server instead of fixit
+</pre>

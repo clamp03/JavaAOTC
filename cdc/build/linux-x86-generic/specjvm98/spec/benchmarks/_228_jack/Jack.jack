@@ -1,0 +1,804 @@
+/**
+ *
+ * Copyright (C) 1996,1997 Sun Microsystems Inc.
+ *
+ * SUN MICROSYSTEMS, INC. THROUGH ITS SUN LABORATORIES DIVISION ("SUN") IS
+ * WILLING TO LICENSE THE JAVA (tm) COMPILER COMPILER (tm) SOFTWARE IN
+ * OBJECT CODE FORMAT, SOFTWARE SAMPLE GRAMMARS AND THE ACCOMPANYING
+ * DOCUMENTATION (the "Software") TO LICENSEE (AS DEFINED BELOW) ONLY ON
+ * THE CONDITION THAT LICENSEE ACCEPTS ALL THE TERMS CONTAINED IN THE
+ * ACCOMPANYING LICENSE AGREEMENT CONTAINED IN THE FILE 'LICENSE'.
+ * 
+ * PLEASE READ THE TERMS CAREFULLY BEFORE USING THE SOFTWARE.  LICENSEE
+ * ACKNOWLEDGES THAT LICENSEE HAS READ AND UNDERSTANDS THIS AGREEMENT AND
+ * AGREES TO BE BOUND BY ITS TERMS AND CONDITIONS.  IF LICENSEE DOES NOT
+ * ACCEPT THESE LICENSE TERMS, SUN DOES NOT GRANT ANY LICENSE TO THE
+ * SOFTWARE.
+ * 
+ * SPEC Development Version @(#)Jack.jack	1.3 10/24/97
+ */
+
+/*
+ * Author: Sriram Sankar
+ * Date: 4/12/96
+ *
+ * This file contains the grammar and actions that describe
+ * Jack_the_Parser_Generator.  When passed as input to Jack_the_Parser_Generator
+ * it generates another copy of itself.  Hence Jack_the_Parser_Generator
+ * may be modified by modifying this file, and therefore this file is to
+ * be considered the master version of Jack_the_Parser_Generator.
+ *
+ */
+
+LOOKAHEAD = 1;
+STACK_TRACE = false;
+TOKEN_TRACE = false;
+
+PARSER_BEGIN(Jack_the_Parser_Generator)
+
+/**
+ * This file contains the code for Jack_the_Parser_Generater generated
+ * by Jack_the_Parser_Generator itself.
+ */
+
+package benchmarks.Jack;
+
+public class Jack_the_Parser_Generator extends benchmarks.Jack.Jack_the_Parser_Generator_Internals {
+
+}
+
+PARSER_END(Jack_the_Parser_Generator)
+
+/**
+ * "Productions" with IGNORE_IN_BNF may occur anywhere in the grammar file and
+ * may occur more than once.  These are collected together and concatenated.
+ * Each right hand side of these productions must be a single lexical token.
+ * The only relevance of the location is to set the precedence of these tokens
+ * with respect to others.
+ */
+
+IGNORE_IN_BNF :
+{}
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| <"//" (~["\n","\r"])* ("\n"|"\r\n")>
+| <"/*" (~["*"])* "*" (~["/"] (~["*"])* "*")* "/">
+}
+
+/**
+ * "Productions" with TOKENS may occur anywhere in the grammar file and
+ * may occur more than once.  These are collected together and concatenated.
+ * Each right hand side of these productions must be a single lexical token.
+ * The only relevance of the location is to set the precedence of these tokens
+ * with respect to others.
+ */
+
+TOKEN :
+{}
+{
+  < ABSTRACT: "abstract" >
+| < BOOLEAN: "boolean" >
+| < BREAK: "break" >
+| < BYTE: "byte" >
+| < CASE: "case" >
+| < CAST: "cast" >
+| < CATCH: "catch" >
+| < CHAR: "char" >
+| < CLASS: "class" >
+| < CONST: "const" >
+| < CONTINUE: "continue" >
+| < DEFAULT: "default" >
+| < DO: "do" >
+| < DOUBLE: "double" >
+| < ELSE: "else" >
+| < EXTENDS: "extends" >
+| < FINAL: "final" >
+| < FINALLY: "finally" >
+| < FLOAT: "float" >
+| < FOR: "for" >
+| < FUTURE: "future" >
+| < GENERIC: "generic" >
+| < GOTO: "goto" >
+| < IF: "if" >
+| < IMPLEMENTS: "implements" >
+| < IMPORT: "import" >
+| < INNER: "inner" >
+| < INSTANCEOF: "instanceof" >
+| < INT: "int" >
+| < INTERFACE: "interface" >
+| < LONG: "long" >
+| < NATIVE: "native" >
+| < NEW: "new" >
+| < NULL: "null" >
+| < OPERATOR: "operator" >
+| < OUTER: "outer" >
+| < PACKAGE: "package">
+| < PRIVATE: "private" >
+| < PROTECTED: "protected" >
+| < PUBLIC: "public" >
+| < REST: "rest" >
+| < RETURN: "return" >
+| < SHORT: "short" >
+| < STATIC: "static" >
+| < SUPER: "super" >
+| < SWITCH: "switch" >
+| < SYNCHRONIZED: "synchronized" >
+| < THIS: "this" >
+| < THROW: "throw" >
+| < THROWS: "throws" >
+| < TRANSIENT: "transient" >
+| < TRY: "try" >
+| < VAR: "var" >
+| < VOID: "void" >
+| < VOLATILE: "volatile" >
+| < WHILE: "while" >
+| < TRUE: "true" >
+| < FALSE: "false" >
+| < NUMERIC_LITERAL: ["0"-"9"] (["0"-"9","a"-"z","A"-"Z",".","+","-"])* >
+|
+  < STRING_LITERAL:
+      "\""
+      (   (~["\"","\\","\n","\r"])
+        | ("\\" ["n","t","b","r","f","\\","'","\""])
+      )*
+      "\""
+  >
+|
+  < CHARACTER_LITERAL:
+      "'"
+      (   (~["'","\\","\n","\r"])
+        | ("\\" ["n","t","b","r","f","\\","'","\""])
+      ) 
+      "'"
+  >   
+| < LPAREN: "(" >
+| < RPAREN: ")" >
+| < LBRACE: "{" >
+| < RBRACE: "}" >
+| < LBRACKET: "[" >
+| < RBRACKET: "]" >
+| < SEMICOLON: ";" >
+| < COMMA: "," >
+| < DOT: "." >
+| < ASSIGN: "=" >
+| < GT: ">" >
+| < LT: "<" >
+| < BANG: "!" >
+| < TILDE: "~" >
+| < HOOK: "?" >
+| < COLON: ":" >
+| < EQ: "==" >
+| < LE: "<=" >
+| < GE: ">=" >
+| < NE: "!=" >
+| < SC_OR: "||" >
+| < SC_AND: "&&" >
+| < INCR: "++" >
+| < DECR: "--" >
+| < PLUS: "+" >
+| < MINUS: "-" >
+| < STAR: "*" >
+| < SLASH: "/" >
+| < BIT_AND: "&" >
+| < BIT_OR: "|" >
+| < XOR: "^" >
+| < REM: "%" >
+| < LSHIFT: "<<" >
+| < RSHIFT: ">>" >
+| < RSIGNSHIFT: ">>>" >
+| < PLUSASSIGN: "+=" >
+| < MINUSASSIGN: "-=" >
+| < STARASSIGN: "*=" >
+| < SLASHASSIGN: "/=" >
+| < ANDASSIGN: "&=" >
+| < ORASSIGN: "|=" >
+| < XORASSIGN: "^=" >
+| < REMASSIGN: "%=" >
+| < LSHIFTASSIGN: "<<=" >
+| < RSHIFTASSIGN: ">>=" >
+| < RSIGNSHIFTASSIGN: ">>>=" >
+| < _LOOKAHEAD: "LOOKAHEAD" >
+| < _STACK_TRACE: "STACK_TRACE" >
+| < _TOKEN_TRACE: "TOKEN_TRACE" >
+| < _PARSER_BEGIN: "PARSER_BEGIN" >
+| < _PARSER_END: "PARSER_END" >
+| < _JAVACODE: "JAVACODE" >
+| < _IGNORE_IN_BNF: "IGNORE_IN_BNF" >
+| < _TOKEN: "TOKEN" >
+| < _EOF: "EOF" >
+}
+
+void jack_input() :
+{
+			int la = 1;
+			boolean st = false, tt = false;
+			String id1, id2;
+}
+{
+  (   "LOOKAHEAD"   "=" la=integer_literal() ";"
+			{
+			  la_bookkeep(la);
+			}
+    | "STACK_TRACE" "=" st=boolean_literal() ";"
+			{
+			  st_bookkeep(st);
+			}
+    | "TOKEN_TRACE" "=" tt=boolean_literal() ";"
+			{
+			  tt_bookkeep(tt);
+			}
+  )*
+			{
+			  flags_finalize(la, st, tt);
+			  db_init();
+			}
+
+  "PARSER_BEGIN" "(" id1=identifier()
+			{
+			  db_namecu(id1);
+			}
+                 ")"
+  java_compilation_unit(id1)
+  "PARSER_END" "(" id2=identifier()
+			{
+			  compare(id1, id2);
+			}
+               ")"
+  ( production() )+
+  <EOF>
+			{
+			  db_process();
+			}
+}
+
+int integer_literal() :
+{}
+{
+  <NUMERIC_LITERAL>
+			{
+			  try {
+			    return Integer.parseInt(token.image);
+			  } catch (NumberFormatException e) {
+			    throw new Error();
+			  }
+			}
+}
+
+boolean boolean_literal() :
+{}
+{
+  "true"
+			{
+			  return true;
+			}
+|
+  "false"
+			{
+			  return false;
+			}
+}
+
+// "throws benchmarks.Jack.ParseError" is implicit in JAVACODE
+
+JAVACODE
+void java_compilation_unit(String cu_name) {
+  try {
+    benchmarks.Jack.Token tok;
+    int nesting = 0;
+    boolean in_main_class = false;
+    while (true) {
+      tok = token_source.getToken(1);
+      if (tok.kind == _PARSER_END) break;
+      if (tok.kind == LBRACE) {
+        if (nesting == 0 && in_main_class) {
+          db_setinsertionpoint(1);
+        }
+        nesting++;
+      }
+      if (tok.kind == RBRACE) {
+        if (nesting != 0) nesting--; // Simply ignore excess closing braces.
+        if (nesting == 0 && in_main_class) {
+          in_main_class = false;
+          db_setinsertionpoint(2);
+        }
+      }
+      tok = token_source.getNextToken();
+      db_addcutoken(tok);
+      if (nesting == 0 && tok.kind == CLASS) {
+        if (token_source.getToken(1).kind == _PARSER_END) break;
+        tok = token_source.getNextToken();
+        db_addcutoken(tok);
+        if (tok.image.equals(cu_name)) in_main_class = true;
+      }
+    }
+    db_insertionpointerrors();
+  } catch (benchmarks.Jack.TokenException e) {
+    throw new ParseError();
+  }
+}
+
+void production() :
+{
+			String lhs;
+			Production p;
+			Container c = new Container();
+			java.util.Vector declaration_tokens = new java.util.Vector();
+}
+{
+  "JAVACODE"
+			{
+			  p = new JavaCodeProduction();
+			}
+  java_return_type(((NormalProduction)p).return_type_tokens) lhs=identifier()
+			{
+			  ((NormalProduction)p).setlhs(lhs);
+                        }
+  "(" java_parameter_list(((NormalProduction)p).parameter_list_tokens) ")"
+  "{" java_declarations_and_code(((JavaCodeProduction)p).code_tokens) "}"
+			{
+			  db_addproduction(p);
+			}
+|
+  method_declaration(c) ":"
+			{
+			  p = (Production)(c.member);
+			}
+  "{" java_declarations_and_code(declaration_tokens) "}"
+			{
+			  production_adddecls(p, declaration_tokens);
+			}
+  "{" expansion_choices(c) "}"
+			{
+			  production_addexpansion(p, (Expansion)(c.member));
+			  db_addproduction(p);
+			}
+}
+
+void method_declaration(Container c) :
+{
+			String lhs;
+			Production p;
+}
+{
+			{
+			  p = new BNFProduction();
+			  c.member = p;
+			}
+  java_return_type(((NormalProduction)p).return_type_tokens) lhs=identifier()
+			{
+			  ((NormalProduction)p).setlhs(lhs);
+                        }
+  "(" java_parameter_list(((NormalProduction)p).parameter_list_tokens) ")"
+|
+  "IGNORE_IN_BNF"
+			{
+			  p = new IgnoreInBNFProduction();
+			  c.member = p;
+			}
+|
+  "TOKEN"
+			{
+			  p = new TokenProduction();
+			  c.member = p;
+			}
+}
+
+void expansion_choices(Container c1) :
+{
+			boolean morethanone = false;
+			Choice ch = null; // unnecessary initialization to make Java compiler happy!
+			Container c2 = new Container();
+}
+{
+  expansion(c1)
+  ( "|" expansion(c2)
+			{
+			  if (morethanone) {
+			    ch.choices.addElement(c2.member);
+			  } else {
+			    morethanone = true;
+			    ch = new Choice();
+			    ch.choices.addElement(c1.member);
+			    ch.choices.addElement(c2.member);
+			  }
+			}
+  )*
+			{
+			  if (morethanone) {
+			    c1.member = ch;
+			  }
+			}
+}
+
+void expansion(Container c1) :
+{
+			int count = 0;
+			Sequence seq = null; // unnecessary initialization to make Java compiler happy!
+			Container c2 = new Container();
+}
+{
+  ( expansion_unit(c2)
+			{
+			  count++;
+			  if (count == 1) {
+			    c1.member = c2.member; // if count does not go beyond 1, we are done.
+			  } else if (count == 2) { // more than 1, so create a sequence.
+			    seq = new Sequence();
+			    seq.units.addElement(c1.member);
+			    seq.units.addElement(c2.member);
+			  } else {
+			    seq.units.addElement(c2.member);
+			  }
+			}
+  )+
+			{
+			  if (count > 1) {
+			    c1.member = seq;
+			  }
+			}
+}
+
+void expansion_unit(Container c) :
+{
+			String retval, name;
+			NonTerminal nt;
+			Action act;
+}
+{
+  regular_expression(c)
+|
+			{
+			  nt = new NonTerminal();
+			  retval = "";
+			}
+  [retval=identifier() "="] name=identifier() "(" java_expression_list(nt.argument_tokens) ")"
+			{
+			  nt.retval = retval;
+			  nt.name = name;
+			  c.member = nt;
+			}
+|
+			{
+			  act = new Action();
+			}
+  "{" java_declarations_and_code(act.action_tokens) "}"
+			{
+			  c.member = act;
+			}
+|
+  "(" expansion_choices(c) ")"
+  (  "+"
+			{
+			  OneOrMore exp = new OneOrMore();
+			  exp.expansion = (Expansion)c.member;
+			  c.member = exp;
+			}
+   | "*"
+			{
+			  ZeroOrMore exp = new ZeroOrMore();
+			  exp.expansion = (Expansion)c.member;
+			  c.member = exp;
+			}
+   | "?"
+			{
+			  ZeroOrOne exp = new ZeroOrOne();
+			  exp.expansion = (Expansion)c.member;
+			  c.member = exp;
+			}
+  )?
+|
+  "[" expansion_choices(c) "]"
+			{
+			  ZeroOrOne exp = new ZeroOrOne();
+			  exp.expansion = (Expansion)c.member;
+			  c.member = exp;
+			}
+}
+
+JAVACODE
+void java_declarations_and_code(java.util.Vector tokens) {
+  try {
+    benchmarks.Jack.Token tok;
+    int nesting = 1;
+    while (true) {
+      tok = token_source.getToken(1);
+      if (tok.kind == LBRACE) nesting++;
+      if (tok.kind == RBRACE) {
+        nesting--;
+        if (nesting == 0) break;
+      }
+      tok = token_source.getNextToken();
+      tokens.addElement(tok);
+    }
+  } catch (benchmarks.Jack.TokenException e) {
+    throw new ParseError();
+  }
+}
+
+void java_return_type(java.util.Vector tokens) :
+{
+			String id;
+}
+{
+  (  "void" | "byte" | "short" | "int" | "long" | "float"
+   | "double" | "char" | "boolean" | id=identifier()
+  )
+			{
+			  tokens.addElement(token); // "token" is the current token.
+			}
+  ( "["
+			{
+			  tokens.addElement(token); // "token" is the current token.
+			}
+    "]"
+			{
+			  tokens.addElement(token); // "token" is the current token.
+			}
+  )*
+}
+
+JAVACODE
+void java_parameter_list(java.util.Vector tokens) {
+  try {
+    benchmarks.Jack.Token tok;
+    int nesting = 1;
+    while (true) {
+      tok = token_source.getToken(1);
+      if (tok.kind == LPAREN) nesting++;
+      if (tok.kind == RPAREN) {
+        nesting--;
+        if (nesting == 0) break;
+      }
+      tok = token_source.getNextToken();
+      tokens.addElement(tok);
+    }
+  } catch (benchmarks.Jack.TokenException e) {
+    throw new ParseError();
+  }
+}
+
+JAVACODE
+void java_expression_list(java.util.Vector tokens) {
+  try {
+    benchmarks.Jack.Token tok;
+    int nesting = 1;
+    while (true) {
+      tok = token_source.getToken(1);
+      if (tok.kind == LPAREN) nesting++;
+      if (tok.kind == RPAREN) {
+        nesting--;
+        if (nesting == 0) break;
+      }
+      tok = token_source.getNextToken();
+      tokens.addElement(tok);
+    }
+  } catch (benchmarks.Jack.TokenException e) {
+    throw new ParseError();
+  }
+}
+
+void regular_expression(Container c) :
+{
+			RStringLiteral strlit;
+			RJustName jn;
+			String image;
+}
+{
+  image=string_literal()
+			{
+			  strlit = new RStringLiteral();
+			  strlit.image = image;
+			  c.member = strlit;
+			}
+|
+			{
+			  image = "";
+			}
+  < LANGLE: "<" > [image=identifier() ":"] complex_regular_expression_choices(c) < RANGLE: ">" >
+			{
+			  ((RegularExpression)c.member).label = image;
+			}
+|
+  "<" image=identifier() ">"
+			{
+			  jn = new RJustName();
+			  jn.label = image;
+			  c.member = jn;
+			}
+|
+  "<" "EOF" ">"
+			{
+			  c.member = new REndOfFile();
+			}
+}
+
+String string_literal() :
+{
+}
+{
+  <STRING_LITERAL>
+			{
+			  try {
+			    return remove_escapes_and_quotes(token_source.getToken(0).image);
+			  } catch (TokenException e) {
+			    throw new Error();
+			  }
+			}
+}
+
+void complex_regular_expression_choices(Container c1) :
+{
+			boolean morethanone = false;
+			RChoice ch = null; // unnecessary initialization to make Java compiler happy!
+			Container c2 = new Container();
+}
+{
+  complex_regular_expression(c1)
+  ( "|" complex_regular_expression(c2)
+			{
+			  if (morethanone) {
+			    ch.choices.addElement(c2.member);
+			  } else {
+			    morethanone = true;
+			    ch = new RChoice();
+			    ch.choices.addElement(c1.member);
+			    ch.choices.addElement(c2.member);
+			  }
+			}
+  )*
+			{
+			  if (morethanone) {
+			    c1.member = ch;
+			  }
+			}
+}
+
+void complex_regular_expression(Container c1) :
+{
+			int count = 0;
+			RSequence seq = null; // unnecessary initialization to make Java compiler happy!
+			Container c2 = new Container();
+}
+{
+  ( complex_regular_expression_unit(c2)
+			{
+			  count++;
+			  if (count == 1) {
+			    c1.member = c2.member; // if count does not go beyond 1, we are done.
+			  } else if (count == 2) { // more than 1, so create a sequence.
+			    seq = new RSequence();
+			    seq.units.addElement(c1.member);
+			    seq.units.addElement(c2.member);
+			  } else {
+			    seq.units.addElement(c2.member);
+			  }
+			}
+  )+
+			{
+			  if (count > 1) {
+			    c1.member = seq;
+			  }
+			}
+}
+
+void complex_regular_expression_unit(Container c) :
+{
+			String image;
+			RStringLiteral strlit;
+			RJustName jn;
+}
+{
+  image=string_literal()
+			{
+			  strlit = new RStringLiteral();
+			  strlit.image = image;
+			  c.member = strlit;
+			}
+|
+  "<" image=identifier() ">"
+			{
+			  jn = new RJustName();
+			  jn.label = image;
+			  c.member = jn;
+			}
+|
+  character_list(c)
+|
+  "(" complex_regular_expression_choices(c) ")"
+  (  "+"
+			{
+			  ROneOrMore rexp = new ROneOrMore();
+			  rexp.regexpr = (RegularExpression)c.member;
+			  c.member = rexp;
+			}
+   | "*"
+			{
+			  RZeroOrMore rexp = new RZeroOrMore();
+			  rexp.regexpr = (RegularExpression)c.member;
+			  c.member = rexp;
+			}
+   | "?"
+			{
+			  RZeroOrOne rexp = new RZeroOrOne();
+			  rexp.regexpr = (RegularExpression)c.member;
+			  c.member = rexp;
+			}
+  )?
+}
+
+void character_list(Container c1) :
+{
+			RCharacterList chlist = new RCharacterList();
+			Container c2 = new Container();
+}
+{
+  ["~"
+			{
+			  chlist.negated_list = true;
+			}
+  ]
+  "[" [ character_descriptor(c2)
+			{
+			  chlist.descriptors.addElement(c2.member);
+			}
+        ( "," character_descriptor(c2)
+			{
+			  chlist.descriptors.addElement(c2.member);
+			}
+        )*
+      ]
+  "]"
+			{
+			  c1.member = chlist;
+			}
+}
+
+void character_descriptor(Container c) :
+{
+			char c1, c2 = ' '; // unnecessary initialization to make Java compiler happy!
+			boolean isrange = false;
+			String image;
+}
+{
+  image=string_literal()
+			{
+			  c1 = character_descriptor_assign(image);
+			}
+  [ "-" image=string_literal()
+			{
+			  isrange = true;
+			  c2 = character_descriptor_assign(image);
+			}
+  ]
+			{
+			  if (isrange) {
+			    CharacterRange cr = new CharacterRange();
+			    cr.left = c1;
+			    cr.right = c2;
+			    c.member = cr;
+			  } else {
+			    SingleCharacter sc = new SingleCharacter();
+			    sc.ch = c1;
+			    c.member = sc;
+			  }
+			}
+}
+
+//** Identifier needs to be expanded as per LRM
+
+String identifier() :
+{
+}
+{
+  < IDENTIFIER: ["a"-"z","A"-"Z","_"] (["a"-"z","A"-"Z","_","0"-"9"])* >
+			{
+			  try {
+			    return token_source.getToken(0).image;
+			  } catch (TokenException e) {
+			    throw new Error();
+			  }
+			}
+}

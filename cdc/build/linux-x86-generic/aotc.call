@@ -1,0 +1,2590 @@
+cvm
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf6423000,0xf6623000)
+	First semispace      = [0xf6423000,0xf6523000)
+	Second semispace     = [0xf6523000,0xf6623000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf6623000,0xf7523000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf6423000,0xf7523000)
+	cardTable=[0xf7523000,0xf752b800)
+	objectHeaderTable=[0xf752c000,0xf7534800)
+	summaryTable=[0xf7535000,0xf7557000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1997384
+Loop count = 1
+409600
+173261
+552960
+176887
+2457600
+1924365
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.021 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3420160
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 3420160, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=13021184 free memory=2796536
+======= _201_compress Finished in 0.969 secs
+requested gc
+to aotc 4691, aotc 18175541
+201 1/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64da000,0xf66da000)
+	First semispace      = [0xf64da000,0xf65da000)
+	Second semispace     = [0xf65da000,0xf66da000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66da000,0xf75da000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64da000,0xf75da000)
+	cardTable=[0xf75da000,0xf75e2800)
+	objectHeaderTable=[0xf75e3000,0xf75eb800)
+	summaryTable=[0xf75ec000,0xf760e000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1997384
+Loop count = 1
+409600
+173261
+552960
+176887
+2457600
+1924365
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.022 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3420160
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 3420160, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=13021184 free memory=2796536
+======= _201_compress Finished in 0.972 secs
+requested gc
+to aotc 4691, aotc 18175543
+201 2/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf6412000,0xf6612000)
+	First semispace      = [0xf6412000,0xf6512000)
+	Second semispace     = [0xf6512000,0xf6612000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf6612000,0xf7512000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf6412000,0xf7512000)
+	cardTable=[0xf7512000,0xf751a800)
+	objectHeaderTable=[0xf751b000,0xf7523800)
+	summaryTable=[0xf7524000,0xf7546000)
+Speed will be 10
+to aotc 2134, aotc 12595
+Caching On Speed = 10
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1997384
+Loop count = 1
+409600
+173261
+552960
+176887
+2457600
+1924365
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.02 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3420160
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 3420160, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=13021184 free memory=2796552
+======= _201_compress Finished in 0.97 secs
+requested gc
+to aotc 4690, aotc 18175539
+201 3/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf649f000,0xf669f000)
+	First semispace      = [0xf649f000,0xf659f000)
+	Second semispace     = [0xf659f000,0xf669f000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf669f000,0xf759f000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf649f000,0xf759f000)
+	cardTable=[0xf759f000,0xf75a7800)
+	objectHeaderTable=[0xf75a8000,0xf75b0800)
+	summaryTable=[0xf75b1000,0xf75d3000)
+Speed will be 10
+to aotc 2135, aotc 12596
+Caching On Speed = 10
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+Process #10171 received signal 11, suspending
+./runall: line 8: 10171 Killed                  ../bin/cvm -Xms16m SpecApplication -s10 _202_jess
+202 1/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf643b000,0xf663b000)
+	First semispace      = [0xf643b000,0xf653b000)
+	Second semispace     = [0xf653b000,0xf663b000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf663b000,0xf753b000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf643b000,0xf753b000)
+	cardTable=[0xf753b000,0xf7543800)
+	objectHeaderTable=[0xf7544000,0xf754c800)
+	summaryTable=[0xf754d000,0xf756f000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+Process #10266 received signal 11, suspending
+./runall: line 10: 10266 Killed                  ../bin/cvm -Xms16m SpecApplication -s10 _202_jess
+202 2/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf642d000,0xf662d000)
+	First semispace      = [0xf642d000,0xf652d000)
+	Second semispace     = [0xf652d000,0xf662d000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf662d000,0xf752d000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf642d000,0xf752d000)
+	cardTable=[0xf752d000,0xf7535800)
+	objectHeaderTable=[0xf7536000,0xf753e800)
+	summaryTable=[0xf753f000,0xf7561000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+Process #10271 received signal 11, suspending
+./runall: line 12: 10271 Killed                  ../bin/cvm -Xms16m SpecApplication -s10 _202_jess
+202 3/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf6460000,0xf6660000)
+	First semispace      = [0xf6460000,0xf6560000)
+	Second semispace     = [0xf6560000,0xf6660000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf6660000,0xf7560000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf6460000,0xf7560000)
+	cardTable=[0xf7560000,0xf7568800)
+	objectHeaderTable=[0xf7569000,0xf7571800)
+	summaryTable=[0xf7572000,0xf7594000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1997652
+db 1 iterations 
+Reading database input/db2 ... OK
+Building database ...Done.
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 1 ----
+Full name
+   Last: Alexander
+  First: Fox
+     MI: L
+Address
+    Addr: 8509 West Briarwood Ln
+    City: Sanford
+   State: Ohio
+     ZIP: 01634
+ Phone #: (229) 941-2114
+
+---- Record number 2 ----
+Full name
+   Last: Zappa
+  First: Dana
+     MI: Y
+Address
+    Addr: P.O. Box 8698
+    City: Alpine
+   State: Oregon
+     ZIP: 23061
+ Phone #: (689) 341-3654
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5000 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4999 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4998 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4997 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 1 ----
+Full name
+   Last: Adair
+  First: Robert
+     MI: P
+Address
+    Addr: 810 East Pine 
+    City: Wakefield
+   State: Tennessee
+     ZIP: 22647
+ Phone #: (540) 413-6919
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Olivia
+     MI: I
+Address
+    Addr: 5371 Bass 
+    City: Racine
+   State: California
+     ZIP: 21243
+ Phone #: (872) 173-7900
+
+---- Record number 4 ----
+Full name
+   Last: Adair
+  First: Steve
+     MI: O
+Address
+    Addr: 130 Southcross 
+    City: New Castle
+   State: North Dakota
+     ZIP: 05612
+ Phone #: (356) 213-4533
+
+---- Record number 5000 ----
+Full name
+   Last: Zombola
+  First: David
+     MI: N
+Address
+    Addr: 9828 Maple 
+    City: Mitchell
+   State: North Carolina
+     ZIP: 02778
+ Phone #: (331) 189-4261
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Bonnie
+     MI: M
+Address
+    Addr: 9412 West East Ridge Cove
+    City: Alamo
+   State: Washington
+     ZIP: 28575
+ Phone #: (517) 353-5831
+
+---- Record number 4998 ----
+Full name
+   Last: Zombola
+  First: Scott
+     MI: H
+Address
+    Addr: P.O. Box 5130
+    City: Durham
+   State: Ohio
+     ZIP: 50028
+ Phone #: (625) 868-6078
+
+---- Record number 4997 ----
+Full name
+   Last: Zombola
+  First: Samantha
+     MI: F
+Address
+    Addr: P.O. Box 3835
+    City: Benton
+   State: Missouri
+     ZIP: 27182
+ Phone #: (360) 573-2474
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 5000 ----
+Full name
+   Last: Thurman
+  First: Zelma
+     MI: Y
+Address
+    Addr: 9938 South Cat Hollow Cir
+    City: Lawrenceburg
+   State: Tennessee
+     ZIP: 49890
+ Phone #: (365) 478-0308
+
+---- Record number 4999 ----
+Full name
+   Last: Lange
+  First: Zelma
+     MI: G
+Address
+    Addr: 9679 East Primrose Street
+    City: Bloomington
+   State: Pennsylvania
+     ZIP: 08940
+ Phone #: (270) 675-5749
+
+---- Record number 4998 ----
+Full name
+   Last: Farmer
+  First: Zelma
+     MI: O
+Address
+    Addr: 8264 East Pecan 
+    City: Bethany
+   State: Nebraska
+     ZIP: 32463
+ Phone #: (434) 660-3585
+
+---- Record number 4997 ----
+Full name
+   Last: Lindsay
+  First: Zelma
+     MI: F
+Address
+    Addr: 8894 Hilltop Road
+    City: Albany
+   State: Montana
+     ZIP: 47929
+ Phone #: (883) 364-2026
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5 ----
+Full name
+   Last: Fisher
+  First: Samantha
+     MI: Z
+Address
+    Addr: 7199 West Maple Circle
+    City: Hillsboro
+   State: Nevada
+     ZIP: 04147-4991
+ Phone #: (510) 907-8238
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4998 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4997 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4996 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4995 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4994 ----
+Full name
+   Last: Dominguez
+  First: Gary
+     MI: M
+Address
+    Addr: 7482 East Goodyear 
+    City: Baldwin
+   State: Michigan
+     ZIP: 23146
+ Phone #: (345) 569-2553
+
+---- Record number 4993 ----
+Full name
+   Last: Williams
+  First: Beck
+     MI: S
+Address
+    Addr: 4425 North Airport 
+    City: Manassas
+   State: Pennsylvania
+     ZIP: 26737
+ Phone #: (780) 755-1857
+
+---- Record number 4994 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4995 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4998 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4997 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 5000 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Ashley
+     MI: U
+Address
+    Addr: 5245 South Mearns Meadow 
+    City: Racine
+   State: Texas
+     ZIP: 38127
+ Phone #: (892) 872-3208
+
+---- Record number 1 ----
+Full name
+   Last: Aaalam
+  First: Zane
+     MI: N
+Address
+    Addr: 456 Weston Creek Circle
+    City: Grapevine
+   State: Arizona
+     ZIP: 59938
+ Phone #: (432) 495-2937
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 5000 ----
+Full name
+   Last: Erickson
+  First: Zelma
+     MI: O
+Address
+    Addr: 8521 West Turtleback 
+    City: Cameron
+   State: New Mexico
+     ZIP: 41056
+ Phone #: (529) 764-4846
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Zelma
+     MI: K
+Address
+    Addr: 4605 South Forest Dr
+    City: Indian Creek
+   State: Idaho
+     ZIP: 39521-1709
+ Phone #: (807) 898-4727
+
+---- Record number 1 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 2 ----
+Full name
+   Last: Thomas
+  First: Aaron
+     MI: Z
+Address
+    Addr: 1144 Briarwood Street
+    City: Wellington
+   State: Delaware
+     ZIP: 19844-7165
+ Phone #: (888) 567-6489
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0050 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 382431
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 382431, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4616192 free memory=833608
+======= _209_db Finished in 1.001 secs
+requested gc
+to aotc 1270729, aotc 2128417
+209 1/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64a9000,0xf66a9000)
+	First semispace      = [0xf64a9000,0xf65a9000)
+	Second semispace     = [0xf65a9000,0xf66a9000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66a9000,0xf75a9000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64a9000,0xf75a9000)
+	cardTable=[0xf75a9000,0xf75b1800)
+	objectHeaderTable=[0xf75b2000,0xf75ba800)
+	summaryTable=[0xf75bb000,0xf75dd000)
+Speed will be 10
+to aotc 2135, aotc 12597
+Caching On Speed = 10
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1997652
+db 1 iterations 
+Reading database input/db2 ... OK
+Building database ...Done.
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 1 ----
+Full name
+   Last: Alexander
+  First: Fox
+     MI: L
+Address
+    Addr: 8509 West Briarwood Ln
+    City: Sanford
+   State: Ohio
+     ZIP: 01634
+ Phone #: (229) 941-2114
+
+---- Record number 2 ----
+Full name
+   Last: Zappa
+  First: Dana
+     MI: Y
+Address
+    Addr: P.O. Box 8698
+    City: Alpine
+   State: Oregon
+     ZIP: 23061
+ Phone #: (689) 341-3654
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5000 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4999 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4998 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4997 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 1 ----
+Full name
+   Last: Adair
+  First: Robert
+     MI: P
+Address
+    Addr: 810 East Pine 
+    City: Wakefield
+   State: Tennessee
+     ZIP: 22647
+ Phone #: (540) 413-6919
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Olivia
+     MI: I
+Address
+    Addr: 5371 Bass 
+    City: Racine
+   State: California
+     ZIP: 21243
+ Phone #: (872) 173-7900
+
+---- Record number 4 ----
+Full name
+   Last: Adair
+  First: Steve
+     MI: O
+Address
+    Addr: 130 Southcross 
+    City: New Castle
+   State: North Dakota
+     ZIP: 05612
+ Phone #: (356) 213-4533
+
+---- Record number 5000 ----
+Full name
+   Last: Zombola
+  First: David
+     MI: N
+Address
+    Addr: 9828 Maple 
+    City: Mitchell
+   State: North Carolina
+     ZIP: 02778
+ Phone #: (331) 189-4261
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Bonnie
+     MI: M
+Address
+    Addr: 9412 West East Ridge Cove
+    City: Alamo
+   State: Washington
+     ZIP: 28575
+ Phone #: (517) 353-5831
+
+---- Record number 4998 ----
+Full name
+   Last: Zombola
+  First: Scott
+     MI: H
+Address
+    Addr: P.O. Box 5130
+    City: Durham
+   State: Ohio
+     ZIP: 50028
+ Phone #: (625) 868-6078
+
+---- Record number 4997 ----
+Full name
+   Last: Zombola
+  First: Samantha
+     MI: F
+Address
+    Addr: P.O. Box 3835
+    City: Benton
+   State: Missouri
+     ZIP: 27182
+ Phone #: (360) 573-2474
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 5000 ----
+Full name
+   Last: Thurman
+  First: Zelma
+     MI: Y
+Address
+    Addr: 9938 South Cat Hollow Cir
+    City: Lawrenceburg
+   State: Tennessee
+     ZIP: 49890
+ Phone #: (365) 478-0308
+
+---- Record number 4999 ----
+Full name
+   Last: Lange
+  First: Zelma
+     MI: G
+Address
+    Addr: 9679 East Primrose Street
+    City: Bloomington
+   State: Pennsylvania
+     ZIP: 08940
+ Phone #: (270) 675-5749
+
+---- Record number 4998 ----
+Full name
+   Last: Farmer
+  First: Zelma
+     MI: O
+Address
+    Addr: 8264 East Pecan 
+    City: Bethany
+   State: Nebraska
+     ZIP: 32463
+ Phone #: (434) 660-3585
+
+---- Record number 4997 ----
+Full name
+   Last: Lindsay
+  First: Zelma
+     MI: F
+Address
+    Addr: 8894 Hilltop Road
+    City: Albany
+   State: Montana
+     ZIP: 47929
+ Phone #: (883) 364-2026
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5 ----
+Full name
+   Last: Fisher
+  First: Samantha
+     MI: Z
+Address
+    Addr: 7199 West Maple Circle
+    City: Hillsboro
+   State: Nevada
+     ZIP: 04147-4991
+ Phone #: (510) 907-8238
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4998 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4997 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4996 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4995 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4994 ----
+Full name
+   Last: Dominguez
+  First: Gary
+     MI: M
+Address
+    Addr: 7482 East Goodyear 
+    City: Baldwin
+   State: Michigan
+     ZIP: 23146
+ Phone #: (345) 569-2553
+
+---- Record number 4993 ----
+Full name
+   Last: Williams
+  First: Beck
+     MI: S
+Address
+    Addr: 4425 North Airport 
+    City: Manassas
+   State: Pennsylvania
+     ZIP: 26737
+ Phone #: (780) 755-1857
+
+---- Record number 4994 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4995 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4998 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4997 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 5000 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Ashley
+     MI: U
+Address
+    Addr: 5245 South Mearns Meadow 
+    City: Racine
+   State: Texas
+     ZIP: 38127
+ Phone #: (892) 872-3208
+
+---- Record number 1 ----
+Full name
+   Last: Aaalam
+  First: Zane
+     MI: N
+Address
+    Addr: 456 Weston Creek Circle
+    City: Grapevine
+   State: Arizona
+     ZIP: 59938
+ Phone #: (432) 495-2937
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 5000 ----
+Full name
+   Last: Erickson
+  First: Zelma
+     MI: O
+Address
+    Addr: 8521 West Turtleback 
+    City: Cameron
+   State: New Mexico
+     ZIP: 41056
+ Phone #: (529) 764-4846
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Zelma
+     MI: K
+Address
+    Addr: 4605 South Forest Dr
+    City: Indian Creek
+   State: Idaho
+     ZIP: 39521-1709
+ Phone #: (807) 898-4727
+
+---- Record number 1 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 2 ----
+Full name
+   Last: Thomas
+  First: Aaron
+     MI: Z
+Address
+    Addr: 1144 Briarwood Street
+    City: Wellington
+   State: Delaware
+     ZIP: 19844-7165
+ Phone #: (888) 567-6489
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0010 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 382431
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 382431, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4616192 free memory=833100
+======= _209_db Finished in 1.005 secs
+requested gc
+to aotc 1270750, aotc 2128463
+209 2/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64c0000,0xf66c0000)
+	First semispace      = [0xf64c0000,0xf65c0000)
+	Second semispace     = [0xf65c0000,0xf66c0000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66c0000,0xf75c0000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64c0000,0xf75c0000)
+	cardTable=[0xf75c0000,0xf75c8800)
+	objectHeaderTable=[0xf75c9000,0xf75d1800)
+	summaryTable=[0xf75d2000,0xf75f4000)
+Speed will be 10
+to aotc 2134, aotc 12595
+Caching On Speed = 10
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1997652
+db 1 iterations 
+Reading database input/db2 ... OK
+Building database ...Done.
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 1 ----
+Full name
+   Last: Alexander
+  First: Fox
+     MI: L
+Address
+    Addr: 8509 West Briarwood Ln
+    City: Sanford
+   State: Ohio
+     ZIP: 01634
+ Phone #: (229) 941-2114
+
+---- Record number 2 ----
+Full name
+   Last: Zappa
+  First: Dana
+     MI: Y
+Address
+    Addr: P.O. Box 8698
+    City: Alpine
+   State: Oregon
+     ZIP: 23061
+ Phone #: (689) 341-3654
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5000 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4999 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4998 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4997 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 1 ----
+Full name
+   Last: Adair
+  First: Robert
+     MI: P
+Address
+    Addr: 810 East Pine 
+    City: Wakefield
+   State: Tennessee
+     ZIP: 22647
+ Phone #: (540) 413-6919
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Olivia
+     MI: I
+Address
+    Addr: 5371 Bass 
+    City: Racine
+   State: California
+     ZIP: 21243
+ Phone #: (872) 173-7900
+
+---- Record number 4 ----
+Full name
+   Last: Adair
+  First: Steve
+     MI: O
+Address
+    Addr: 130 Southcross 
+    City: New Castle
+   State: North Dakota
+     ZIP: 05612
+ Phone #: (356) 213-4533
+
+---- Record number 5000 ----
+Full name
+   Last: Zombola
+  First: David
+     MI: N
+Address
+    Addr: 9828 Maple 
+    City: Mitchell
+   State: North Carolina
+     ZIP: 02778
+ Phone #: (331) 189-4261
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Bonnie
+     MI: M
+Address
+    Addr: 9412 West East Ridge Cove
+    City: Alamo
+   State: Washington
+     ZIP: 28575
+ Phone #: (517) 353-5831
+
+---- Record number 4998 ----
+Full name
+   Last: Zombola
+  First: Scott
+     MI: H
+Address
+    Addr: P.O. Box 5130
+    City: Durham
+   State: Ohio
+     ZIP: 50028
+ Phone #: (625) 868-6078
+
+---- Record number 4997 ----
+Full name
+   Last: Zombola
+  First: Samantha
+     MI: F
+Address
+    Addr: P.O. Box 3835
+    City: Benton
+   State: Missouri
+     ZIP: 27182
+ Phone #: (360) 573-2474
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 5000 ----
+Full name
+   Last: Thurman
+  First: Zelma
+     MI: Y
+Address
+    Addr: 9938 South Cat Hollow Cir
+    City: Lawrenceburg
+   State: Tennessee
+     ZIP: 49890
+ Phone #: (365) 478-0308
+
+---- Record number 4999 ----
+Full name
+   Last: Lange
+  First: Zelma
+     MI: G
+Address
+    Addr: 9679 East Primrose Street
+    City: Bloomington
+   State: Pennsylvania
+     ZIP: 08940
+ Phone #: (270) 675-5749
+
+---- Record number 4998 ----
+Full name
+   Last: Farmer
+  First: Zelma
+     MI: O
+Address
+    Addr: 8264 East Pecan 
+    City: Bethany
+   State: Nebraska
+     ZIP: 32463
+ Phone #: (434) 660-3585
+
+---- Record number 4997 ----
+Full name
+   Last: Lindsay
+  First: Zelma
+     MI: F
+Address
+    Addr: 8894 Hilltop Road
+    City: Albany
+   State: Montana
+     ZIP: 47929
+ Phone #: (883) 364-2026
+
+---- Record number 1 ----
+Full name
+   Last: Henderson
+  First: Aaron
+     MI: L
+Address
+    Addr: 4860 South Ridgewood Dr
+    City: Kasota
+   State: Indiana
+     ZIP: 43121-2099
+ Phone #: (844) 936-5162
+
+---- Record number 2 ----
+Full name
+   Last: Pearson
+  First: Aaron
+     MI: C
+Address
+    Addr: P.O. Box 4831
+    City: Eureka
+   State: South Dakota
+     ZIP: 03104-9140
+ Phone #: (329) 173-3936
+
+---- Record number 3 ----
+Full name
+   Last: McLeod
+  First: Aaron
+     MI: E
+Address
+    Addr: P.O. Box 7366
+    City: Mitchell
+   State: Idaho
+     ZIP: 19657
+ Phone #: (635) 120-9344
+
+---- Record number 4 ----
+Full name
+   Last: Zastrow
+  First: Aaron
+     MI: U
+Address
+    Addr: 5654 East Ash Cir
+    City: Galveston
+   State: Montana
+     ZIP: 02137-5174
+ Phone #: (543) 958-8997
+
+---- Record number 3 ----
+Full name
+   Last: Wyatt
+  First: Mark
+     MI: O
+Address
+    Addr: 1293 East Stagecoach Rd
+    City: Albers
+   State: Minnesota
+     ZIP: 37278
+ Phone #: (698) 135-8981
+
+---- Record number 4 ----
+Full name
+   Last: Gardner
+  First: Christopher
+     MI: K
+Address
+    Addr: P.O. Box 4694
+    City: Bloomington
+   State: Missouri
+     ZIP: 23338
+ Phone #: (251) 426-0431
+
+---- Record number 5 ----
+Full name
+   Last: Fisher
+  First: Samantha
+     MI: Z
+Address
+    Addr: 7199 West Maple Circle
+    City: Hillsboro
+   State: Nevada
+     ZIP: 04147-4991
+ Phone #: (510) 907-8238
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4998 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+---- Record number 4997 ----
+Full name
+   Last: Maynord
+  First: Raymond
+     MI: P
+Address
+    Addr: 6014 Spring Lane
+    City: Kasota
+   State: Idaho
+     ZIP: 37573
+ Phone #: (195) 728-7758
+
+---- Record number 4996 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4995 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4994 ----
+Full name
+   Last: Dominguez
+  First: Gary
+     MI: M
+Address
+    Addr: 7482 East Goodyear 
+    City: Baldwin
+   State: Michigan
+     ZIP: 23146
+ Phone #: (345) 569-2553
+
+---- Record number 4993 ----
+Full name
+   Last: Williams
+  First: Beck
+     MI: S
+Address
+    Addr: 4425 North Airport 
+    City: Manassas
+   State: Pennsylvania
+     ZIP: 26737
+ Phone #: (780) 755-1857
+
+---- Record number 4994 ----
+Full name
+   Last: Lambert
+  First: Karen
+     MI: J
+Address
+    Addr: P.O. Box 1998
+    City: Somerset
+   State: Wisconsin
+     ZIP: 58766
+ Phone #: (344) 407-8960
+
+---- Record number 4995 ----
+Full name
+   Last: Wolfe
+  First: Ed
+     MI: M
+Address
+    Addr: 9459 North Blacksmith Circle
+    City: Bandera
+   State: Alabama
+     ZIP: 38989
+ Phone #: (637) 485-7441
+
+---- Record number 4998 ----
+Full name
+   Last: Hanner
+  First: Bentley
+     MI: K
+Address
+    Addr: P.O. Box 4633
+    City: Big Springs
+   State: Minnesota
+     ZIP: 16772
+ Phone #: (156) 314-8981
+
+---- Record number 4997 ----
+Full name
+   Last: Hill
+  First: Sharon
+     MI: X
+Address
+    Addr: 4405 North Travis Blvd
+    City: Bloomington
+   State: North Carolina
+     ZIP: 54516
+ Phone #: (818) 236-9912
+
+a - add record
+b - show beginning record
+d - delete record
+e - show end record
+f - find record
+m - modify record
+n - next entry
+p - previous record
+q - quit
+w - write database
+s - sort
+. - current record number
+x - Total records
+num - goto record number 'num'
+---- Record number 5000 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 4999 ----
+Full name
+   Last: Zombola
+  First: Ashley
+     MI: U
+Address
+    Addr: 5245 South Mearns Meadow 
+    City: Racine
+   State: Texas
+     ZIP: 38127
+ Phone #: (892) 872-3208
+
+---- Record number 1 ----
+Full name
+   Last: Aaalam
+  First: Zane
+     MI: N
+Address
+    Addr: 456 Weston Creek Circle
+    City: Grapevine
+   State: Arizona
+     ZIP: 59938
+ Phone #: (432) 495-2937
+
+---- Record number 2 ----
+Full name
+   Last: Adair
+  First: Todd
+     MI: R
+Address
+    Addr: P.O. Box 2603
+    City: Oakland
+   State: South Carolina
+     ZIP: 28602
+ Phone #: (755) 709-1115
+
+---- Record number 5000 ----
+Full name
+   Last: Erickson
+  First: Zelma
+     MI: O
+Address
+    Addr: 8521 West Turtleback 
+    City: Cameron
+   State: New Mexico
+     ZIP: 41056
+ Phone #: (529) 764-4846
+
+---- Record number 4999 ----
+Full name
+   Last: Hanner
+  First: Zelma
+     MI: K
+Address
+    Addr: 4605 South Forest Dr
+    City: Indian Creek
+   State: Idaho
+     ZIP: 39521-1709
+ Phone #: (807) 898-4727
+
+---- Record number 1 ----
+Full name
+   Last: Zzeik
+  First: Aaarik
+     MI: M
+Address
+    Addr: 123 Harcourt Plaza
+    City: Austin
+   State: Texas
+     ZIP: 78758
+ Phone #: (512) 837-6822
+
+---- Record number 2 ----
+Full name
+   Last: Thomas
+  First: Aaron
+     MI: Z
+Address
+    Addr: 1144 Briarwood Street
+    City: Wellington
+   State: Delaware
+     ZIP: 19844-7165
+ Phone #: (888) 567-6489
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0030 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 382431
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 382431, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4616192 free memory=833608
+======= _209_db Finished in 1.002 secs
+requested gc
+to aotc 1270728, aotc 2128412
+209 3/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64ab000,0xf66ab000)
+	First semispace      = [0xf64ab000,0xf65ab000)
+	Second semispace     = [0xf65ab000,0xf66ab000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66ab000,0xf75ab000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64ab000,0xf75ab000)
+	cardTable=[0xf75ab000,0xf75b3800)
+	objectHeaderTable=[0xf75b4000,0xf75bc800)
+	summaryTable=[0xf75bd000,0xf75df000)
+Speed will be 10
+to aotc 2135, aotc 12596
+Caching On Speed = 10
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+File output byte count = 192988 checksum = 1400562
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.057 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 17053
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2609152 free memory=935556
+======= _228_jack Finished in 0.934 secs
+requested gc
+to aotc 2755236, aotc 5589706
+228 1/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64cb000,0xf66cb000)
+	First semispace      = [0xf64cb000,0xf65cb000)
+	Second semispace     = [0xf65cb000,0xf66cb000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66cb000,0xf75cb000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64cb000,0xf75cb000)
+	cardTable=[0xf75cb000,0xf75d3800)
+	objectHeaderTable=[0xf75d4000,0xf75dc800)
+	summaryTable=[0xf75dd000,0xf75ff000)
+Speed will be 10
+to aotc 2134, aotc 12596
+Caching On Speed = 10
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+File output byte count = 192988 checksum = 1400562
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.048 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 17053
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2609152 free memory=935556
+======= _228_jack Finished in 0.935 secs
+requested gc
+to aotc 2755235, aotc 5589705
+228 2/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf644f000,0xf664f000)
+	First semispace      = [0xf644f000,0xf654f000)
+	Second semispace     = [0xf654f000,0xf664f000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf664f000,0xf754f000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf644f000,0xf754f000)
+	cardTable=[0xf754f000,0xf7557800)
+	objectHeaderTable=[0xf7558000,0xf7560800)
+	summaryTable=[0xf7561000,0xf7583000)
+Speed will be 10
+to aotc 2133, aotc 12595
+Caching On Speed = 10
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1997640
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+File output byte count = 192988 checksum = 1400562
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.056 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 17053
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2609152 free memory=935556
+======= _228_jack Finished in 0.937 secs
+requested gc
+to aotc 2755234, aotc 5589708
+228 3/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64bb000,0xf66bb000)
+	First semispace      = [0xf64bb000,0xf65bb000)
+	Second semispace     = [0xf65bb000,0xf66bb000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66bb000,0xf75bb000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64bb000,0xf75bb000)
+	cardTable=[0xf75bb000,0xf75c3800)
+	objectHeaderTable=[0xf75c4000,0xf75cc800)
+	summaryTable=[0xf75cd000,0xf75ef000)
+Speed will be 10
+to aotc 2134, aotc 12598
+Caching On Speed = 10
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1997296
+MPEG Audio - Decoding input/spot3.mp3 2 times
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 878msec
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 875msec
+File output byte count = 4119552
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 140563
+## No. of Byte Reads from File  : 140563
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 140563, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2097152 free memory=1558716
+======= _222_mpegaudio Finished in 1.756 secs
+requested gc
+to aotc 2432374, aotc 8914068
+227 1/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf646f000,0xf666f000)
+	First semispace      = [0xf646f000,0xf656f000)
+	Second semispace     = [0xf656f000,0xf666f000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf666f000,0xf756f000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf646f000,0xf756f000)
+	cardTable=[0xf756f000,0xf7577800)
+	objectHeaderTable=[0xf7578000,0xf7580800)
+	summaryTable=[0xf7581000,0xf75a3000)
+Speed will be 10
+to aotc 2133, aotc 12597
+Caching On Speed = 10
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1997296
+MPEG Audio - Decoding input/spot3.mp3 2 times
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 878msec
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 880msec
+File output byte count = 4119552
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0020 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 140563
+## No. of Byte Reads from File  : 140563
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 140563, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2097152 free memory=1558628
+======= _222_mpegaudio Finished in 1.76 secs
+requested gc
+to aotc 2432355, aotc 8914033
+227 2/3
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf645b000,0xf665b000)
+	First semispace      = [0xf645b000,0xf655b000)
+	Second semispace     = [0xf655b000,0xf665b000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf665b000,0xf755b000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf645b000,0xf755b000)
+	cardTable=[0xf755b000,0xf7563800)
+	objectHeaderTable=[0xf7564000,0xf756c800)
+	summaryTable=[0xf756d000,0xf758f000)
+Speed will be 10
+to aotc 2135, aotc 12599
+Caching On Speed = 10
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1997296
+MPEG Audio - Decoding input/spot3.mp3 2 times
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 877msec
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 876msec
+File output byte count = 4119552
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0020 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 140563
+## No. of Byte Reads from File  : 140563
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 140563, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=2097152 free memory=1558628
+======= _222_mpegaudio Finished in 1.756 secs
+requested gc
+to aotc 2432336, aotc 8913985
+227 3/3

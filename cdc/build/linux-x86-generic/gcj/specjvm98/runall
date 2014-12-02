@@ -1,0 +1,43 @@
+echo cvm
+../bin/cvm -Xms16m SpecApplication -s10 _201_compress  
+echo 201 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _201_compress  
+echo 201 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _201_compress  
+echo 201 3/3
+../bin/cvm -Xms16m SpecApplication -s10 _202_jess  
+echo 202 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _202_jess  
+echo 202 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _202_jess  
+echo 202 3/3
+../bin/cvm -Xms16m SpecApplication -s10 _209_db  
+echo 209 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _209_db  
+echo 209 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _209_db  
+echo 209 3/3
+../bin/cvm -Xms16m SpecApplication -s10 _213_javac  
+echo 213 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _213_javac  
+echo 213 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _213_javac  
+echo 213 3/3
+../bin/cvm -Xms16m SpecApplication -s10 _228_jack  
+echo 228 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _228_jack  
+echo 228 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _228_jack  
+echo 228 3/3
+../bin/cvm -Xms16m SpecApplication -s10 _222_mpegaudio  
+echo 227 1/3
+../bin/cvm -Xms16m SpecApplication -s10 _222_mpegaudio  
+echo 227 2/3
+../bin/cvm -Xms16m SpecApplication -s10 _222_mpegaudio  
+echo 227 3/3
+#../bin/cvm -Xms16m SpecApplication -s10 _227_mtrt
+#echo 228 1/3
+#../bin/cvm -Xms16m SpecApplication -s10 _227_mtrt
+#echo 228 2/3
+#../bin/cvm -Xms16m SpecApplication -s10 _227_mtrt
+#echo 228 3/3

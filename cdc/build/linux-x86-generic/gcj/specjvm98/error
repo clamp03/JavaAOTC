@@ -1,0 +1,30 @@
+CVM Configuration:
+	Java stack chunk size (stackChunkSize): 1024
+	Java stack minimum size (stackMinSize): 1024
+	Java stack maximum size (stackMaxSize): 131072
+WARNING: Start heap size 16777216 is larger than maximum size 5242880, setting both to 16777216
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf64a8000,0xf66a8000)
+	First semispace      = [0xf64a8000,0xf65a8000)
+	Second semispace     = [0xf65a8000,0xf66a8000)
+	Current semispace    = First semispace
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=15728640
+	Limits of generation = [0xf66a8000,0xf75a8000)
+GC[generational]: Sizes
+	youngGen = min 1048576 start 1048576 max 1048576
+	oldGen   = min 1048576 start 15728640 max 15728640
+	overall  = min 2097152 start 16777216 max 16777216
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf64a8000,0xf75a8000)
+	cardTable=[0xf75a8000,0xf75b0800)
+	objectHeaderTable=[0xf75b1000,0xf75b9800)
+	summaryTable=[0xf75ba000,0xf75dc000)
+Speed will be 10
+to aotc 0, aotc 0
+Caching On Speed = 10
+======= _213_javac Starting =======
+Run 0 start. Total memory=2097152 free memory=1997572
+Javac benchmark starting...
+Process #6855 received signal 11, suspending

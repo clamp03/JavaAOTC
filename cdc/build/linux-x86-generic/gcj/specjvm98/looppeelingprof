@@ -1,0 +1,1046 @@
+#start
+spec/benchmarks/_228_jack/ParseGen
+ buildPhase3Routine
+  496 10 3672 6528 816
+  423 71 833 833 170
+ phase1NewLine
+  26 10 26197 0 3995
+ phase1ExpansionGen
+  254 11 1513 2601 425
+  358 11 17816 34646 986
+  571 95 833 833 170
+  695 10 3961 7089 833
+ buildPhase1Routine
+  187 11 629 1071 187
+  348 11 3451 6681 221
+  73 11 578 867 289
+ build
+  589 15 1207 0 17
+  553 9 935 1853 17
+  411 11 8296 16524 68
+  253 11 408 748 68
+  131 11 136 204 68
+  517 211 374 731 306
+spec/benchmarks/_228_jack/NfaState
+ GenerateCode
+  610 69 1326 1632 1173
+  443 62 2023 3723 1173
+  292 55 3672 0 1173
+ EpsilonClosure
+  44 20 4182 1479 2703
+  111 27 6052 3791 2261
+spec/benchmarks/_228_jack/RChoice
+ GenerateNfa
+  52 27 153 0 51
+spec/benchmarks/_228_jack/RCharacterList
+ GenerateNfa
+  163 58 1479 0 476
+spec/benchmarks/_228_jack/RSequence
+ GenerateNfa
+  80 32 527 0 204
+spec/benchmarks/_228_jack/RStringLiteral
+ DumpDfaCode
+  406 17 663 0 221
+  279 47 99450 0 1530
+  331 84 10914 21828 3638
+  350 124 3859 11135 221
+  440 199 238 0 17
+ GenerateNfa
+  69 17 153 0 51
+ GenerateDfa
+  151 64 10234 0 1989
+spec/benchmarks/_228_jack/LexGen
+ build
+  728 24 51 0 17
+  646 13 51 0 17
+  537 66 2108 0 17
+  278 13 102 0 17
+  306 52 238 0 17
+spec/benchmarks/_228_jack/ExpansionTreeWalker
+ preOrderWalk
+  196 9 153 255 51
+  240 9 578 1003 153
+  95 9 11883 21267 2499
+  51 9 6715 12852 578
+spec/benchmarks/_228_jack/JackConstants
+ printToken
+  54 16 128265 97308 30957
+  24 19 34527 38097 30957
+spec/benchmarks/_228_jack/Jack_the_Parser_Generator_Internals
+ process_lexical_tokens
+  248 15 408 799 17
+  202 27 2040 4063 17
+  127 44 408 799 391
+ db_process
+  1905 11 34 51 17
+  870 11 34 51 17
+  760 11 255 493 17
+  480 13 374 731 17
+  322 13 102 0 17
+  348 52 238 0 17
+ production_addexpansion
+  77 23 2108 2108 34
+ remove_escapes_and_quotes
+  645 283 17000 17000 4386
+spec/benchmarks/_228_jack/CharPosInputStream
+ readChar
+  181 13 112319 112319 15317
+spec/benchmarks/_228_jack/RunTimeNfaState
+ Move
+  230 26 1829200 2454817 1319523
+  68 33 1464941 1146072 318869
+spec/benchmarks/_228_jack/TokenEngine
+ AnyActiveStr
+  18 12 909636 909636 407762
+ getNextTokenFromStream
+  473 28 683740 0 163574
+  529 74 287912 0 124338
+  379 36 134419 0 124338
+  240 28 969306 0 148988
+  296 89 273343 0 124355
+ getToken
+  140 23 113118 0 56559
+spec/benchmarks/_228_jack/Jack_the_Parser_Generator
+ _Jack3expansion_choices
+  4 33 119 0 17
+ java_expression_list
+  2 25 1819 0 731
+ java_parameter_list
+  2 25 1139 0 357
+ java_return_type
+  242 20 357 0 357
+ _Jack3java_return_type
+  535 33 2227 0 2227
+ complex_regular_expression_choices
+  85 36 2329 0 2329
+ character_list
+  94 17 731 0 204
+ complex_regular_expression
+  13 41 2601 0 2329
+ _Jack3complex_regular_expression_choices
+  4 33 6579 0 6545
+ _Jack3_52
+  4 33 4675 0 2448
+ _Jack3complex_regular_expression
+  0 32 10659 0 9911
+ _Jack3expansion
+  0 32 4114 0 3383
+ expansion_choices
+  85 36 3128 0 799
+ expansion
+  13 41 5423 0 3128
+ java_declarations_and_code
+  2 25 29665 0 1377
+ java_compilation_unit
+  5 72 272 0 17
+ jack_input
+  235 7 391 0 17
+  146 68 68 0 17
+spec/benchmarks/_228_jack/Main
+ runBenchmark
+  134 39 18 0 1
+spec/benchmarks/_205_raytrace/Canvas
+ WriteDiag
+  58 25 201 0 1
+spec/benchmarks/_205_raytrace/PolygonObj
+ InsidePolygon
+  226 58 285970 457552 57194
+spec/benchmarks/_205_raytrace/IntersectPt
+ FindNearestIsect
+  264 88 1379336 828394 550942
+  314 116 613359 0 87890
+spec/benchmarks/_205_raytrace/OctNode
+ Copy
+  55 12 250974 223088 27886
+  30 19 195202 167316 27886
+ FindTreeNode
+  166 14 3301585 0 679298
+ CreateChildren
+  1177 21 6732 0 748
+  1100 87 297774 264688 33086
+  1114 100 33834 0 748
+ CreateFaces
+  23 13 41902 0 5986
+ Initialize
+  63 10 615627 0 68403
+  42 10 478821 0 68403
+spec/benchmarks/_205_raytrace/TriangleObj
+ <init>
+  64 24 11160 33480 2790
+spec/benchmarks/_205_raytrace/PolyTypeObj
+ <init>
+  385 117 8466 0 2814
+spec/benchmarks/_205_raytrace/Scene
+ FindLightBlock
+  109 33 1283874 788489 499953
+  149 56 546331 495385 499953
+ GetLightColor
+  141 64 76419 0 25473
+ RenderScene
+  570 63 80400 0 400
+  590 83 402 400 2
+ ReadSphere
+  193 8 80 0 10
+  120 24 30 0 10
+ ReadPoly
+  257 24 25398 0 8466
+  311 67 11280 0 2814
+  410 139 2820 0 6
+  137 8 30 0 6
+ ReadMaterial
+  92 24 192 0 64
+  132 70 80 0 16
+ ReadLight
+  148 24 12 0 4
+  59 24 12 0 4
+ ReadCamera
+  294 24 6 0 2
+  184 24 6 0 2
+  59 24 6 0 2
+ LoadSceneOrig
+  202 49 24 0 2
+spec/benchmarks/_205_raytrace/RayTracer
+ run
+  183 14 3 0 1
+  152 26 3 4 1
+spec/benchmarks/_213_javac/FieldDefinition
+ canReach
+  49 9 24 0 12
+spec/benchmarks/_213_javac/TryStatement
+ code
+  202 30 128 0 64
+  80 30 128 0 64
+ inline
+  79 28 128 0 64
+ check
+  395 17 40 0 40
+  542 31 52 0 52
+  572 60 116 0 64
+  429 85 128 0 64
+  213 64 64 0 64
+  72 19 128 0 64
+spec/benchmarks/_213_javac/SwitchDataEnumeration
+ sortTable
+  60 35 9552 16680 1212
+  5 47 1212 0 212
+ <init>
+  43 12 1720 3228 212
+spec/benchmarks/_213_javac/Instruction
+ collect
+  586 14 128 192 128
+ write
+  1315 21 1720 3228 212
+  1233 9 684 684 212
+  1188 25 516 0 100
+  1091 12 192 192 100
+ size
+  799 9 684 684 212
+  755 9 192 192 100
+ optimize
+  868 21 4664 8636 692
+spec/benchmarks/_213_javac/InlineReturnStatement
+ getDestination
+  43 19 1816 0 748
+spec/benchmarks/_213_javac/SwitchStatement
+ code
+  217 44 6456 0 312
+  102 33 6456 0 312
+ costInline
+  39 24 1592 0 260
+ inline
+  57 23 6456 0 312
+ check
+  353 121 6456 0 312
+spec/benchmarks/_213_javac/FieldExpression
+ toIdentifier
+  55 21 132 0 64
+spec/benchmarks/_213_javac/ArrayExpression
+ codeValue
+  483 63 9088 0 992
+ inlineValue
+  25 18 17568 0 1952
+ checkInitializer
+  96 31 9088 0 992
+java/io/DataOutputStream
+ writeUTF
+  38 86 1805512 0 148676
+spec/benchmarks/_213_javac/ConstantPool
+ write
+  127 12 302612 301864 748
+  83 24 1513060 3022380 305604
+  96 35 4488 0 748
+spec/benchmarks/_213_javac/Assembler
+ writeExceptions
+  131 34 128 256 64
+  155 68 4048 4048 124
+ balance
+  772 15 128 192 64
+  715 10 2204 4096 312
+  787 144 558964 0 48940
+ write
+  247 10 537252 0 4824
+  188 27 542076 0 4824
+  55 14 13152 21480 4824
+ collect
+  98 9 542188 0 4880
+ eliminate
+  47 20 1120052 0 8016
+ optimize
+  491 13 280 420 140
+  427 10 4664 8636 692
+  506 68 1081208 0 106300
+  0 11 8016 3136 4880
+spec/benchmarks/_213_javac/Statement
+ hasLabel
+  27 9 40 80 40
+ codeFinally
+  89 34 31504 0 7132
+spec/benchmarks/_213_javac/NaryExpression
+ copyInline
+  72 22 31568 0 12668
+ costInline
+  52 24 30824 0 14856
+spec/benchmarks/_213_javac/NewArrayExpression
+ inline
+  55 31 8 0 4
+ codeValue
+  38 21 1396 0 688
+ inlineValue
+  34 23 1396 0 688
+ checkValue
+  116 53 1396 0 688
+spec/benchmarks/_213_javac/NewInstanceExpression
+ codeValue
+  50 15 21680 0 10044
+ inlineValue
+  25 18 21740 0 10088
+ checkValue
+  501 19 5588 6088 5088
+  447 22 12676 7588 5088
+  153 37 12676 0 5088
+spec/benchmarks/_213_javac/VarDeclarationStatement
+ checkDeclaration
+  154 25 8784 0 8624
+spec/benchmarks/_213_javac/DeclarationStatement
+ code
+  32 20 16624 0 8300
+ inline
+  37 25 17224 0 8600
+ check
+  66 20 17224 0 8600
+spec/benchmarks/_213_javac/BinaryField
+ getExceptions
+  106 14 48 0 24
+ getAttribute
+  29 11 16784 0 16784
+spec/benchmarks/_213_javac/MethodExpression
+ inlineValue
+  67 18 25236 0 13380
+ codeValue
+  90 15 75696 0 38256
+ inlineMethod
+  217 27 12408 6072 6336
+ inline
+  403 69 13960 0 812
+  67 18 63908 0 31868
+ checkValue
+  1006 19 54588 68240 40936
+  952 22 81624 40688 40936
+  358 37 81624 0 40936
+spec/benchmarks/_213_javac/Context
+ getLabelContext
+  43 19 272 0 40
+ getBreakContext
+  67 13 16180 0 4696
+ getInlineContext
+  47 13 812 0 404
+ getInlineFieldContext
+  83 27 96500 0 13764
+ getContinueContext
+  63 13 2592 0 552
+ getLocalField
+  26 11 1118988 991804 252528
+spec/benchmarks/_213_javac/CompoundStatement
+ code
+  34 15 116324 0 24272
+ copyInline
+  48 18 22288 0 6996
+ costInline
+  23 19 36880 0 13564
+ inline
+  171 8 9628 0 9448
+  273 11 21476 32544 5204
+  294 43 135600 0 121528
+  100 45 155436 0 39180
+ check
+  52 17 103404 0 24668
+spec/benchmarks/_213_javac/Environment
+ implicitCast
+  146 14 512 0 512
+ isApplicable
+  57 12 543520 1436384 367264
+ resolve
+  132 11 9148 4304 4844
+spec/benchmarks/_213_javac/ClassDefinition
+ findMethod
+  32 11 144 0 116
+ subClassOf
+  27 12 21564 0 7268
+ implementedBy
+  48 13 90920 90920 89536
+  64 35 165720 0 77288
+ getVariable
+  115 26 45240 0 45228
+  23 9 189032 0 189032
+ matchMethod
+  208 19 460 460 460
+  100 38 582300 382640 199660
+ hasAbstractFields
+  50 22 14600 0 844
+ superClassOf
+  25 13 2936 0 1360
+spec/benchmarks/_213_javac/BinaryAttribute
+ load
+  85 40 7800 3580 4220
+spec/benchmarks/_213_javac/BinaryClass
+ getAttribute
+  29 11 912 0 608
+ load
+  388 36 3472 0 304
+  303 36 1052 0 304
+  183 14 336 0 304
+java/io/BufferedInputStream
+ read
+  52 24 11756 0 11744
+spec/benchmarks/_213_javac/BinaryConstantPool
+ getDependencies
+  53 20 20760 0 304
+ <init>
+  287 99 19964 0 304
+spec/benchmarks/_213_javac/ClassDeclaration
+ getClassDefinition
+  0 7 591848 404 591444
+spec/benchmarks/_213_javac/MethodType
+ stackSize
+  22 15 118444 0 61644
+ equalArguments
+  62 13 1264 0 964
+spec/benchmarks/_213_javac/SourceField
+ code
+  197 13 13116 21444 4788
+ inline
+  166 11 13116 21444 4788
+ check
+  674 15 2824 2824 1364
+  727 65 6232 7676 4788
+  424 17 13116 21444 4788
+  338 16 14216 5784 8432
+  347 36 13276 0 4844
+  226 38 6240 6240 4844
+  896 33 3720 3720 3720
+ <init>
+  139 22 9000 13304 4696
+spec/benchmarks/_213_javac/Type
+ tType
+  142 6 1870 0 103
+  117 7 284 0 257
+  203 58 422 0 165
+ tMethod
+  34 13 11610 11610 6429
+spec/benchmarks/_213_javac/SourceClass
+ compileClass
+  1590 14 2728 0 1332
+  1598 190 5628 10508 2080
+  1153 69 8124 15500 5616
+  932 16 752 0 748
+  788 40 8124 15500 3256
+  601 12 6276 0 4880
+  678 51 5628 10508 748
+  486 14 752 0 748
+  290 59 12968 0 748
+ checkOverride
+  340 13 16 32 16
+  376 36 156 156 140
+  442 13 5144 5144 5144
+  391 108 6168 0 5144
+ check
+  724 10 12968 0 748
+  498 15 4892 0 4844
+  515 37 12968 0 748
+  423 51 752 0 748
+ compile
+  15 8 748 0 748
+ addAbstractMethodsFromInterfaces
+  69 32 48 0 4
+  106 16 748 748 744
+ basicCheck
+  166 15 752 0 748
+ addField
+  416 21 12980 0 4696
+  698 21 12480 0 12068
+spec/benchmarks/_213_javac/BatchParser
+ defineField
+  205 15 2728 1396 1332
+  133 11 8996 0 4692
+ beginClass
+  363 18 46652 92556 748
+  245 15 752 4 748
+spec/benchmarks/_213_javac/Imports
+ resolve
+  94 22 47880 96800 23420
+spec/benchmarks/_213_javac/Parser
+ parseStatement
+  1166 45 128 0 64
+  948 46 6456 0 312
+  544 21 2660 0 2660
+  438 21 2152 0 2152
+ parseDeclaration
+  61 17 8624 0 8600
+ parseMethodExpression
+  45 11 40688 0 32548
+ parseTypeExpression
+  278 18 5280 0 5208
+ parseBlockStatement
+  81 16 101156 0 23980
+ parseTerm
+  1348 21 1396 0 688
+  1414 11 7588 0 4024
+  1210 15 8096 0 992
+ parseExpression
+  1129 451 320808 0 169488
+ parseType
+  258 14 16576 0 16352
+ parseField
+  712 14 1396 0 1332
+  500 27 1692 0 1564
+  582 27 4692 0 4692
+  518 49 4304 0 2740
+  406 27 2964 0 2740
+  893 27 8912 0 7376
+  834 69 7376 0 7356
+  28 54 23556 0 12052
+ parseClass
+  276 14 32 0 32
+  363 26 4 0 4
+  507 11 12800 0 748
+  7 43 1504 0 748
+ parseIdentifier
+  101 30 12800 0 8192
+ parseFile
+  234 14 892 0 144
+  101 30 1324 0 144
+spec/benchmarks/_213_javac/Scanner
+ scanReal
+  32 42 12 0 4
+ scanString
+  22 23 373676 0 19952
+ scanEscapeChar
+  269 24 1184 0 1184
+ scanNumber
+  46 158 15620 0 14220
+ scanIdentifier
+  5 21 2309244 0 356364
+ skipComment
+  0 20 524652 0 10304
+ scanDocComment
+  285 11 326124 0 6312
+  106 88 511032 0 6296
+  14 9 326232 0 6296
+ xscan
+  632 15 119468 0 2784
+  21 98 3727696 0 882948
+spec/benchmarks/_213_javac/ClassPath
+ getFile
+  106 43 96516 0 48652
+ <init>
+  216 85 8 0 4
+  23 12 4 4 4
+spec/benchmarks/_213_javac/Javac
+ compile
+  983 161 4000 0 16
+  563 172 16 0 4
+  541 19 8 0 4
+  416 149 16 16 4
+spec/benchmarks/_213_javac/Main
+ runBenchmark
+  90 12 5 0 1
+spec/benchmarks/_209_db/Entry
+ equals
+  88 15 1460390 2920489 1451782
+java/io/DataInputStream
+ skipBytes
+  10 19 5428 2764 2664
+ readUTF
+  30 100 152092 0 10832
+ readFully
+  21 20 23492 11744 11748
+ readLine
+  31 38 688026 688026 28475
+spec/benchmarks/_209_db/Database
+ printRec
+  138 20 437 851 207
+ lookup
+  81 38 225 210 182
+ shell_sort
+  132 53 23048135 0 12273956
+  139 65 12274827 0 871
+  151 76 938 871 67
+ getfield
+  89 20 281 0 99
+ set_index
+  52 12 5270560 5270560 345
+ getEntry
+  68 18 4199 0 1989
+ read_db
+  305 15 275992 0 137996
+  216 15 1170488 1170488 137996
+  336 70 137997 0 137997
+  81 16 2 0 1
+ read_fmt
+  106 57 19 0 1
+spec/benchmarks/_209_db/Main
+ run
+  380 103 696 0 1
+ inst_main
+  45 8 2 0 1
+spec/benchmarks/_202_jess/jess/_times
+ Call
+  5 13 1305684 1305684 435228
+spec/benchmarks/_202_jess/jess/_equals
+ Call
+  2 16 75085 75085 67852
+spec/benchmarks/_202_jess/jess/_minus
+ Call
+  12 13 2336 0 1168
+spec/benchmarks/_202_jess/jess/_or
+ Call
+  2 17 3005 5175 1168
+spec/benchmarks/_202_jess/jess/_eq
+ Call
+  2 14 288 288 240
+spec/benchmarks/_202_jess/jess/ValueVector
+ equals
+  27 16 9158377 0 3055419
+spec/benchmarks/_202_jess/jess/_assert
+ Call
+  5 16 2871 4390 1352
+spec/benchmarks/_202_jess/jess/_plus
+ Call
+  5 13 763002 763002 130390
+spec/benchmarks/_202_jess/jess/NodeTerm
+ CallNode
+  74 16 1767 0 1467
+spec/benchmarks/_202_jess/jess/TokenVector
+ removeElement
+  2 13 790482 0 14625
+spec/benchmarks/_202_jess/jess/Token
+ data_equals
+  7 15 9422162 9407352 3065816
+spec/benchmarks/_202_jess/jess/_retract
+ Call
+  2 13 160 252 68
+spec/benchmarks/_202_jess/jess/_lt
+ Call
+  2 24 111 111 57
+spec/benchmarks/_202_jess/jess/Node1TEQ
+ CallNode
+  107 19 4082 0 1691
+spec/benchmarks/_202_jess/jess/Node1TELN
+ CallNode
+  33 19 15555 0 1615
+spec/benchmarks/_202_jess/jess/Node1TECT
+ CallNode
+  52 19 3230 0 1615
+spec/benchmarks/_202_jess/jess/Node
+ Eval
+  14 51 3172004 3172004 700043
+ freeze
+  16 22 1796 0 903
+spec/benchmarks/_202_jess/jess/Deftemplate
+ SlotType
+  23 14 180 0 90
+spec/benchmarks/_202_jess/jess/Node2
+ runTests
+  18 120 3168872 0 1891788
+ runTestsVaryRight
+  56 17 66890 0 33431
+  10 45 1907060 0 32884
+ runTestsVaryLeft
+  65 17 4548 0 2274
+  10 49 19161 0 1549
+ findInMemory
+  9 19 3162514 3142706 34433
+ equals
+  35 37 1 0 1
+ complete
+  16 15 186 0 63
+spec/benchmarks/_202_jess/jess/GlobalContext
+ findGlobalBinding
+  2 17 68 0 68
+java/util/Observable
+ notifyObservers
+  66 11 8 0 8
+spec/benchmarks/_202_jess/jess/ReteCompiler
+ freeze
+  9 14 11 0 1
+ CheckForMultiPattern
+  8 33 100 100 48
+ Eval
+  58 15 1444 5776 128
+  14 89 610 610 138
+ findIntInArray
+  6 10 1947 1879 181
+ CreateSuccessor
+  37 36 361 361 115
+  3 39 552 552 144
+ AddRule
+  1712 53 2 6 2
+  822 152 142 0 46
+  1645 87 65 134 64
+  1312 16 1941 3882 176
+  1271 188 475 0 180
+  1243 204 244 0 64
+  794 168 227 0 181
+  747 17 522 341 181
+  706 226 497 0 191
+  417 88 497 0 191
+  169 47 497 0 191
+  2078 16 62 0 8
+  1177 405 72 136 8
+  678 242 263 263 72
+  639 263 80 80 8
+  383 108 263 0 72
+  301 36 263 0 72
+  135 67 263 0 72
+  74 264 80 152 8
+ makeVarTable
+  78 120 497 0 191
+  334 15 40 64 8
+  50 136 263 263 72
+  21 152 80 80 8
+spec/benchmarks/_202_jess/jess/Rete
+ findFactByID
+  10 17 33461 0 92
+ Run
+  34 22 71958 0 1339
+  7 47 1340 0 1
+ ProcessToken
+  23 18 9719 0 1615
+ findFact
+  82 13 894735 0 829561
+  26 42 1062476 0 1523
+ Assert
+  200 46 500 0 125
+  16 12 9628 0 1398
+ Reset
+  209 15 4 0 1
+  176 33 2 0 1
+  54 37 1 0 1
+  23 11 1 0 1
+ AddDeffacts
+  2 16 1 0 1
+ UpdateNode
+  2 22 54 0 54
+ AddDefrule
+  2 18 36 28 8
+spec/benchmarks/_202_jess/jess/Fact
+ FindSlot
+  26 16 30 0 15
+ CreateNewFact
+  60 12 98 0 83
+spec/benchmarks/_202_jess/jess/Defrule
+ Fire
+  38 21 2844 0 1339
+ Ready
+  14 55 5559 0 1339
+ freeze
+  29 16 41 0 8
+ AddPattern
+  37 75 497 0 191
+  14 91 263 0 72
+spec/benchmarks/_202_jess/jess/Pattern
+ AddTest
+  129 9 281 0 139
+  27 14 342 0 139
+  71 10 363 0 167
+ compact
+  105 14 497 306 191
+  75 9 497 0 191
+  56 56 263 0 72
+  20 13 163 116 47
+spec/benchmarks/_202_jess/Jess
+ run_jess
+  175 13 1 0 1
+spec/benchmarks/_202_jess/jess/_printout
+ Call
+  52 92 845 0 86
+spec/benchmarks/_202_jess/jess/Context
+ ExpandFact
+  10 61 5927 5927 1519
+ findBinding
+  2 17 14075 0 4769
+ ExpandAction
+  23 58 17195 11276 5919
+ Push
+  37 16 5562 0 1342
+spec/benchmarks/_202_jess/jess/JessTokenStream
+ PrepareSexp
+  106 10 2185 0 13
+  43 29 2172 0 13
+java/io/StringBufferInputStream
+ read
+  125 22 45 44 1
+spec/benchmarks/_202_jess/jess/Jesp
+ ParseDeffacts
+  123 19 4 0 1
+ ParseDeftemplate
+  264 86 3 0 3
+  130 183 4 0 1
+ ParsePattern
+  237 103 214 0 75
+  157 154 100 0 25
+  577 75 167 0 116
+  567 83 161 116 45
+ ParseFact
+  117 172 20 0 5
+  651 42 231 0 77
+ DoParseDefrule
+  584 19 41 33 8
+  297 93 78 0 8
+ ParseFuncall
+  144 64 565 0 111
+ parse
+  40 29 15 0 2
+spec/benchmarks/_202_jess/jess/Funcall
+ Execute
+  137 25 5927 5927 1519
+  53 112 2471636 1771514 700122
+ <clinit>
+  348 28 44 0 1
+spec/benchmarks/_202_jess/jess/RU
+ putAtom
+  19 24 1347 0 1347
+java/io/StreamTokenizer
+ nextToken
+  308 31 264 0 89
+  600 140 1212 0 84
+  1254 13 2866 0 67
+  444 51 4101 0 1062
+  118 55 5616 0 2259
+ parseNumbers
+  3 16 44 0 4
+ whitespaceChars
+  23 10 136 0 4
+ wordChars
+  23 16 644 0 32
+java/util/Hashtable$Enumerator
+ nextElement
+  15 10 2156550 0 2156550
+ hasMoreElements
+  15 10 8856530 6443458 2413072
+SpecApplicationRunner
+ benchmarkDone
+  8 35 114 222 6
+spec/io/FileInputStream
+ closeAll
+  21 14 413 413 6
+spec/io/ValidityCheckOutputStream
+ strip1
+  0 16 19664 38134 1194
+ getLineStartChar
+  11 9 380 0 16
+  5 17 1222 0 1206
+ validityCheck2
+  42 123 603 0 6
+java/lang/FloatingDecimal
+ floatValue
+  23 16 150364 0 25708
+ doubleValue
+  76 17 4 0 4
+  37 16 12 0 4
+ readJavaFormatString
+  193 9 150270 0 25606
+  96 44 204854 0 25712
+ developLongDigits
+  176 24 89 4 88
+  151 12 173 170 88
+  3 10 88 0 88
+ dtoa
+  906 58 157 242 36
+ countBits
+  62 10 505 0 124
+  41 12 347 0 124
+  26 9 496 0 124
+  8 11 248 0 124
+spec/benchmarks/_201_compress/Decompressor
+ decompress
+  219 26 47052775 0 9861565
+  168 35 47039190 0 9861565
+  323 185 9861590 0 25
+spec/benchmarks/_201_compress/Input_Buffer
+ readbytes
+  59 29 19796180 18563405 1232775
+spec/benchmarks/_201_compress/Decompressor$Suffix_Table
+ init
+  16 11 6425 0 25
+spec/benchmarks/_201_compress/Code_Table
+ clear
+  15 10 38550 0 150
+spec/benchmarks/_201_compress/Output_Buffer
+ writebytes
+  27 22 2085 1955 130
+spec/benchmarks/_201_compress/Compressor$Hash_Table
+ clear
+  15 11 10350300 0 150
+spec/benchmarks/_201_compress/Compressor
+ output
+  161 11 18561450 0 1232645
+ compress
+  152 24 85200395 0 15779520
+  293 137 47052800 0 610
+  36 9 25 0 25
+spec/benchmarks/_201_compress/Harness
+ fill_text_buffer
+  42 17 50 0 25
+ run_compress
+  165 62 30 25 5
+  175 71 6 0 1
+spec/io/ConsoleOutputStream
+ write
+  3 12 11894 10014 1880
+java/lang/Long
+ toString
+  44 28 66119 227088 9347
+spec/harness/ProgramRunner
+ runBenchmark2
+  336 226 6 0 6
+java/io/OutputStreamWriter
+ flushBuffer
+  11 34 585669 0 298834
+ write
+  67 47 573670 0 286835
+java/io/BufferedWriter
+ write
+  20 43 585612 0 298777
+java/util/Vector
+ removeAllElements
+  2 11 1901756 0 561272
+ indexOf
+  33 13 5517622 4174344 1351097
+java/lang/ThreadGroup
+ remove
+  16 12 50 0 14
+java/lang/ref/Finalizer$2
+ run
+  0 10 12 0 12
+java/lang/Thread
+ join
+  37 8 28 0 14
+java/lang/ref/Finalizer$1
+ run
+  9 8 36 0 12
+java/lang/Integer
+ toString
+  86 27 45770 45770 27608
+  31 38 27821 213 27608
+ parseInt
+  179 29 2920 0 2859
+SpecApplication
+ main
+  6 227 7 7 1
+java/io/InputStreamReader
+ fill
+  23 39 14 0 9
+java/io/BufferedReader
+ read
+  11 33 12757 0 12757
+ fill
+  129 14 9 0 9
+ readLine
+  131 17 5653 0 159
+  32 87 160 0 160
+java/util/Properties
+ loadConvert
+  18 106 2763 0 160
+ continueLine
+  9 14 80 0 80
+ load
+  347 12 81 81 80
+  291 12 80 80 80
+  239 19 2005 0 80
+  194 12 80 80 80
+  56 63 80 0 80
+  18 198 160 160 1
+sun/misc/URLClassPath
+ push
+  12 11 2 0 1
+ <init>
+  50 13 2 2 1
+sun/misc/Launcher
+ pathToURLs
+  8 13 2 1 1
+ getClassPath
+  53 40 1 0 1
+  14 15 1 1 1
+sun/misc/CVM
+ parseCommandLineOptions
+  340 23 7 6 1
+  39 68 1 1 1
+java/lang/String
+ trim
+  40 14 25712 25712 25712
+  18 12 25712 25712 25712
+ lastIndexOf
+  138 20 6 0 6
+  83 51 30 0 6
+  36 10 30846 29112 2232
+ replace
+  86 20 1859171 3513092 102625
+  60 13 513125 821000 102625
+  25 11 3137164 5938426 270576
+ startsWith
+  59 12 2415 4198 831
+ toLowerCase
+  163 14 22 20 2
+  19 16 2 0 2
+java/util/Locale
+ toUpperCase
+  7 13 74 74 44
+ toLowerCase
+  7 13 66 66 22
+java/util/HashMap
+ containsKey
+  29 15 1 0 1
+ get
+  29 15 122946 0 122946
+ put
+  37 15 43 0 43
+java/util/Hashtable
+ containsKey
+  25 15 66089 0 49154
+ get
+  25 15 9641140 0 7596889
+ rehash
+  70 24 932975 1196490 534145
+  54 36 536889 1068290 2744
+ put
+  39 15 503372 0 340783
+java/lang/ref/ReferenceQueue
+ remove
+  39 13 115 0 115
+java/lang/ref/Finalizer$FinalizerThread
+ run
+  0 10 504 0 1
+java/lang/ref/Reference$ReferenceHandler
+ run
+  0 46 662 0 1
+java/lang/ref/Finalizer
+ <clinit>
+  33 8 3 0 1
+java/lang/ref/Reference
+ createHandlerThread
+  9 8 3 0 1
+java/lang/Class
+ runStaticInitializers
+  7 8 104 0 104
+#end

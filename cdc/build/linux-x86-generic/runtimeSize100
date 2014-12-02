@@ -1,0 +1,4037 @@
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................138
+GRAND TOTAL.......................138
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................133
+GRAND TOTAL.......................133
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................130
+GRAND TOTAL.......................130
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................149
+GRAND TOTAL.......................149
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................149
+GRAND TOTAL.......................149
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................151
+GRAND TOTAL.......................151
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................163
+GRAND TOTAL.......................163
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................163
+GRAND TOTAL.......................163
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................164
+GRAND TOTAL.......................164
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................47
+GRAND TOTAL........................47
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................54
+GRAND TOTAL........................54
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................37
+GRAND TOTAL........................37
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding.......................92
+GRAND TOTAL........................92
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding.......................84
+GRAND TOTAL........................84
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding.......................84
+GRAND TOTAL........................84
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............124
+GRAND TOTAL.......................124
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............127
+GRAND TOTAL.......................127
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............123
+GRAND TOTAL.......................123
+-------------------------------------
+cvm
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1996704
+Loop count = 5
+3153920
+931067
+>>>> spec.benchmarks._201_compress.Main exited with exception: java.lang.OutOfMemoryError <<<<
+java.lang.OutOfMemoryError
+
+java.lang.NullPointerException
+201 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1996704
+Loop count = 5
+3153920
+931067
+>>>> spec.benchmarks._201_compress.Main exited with exception: java.lang.OutOfMemoryError <<<<
+java.lang.OutOfMemoryError
+
+java.lang.NullPointerException
+201 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=2097152 free memory=1996704
+Loop count = 5
+3153920
+931067
+>>>> spec.benchmarks._201_compress.Main exited with exception: java.lang.OutOfMemoryError <<<<
+java.lang.OutOfMemoryError
+
+java.lang.NullPointerException
+201 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.01 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=3760128 free memory=1023728
+======= _202_jess Finished in 1.478 secs
+requested gc
+202 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0010 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=3760128 free memory=1023192
+======= _202_jess Finished in 1.458 secs
+requested gc
+202 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=3760128 free memory=1023788
+======= _202_jess Finished in 1.453 secs
+requested gc
+202 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1996972
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.035 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=14290944 free memory=2887232
+======= _209_db Finished in 3.01 secs
+requested gc
+209 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1996972
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.02 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=14290944 free memory=2887248
+======= _209_db Finished in 2.999 secs
+requested gc
+209 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=2097152 free memory=1996972
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.013 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=14290944 free memory=2887232
+======= _209_db Finished in 2.974 secs
+requested gc
+209 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=2097152 free memory=1996792
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.024 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4587520 free memory=1929088
+======= _213_javac Finished in 1.974 secs
+requested gc
+213 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=2097152 free memory=1996792
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0070 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4587520 free memory=1922372
+======= _213_javac Finished in 1.941 secs
+requested gc
+213 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=2097152 free memory=1996792
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.011 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4587520 free memory=1852316
+======= _213_javac Finished in 1.947 secs
+requested gc
+213 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11904777
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.038 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11763712 free memory=2070832
+======= _228_jack Finished in 1.241 secs
+requested gc
+228 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11904777
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.044 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11763712 free memory=2070832
+======= _228_jack Finished in 1.246 secs
+requested gc
+228 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=2097152 free memory=1996960
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11904777
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.05 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11763712 free memory=2070848
+======= _228_jack Finished in 1.246 secs
+requested gc
+228 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1996616
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 3082msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0080 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4489216 free memory=949708
+======= _222_mpegaudio Finished in 3.084 secs
+requested gc
+227 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1996616
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 3067msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.011 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4489216 free memory=949720
+======= _222_mpegaudio Finished in 3.072 secs
+requested gc
+227 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=2097152 free memory=1996616
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 3065msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0060 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4489216 free memory=949708
+======= _222_mpegaudio Finished in 3.068 secs
+requested gc
+227 3/3
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................230
+GRAND TOTAL.......................230
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................238
+GRAND TOTAL.......................238
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Chess.............................230
+GRAND TOTAL.......................230
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................196
+GRAND TOTAL.......................196
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................196
+GRAND TOTAL.......................196
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Cryptography......................196
+GRAND TOTAL.......................196
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................135
+GRAND TOTAL.......................135
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................134
+GRAND TOTAL.......................134
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+kXML..............................145
+GRAND TOTAL.......................145
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................81
+GRAND TOTAL........................81
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................98
+GRAND TOTAL........................98
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Parallel...........................86
+GRAND TOTAL........................86
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding......................159
+GRAND TOTAL.......................159
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding......................159
+GRAND TOTAL.......................159
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+PNG Decoding......................159
+GRAND TOTAL.......................159
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............196
+GRAND TOTAL.......................196
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............188
+GRAND TOTAL.......................188
+-------------------------------------
+-------------------------------------
+EEMBC GrinderBench, Copyright (c) 2003, EDN Embedded 
+Microprocessor Benchmark Consortium (EEMBC), Inc.
+Regular Expressions...............191
+GRAND TOTAL.......................191
+-------------------------------------
+cvm
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=659456 free memory=155648
+Loop count = 5
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.014 seconds
+## No. of File opens            : 25
+## No. of Byte Reads from cache : 37642240
+## No. of Byte Reads from File  : 9410560
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 5, B 9410560, H 20, M 5
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=48103424 free memory=16400384
+======= _201_compress Finished in 5.917 secs
+requested gc
+201 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=659456 free memory=155648
+Loop count = 5
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.01 seconds
+## No. of File opens            : 25
+## No. of Byte Reads from cache : 37642240
+## No. of Byte Reads from File  : 9410560
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 5, B 9410560, H 20, M 5
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=39714816 free memory=692224
+======= _201_compress Finished in 5.815 secs
+requested gc
+201 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _201_compress Starting =======
+Run 0 start. Total memory=659456 free memory=147456
+Loop count = 5
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+3153920
+931067
+2856960
+1132510
+962560
+688827
+1280000
+591635
+1157120
+368657
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.012 seconds
+## No. of File opens            : 25
+## No. of Byte Reads from cache : 37642240
+## No. of Byte Reads from File  : 9410560
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 5, B 9410560, H 20, M 5
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=39714816 free memory=692224
+======= _201_compress Finished in 5.847 secs
+requested gc
+201 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=659456 free memory=151552
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.0 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=802816
+======= _202_jess Finished in 1.992 secs
+requested gc
+202 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.001 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=790528
+======= _202_jess Finished in 1.963 secs
+requested gc
+202 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _202_jess Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+
+Jess, the Java Expert System Shell
+Copyright (C) 1997 E.J. Friedman Hill and the Sandia Corporation
+Jess Version 3.2 11/8/97
+
+There are five houses, each of a different color, inhabited by men of
+different nationalities, with different pets, drinks, and cigarettes.
+
+The Englishman lives in the red house.  The Spaniard owns the dog.
+The ivory house is immediately to the left of the green house, where
+the coffee drinker lives.  The milk drinker lives in the middle house.
+The man who smokes Old Golds also keeps snails.  The Ukrainian drinks
+tea.  The Norwegian resides in the first house on the left.  The
+Chesterfields smoker lives next door to the fox owner.  The Lucky
+Strike smoker drinks orange juice.  The Japanese smokes Parliaments.
+The horse owner lives next to the Kools smoker, whose house is yellow.
+The Norwegian lives next to the blue house.
+
+Now, who drinks water?  And who owns the zebra?
+
+HOUSE | Nationality Color Pet Drink Smokes
+--------------------------------------------------------------------
+  1   |norwegian yellow fox water kools
+  2   |ukrainian blue horse tea chesterfields
+  3   |englishman red snails milk old-golds
+  4   |spaniard ivory dog orange-juice lucky-strikes
+  5   |japanese green zebra coffee parliaments
+
+
+The problem is
+   GERALD
+ + DONALD
+   ------
+ = ROBERT
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #2= 15
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #3= 16
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #4= 17
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #5= 18
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #6= 19
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #7= 20
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #8= 21
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #9= 22
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #10= 23
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #11= 24
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #12= 25
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #13= 26
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #14= 27
+   1 9 7 4 8 5
+ + 5 2 6 4 8 5
+   ------
+ = 7 2 3 9 7 0
+check #15= 28
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.001 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 12538
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 12538, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=1097728
+======= _202_jess Finished in 1.959 secs
+requested gc
+202 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.012 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=33087488 free memory=6692864
+======= _209_db Finished in 2.984 secs
+requested gc
+209 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.009 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=33087488 free memory=6578176
+======= _209_db Finished in 3.011 secs
+requested gc
+209 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _209_db Starting =======
+Run 0 start. Total memory=659456 free memory=151552
+db 1 iterations 
+Reading database input/db6 ... OK
+Building database ...Done.
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Todd
+     MI: K
+Address
+    Addr: 4140 South Cottonwood Blvd
+    City: Galveston
+   State: Connecticut
+     ZIP: 28010
+ Phone #: (132) 677-7327
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Xaiver
+     MI: A
+Address
+    Addr: 6834 West Northwood Av
+    City: Circleville
+   State: Kansas
+     ZIP: 11316
+ Phone #: (242) 173-4891
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Linda
+     MI: G
+Address
+    Addr: 1162 West Edmond 
+    City: Flat Head
+   State: South Carolina
+     ZIP: 38653
+ Phone #: (121) 163-6018
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: George
+     MI: P
+Address
+    Addr: 8030 East Murphy 
+    City: Alpine
+   State: Kentucky
+     ZIP: 09790
+ Phone #: (169) 364-9962
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Tamara
+     MI: X
+Address
+    Addr: 4630 North Highland Dr
+    City: Circleville
+   State: Pennsylvania
+     ZIP: 00414-9385
+ Phone #: (375) 242-4953
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Zelma
+     MI: L
+Address
+    Addr: 4797 South Ridgewood Lane
+    City: Lamont
+   State: Iowa
+     ZIP: 45812
+ Phone #: (321) 881-9749
+
+NOT found
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hernandez
+  First: Faith
+     MI: O
+Address
+    Addr: 7044 East Willowbrook 
+    City: Sanford
+   State: Arkansas
+     ZIP: 15407-7251
+ Phone #: (919) 623-7368
+
+NOT found
+---- Record number 5000 ----
+Full name
+   Last: Hendricks
+  First: Jake
+     MI: S
+Address
+    Addr: P.O. Box 498
+    City: Fresno
+   State: Kentucky
+     ZIP: 04625
+ Phone #: (905) 747-0285
+
+---- Record number 1 ----
+Full name
+   Last: Fisher
+  First: Aaron
+     MI: O
+Address
+    Addr: 8489 West Cumberland 
+    City: Brandon
+   State: Nevada
+     ZIP: 35534
+ Phone #: (464) 691-3947
+
+---- Record number 15272 ----
+Full name
+   Last: Stevensen
+  First: Zelma
+     MI: Y
+Address
+    Addr: 611 Airport Way
+    City: Sanford
+   State: Alaska
+     ZIP: 07509
+ Phone #: (615) 750-3563
+
+---- Record number 1 ----
+Full name
+   Last: Johnston
+  First: Ike
+     MI: P
+Address
+    Addr: 7130 East Wallace 
+    City: Paris
+   State: Alabama
+     ZIP: 07895
+ Phone #: (659) 814-4503
+
+NOT found
+---- Record number 4000 ----
+Full name
+   Last: Glass
+  First: Zane
+     MI: M
+Address
+    Addr: 6043 Wagon Wheel Circle
+    City: Washington
+   State: North Dakota
+     ZIP: 22743
+ Phone #: (781) 479-5710
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Bobby
+     MI: A
+Address
+    Addr: P.O. Box 5872
+    City: Kasota
+   State: California
+     ZIP: 06408
+ Phone #: (526) 916-8244
+
+---- Record number 15273 ----
+Full name
+   Last: Hayden
+  First: Charlie
+     MI: 
+Address
+    Addr: 111 Eagle Pass
+    City: Kuttawa
+   State: Kentucky
+     ZIP: 43210
+ Phone #: (800) 867-5309
+
+NOT found
+---- Record number 6000 ----
+Full name
+   Last: Jordan
+  First: Gerald
+     MI: D
+Address
+    Addr: P.O. Box 8143
+    City: Troy
+   State: Michigan
+     ZIP: 46205
+ Phone #: (987) 528-4503
+
+---- Record number 1 ----
+Full name
+   Last: Weatherby
+  First: Frank
+     MI: D
+Address
+    Addr: 2911 South Fountainwood Ln
+    City: Lexington
+   State: Minnesota
+     ZIP: 01564
+ Phone #: (616) 327-4172
+
+---- Record number 2 ----
+Full name
+   Last: Becker
+  First: Greg
+     MI: V
+Address
+    Addr: 5145 North Virginia 
+    City: Middletown
+   State: Oregon
+     ZIP: 23941
+ Phone #: (725) 685-0911
+
+---- Record number 3 ----
+Full name
+   Last: Adair
+  First: Barbara
+     MI: I
+Address
+    Addr: 5703 Rio Grande 
+    City: Troy
+   State: Florida
+     ZIP: 29820
+ Phone #: (965) 274-9108
+
+---- Record number 4 ----
+Full name
+   Last: Connors
+  First: Nancy
+     MI: Z
+Address
+    Addr: 7719 West Elm 
+    City: Benton
+   State: Rhode Island
+     ZIP: 15808
+ Phone #: (437) 894-8762
+
+---- Record number 15262 ----
+Full name
+   Last: Walden
+  First: Pete
+     MI: X
+Address
+    Addr: P.O. Box 8978
+    City: Bandera
+   State: Tennessee
+     ZIP: 01861
+ Phone #: (872) 554-6376
+
+---- Record number 15261 ----
+Full name
+   Last: VonSpritzenhaugher
+  First: Samantha
+     MI: I
+Address
+    Addr: 7812 South Spring Valley 
+    City: Gilmore
+   State: Louisiana
+     ZIP: 07504
+ Phone #: (934) 778-0650
+
+---- Record number 15260 ----
+Full name
+   Last: Zimmerman
+  First: Gena
+     MI: Y
+Address
+    Addr: 8104 North Stagecoach 
+    City: Eureka
+   State: Alabama
+     ZIP: 10131
+ Phone #: (771) 365-3303
+
+---- Record number 15259 ----
+Full name
+   Last: Burns
+  First: Bart
+     MI: J
+Address
+    Addr: P.O. Box 6187
+    City: Galveston
+   State: South Carolina
+     ZIP: 61796
+ Phone #: (738) 984-7415
+
+Save database (y or n)? File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.007 seconds
+## No. of File opens            : 3
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 1189534
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 3, B 1189534, H 0, M 3
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=32890880 free memory=5074944
+======= _209_db Finished in 3.024 secs
+requested gc
+209 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=659456 free memory=155648
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.003 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=47222784 free memory=13099008
+======= _213_javac Finished in 2.581 secs
+requested gc
+213 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.006 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=47341568 free memory=13832192
+======= _213_javac Finished in 2.655 secs
+requested gc
+213 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _213_javac Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+Javac benchmark starting...
+File output byte count = 3909160 checksum = -40392
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.006 seconds
+## No. of File opens            : 448
+## No. of Byte Reads from cache : 6344901
+## No. of Byte Reads from File  : 2114967
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 112, B 2123310, H 336, M 112
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=47341568 free memory=13021184
+======= _213_javac Finished in 2.604 secs
+requested gc
+213 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11912036
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.028 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=65536
+>>>>>>>>>>>>> RUN WAS NOT VALID <<<<<<<<<<<
+======= _228_jack Finished in 1.781 secs **NOT VALID**
+requested gc
+Validity check errors:
+spec.results._228_jack.run0.validity.error01=line 18 is: File output byte count = 1640398 checksum = 11912036
+228 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=659456 free memory=159744
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11912036
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.022 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=3883008
+>>>>>>>>>>>>> RUN WAS NOT VALID <<<<<<<<<<<
+======= _228_jack Finished in 1.798 secs **NOT VALID**
+requested gc
+Validity check errors:
+spec.results._228_jack.run0.validity.error01=line 18 is: File output byte count = 1640398 checksum = 11912036
+228 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _228_jack Starting =======
+Run 0 start. Total memory=659456 free memory=151552
+Jack Version 0.1:  Parser 0 has been generated successfully.
+Jack Version 0.1:  Parser 1 has been generated successfully.
+Jack Version 0.1:  Parser 2 has been generated successfully.
+Jack Version 0.1:  Parser 3 has been generated successfully.
+Jack Version 0.1:  Parser 4 has been generated successfully.
+Jack Version 0.1:  Parser 5 has been generated successfully.
+Jack Version 0.1:  Parser 6 has been generated successfully.
+Jack Version 0.1:  Parser 7 has been generated successfully.
+Jack Version 0.1:  Parser 8 has been generated successfully.
+Jack Version 0.1:  Parser 9 has been generated successfully.
+Jack Version 0.1:  Parser 10 has been generated successfully.
+Jack Version 0.1:  Parser 11 has been generated successfully.
+Jack Version 0.1:  Parser 12 has been generated successfully.
+Jack Version 0.1:  Parser 13 has been generated successfully.
+Jack Version 0.1:  Parser 14 has been generated successfully.
+Jack Version 0.1:  Parser 15 has been generated successfully.
+Jack Version 0.1:  Parser 16 has been generated successfully.
+File output byte count = 1640398 checksum = 11912036
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.02 seconds
+## No. of File opens            : 17
+## No. of Byte Reads from cache : 272848
+## No. of Byte Reads from File  : 17053
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 17052, H 16, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=11792384 free memory=3936256
+>>>>>>>>>>>>> RUN WAS NOT VALID <<<<<<<<<<<
+======= _228_jack Finished in 1.795 secs **NOT VALID**
+requested gc
+Validity check errors:
+spec.results._228_jack.run0.validity.error01=line 18 is: File output byte count = 1640398 checksum = 11912036
+228 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=659456 free memory=147456
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 5127msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.005 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4431872 free memory=249856
+======= _222_mpegaudio Finished in 5.129 secs
+requested gc
+227 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=659456 free memory=155648
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 5113msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.004 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4440064 free memory=258048
+======= _222_mpegaudio Finished in 5.115 secs
+requested gc
+227 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _222_mpegaudio Starting =======
+Run 0 start. Total memory=659456 free memory=155648
+MPEG Audio - Decoding input/track2.mp3 1 time
+
+MPEG Layer-3 Audio - Java Decoder Implementation
+   (c) 1997 Fraunhofer IIS, Erlangen/Germany
+
+Decoding time: 5118msec
+File output byte count = 35993088
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.005 seconds
+## No. of File opens            : 1
+## No. of Byte Reads from cache : 0
+## No. of Byte Reads from File  : 3257258
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 3257258, H 0, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=4440064 free memory=258048
+======= _222_mpegaudio Finished in 5.121 secs
+requested gc
+227 3/3
+Speed will be 100
+Caching On Speed = 100
+======= _227_mtrt Starting =======
+Run 0 start. Total memory=659456 free memory=159744
++0 to 99 by 200
++100 to 199 by 200
+-0 to 99 by 200
+-100 to 199 by 200
+4802890
+4803146
+4868682
+4868682
+4868682
+4868682
+4868682
+4868682
+4868683
+4868939
+4934475
+4934475
+4934475
+4934475
+4934475
+4934476
+4934732
+5000268
+5000268
+5000268
+5000268
+5000268
+5000269
+5000525
+5066061
+5066061
+5066061
+5066061
+5066062
+5066318
+5131854
+5131854
+5131854
+5131854
+5131854
+5131855
+5132111
+5197647
+5197647
+5197647
+5197647
+5197647
+5197647
+5197648
+5197904
+5197904
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5197904
+5197648
+5197648
+5197647
+5197647
+5197647
+5132111
+5131854
+5131854
+5131854
+5066062
+5066061
+5066061
+5000269
+5000268
+5000268
+4934475
+4934475
+4868682
+4868682
+4802889
+2631720
+2631720
+2566184
+2565927
+4605511
+4605510
+4539717
+4474181
+4473924
+4408131
+4342339
+4342338
+4276545
+4210752
+4144959
+4079167
+4079166
+4013373
+3947580
+3881787
+3815994
+3750201
+3684408
+3618615
+3552822
+3487029
+3421236
+3355443
+3289650
+3223857
+3158064
+3092271
+3689822
+3821666
+3821409
+3821410
+4414835
+4415092
+4480628
+6326701
+6129063
+7250122
+7315659
+8041185
+7777498
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.002 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 347384
+## No. of Byte Reads from File  : 347384
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 347384, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=23187456 free memory=9662464
+======= _227_mtrt Finished in 1.476 secs
+requested gc
+228 1/3
+Speed will be 100
+Caching On Speed = 100
+======= _227_mtrt Starting =======
+Run 0 start. Total memory=659456 free memory=159744
++0 to 99 by 200
++100 to 199 by 200
+-0 to 99 by 200
+-100 to 199 by 200
+4802890
+4803146
+4868682
+4868682
+4868682
+4868682
+4868682
+4868682
+4868683
+4868939
+4934475
+4934475
+4934475
+4934475
+4934475
+4934476
+4934732
+5000268
+5000268
+5000268
+5000268
+5000268
+5000269
+5000525
+5066061
+5066061
+5066061
+5066061
+5066062
+5066318
+5131854
+5131854
+5131854
+5131854
+5131854
+5131855
+5132111
+5197647
+5197647
+5197647
+5197647
+5197647
+5197647
+5197648
+5197904
+5197904
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5197904
+5197648
+5197648
+5197647
+5197647
+5197647
+5132111
+5131854
+5131854
+5131854
+5066062
+5066061
+5066061
+5000269
+5000268
+5000268
+4934475
+4934475
+4868682
+4868682
+4802889
+2631720
+2631720
+2566184
+2565927
+4605511
+4605510
+4539717
+4474181
+4473924
+4408131
+4342339
+4342338
+4276545
+4210752
+4144959
+4079167
+4079166
+4013373
+3947580
+3881787
+3815994
+3750201
+3684408
+3618615
+3552822
+3487029
+3421236
+3355443
+3289650
+3223857
+3158064
+3092271
+3689822
+3821666
+3821409
+3821410
+4414835
+4415092
+4480628
+6326701
+6129063
+7250122
+7315659
+8041185
+7777498
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.004 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 347384
+## No. of Byte Reads from File  : 347384
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 347384, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=23187456 free memory=10305536
+======= _227_mtrt Finished in 1.507 secs
+requested gc
+228 2/3
+Speed will be 100
+Caching On Speed = 100
+======= _227_mtrt Starting =======
+Run 0 start. Total memory=659456 free memory=159744
++0 to 99 by 200
++100 to 199 by 200
+-0 to 99 by 200
+-100 to 199 by 200
+4802890
+4803146
+4868682
+4868682
+4868682
+4868682
+4868682
+4868682
+4868683
+4868939
+4934475
+4934475
+4934475
+4934475
+4934475
+4934476
+4934732
+5000268
+5000268
+5000268
+5000268
+5000268
+5000269
+5000525
+5066061
+5066061
+5066061
+5066061
+5066062
+5066318
+5131854
+5131854
+5131854
+5131854
+5131854
+5131855
+5132111
+5197647
+5197647
+5197647
+5197647
+5197647
+5197647
+5197648
+5197904
+5197904
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5263440
+5197904
+5197648
+5197648
+5197647
+5197647
+5197647
+5132111
+5131854
+5131854
+5131854
+5066062
+5066061
+5066061
+5000269
+5000268
+5000268
+4934475
+4934475
+4868682
+4868682
+4802889
+2631720
+2631720
+2566184
+2565927
+4605511
+4605510
+4539717
+4474181
+4473924
+4408131
+4342339
+4342338
+4276545
+4210752
+4144959
+4079167
+4079166
+4013373
+3947580
+3881787
+3815994
+3750201
+3684408
+3618615
+3552822
+3487029
+3421236
+3355443
+3289650
+3223857
+3158064
+3092271
+3689822
+3821666
+3821409
+3821410
+4414835
+4415092
+4480628
+6326701
+6129063
+7250122
+7315659
+8041185
+7777498
+File output byte count = 0 checksum = 0
+
+#### IO Statistics for this Run ####
+## IO time                      : 0.001 seconds
+## No. of File opens            : 2
+## No. of Byte Reads from cache : 347384
+## No. of Byte Reads from File  : 347384
+## No. of Byte Reads from Url   : 0
+#### Cumulative Cache Stats: N 1, B 347384, H 1, M 1
+#### No. of HTTP retries          : 0
+
+Run 0 end. Total memory=23187456 free memory=9793536
+======= _227_mtrt Finished in 1.494 secs
+requested gc
+228 3/3

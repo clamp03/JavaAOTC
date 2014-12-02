@@ -1,0 +1,33 @@
+#
+# Server properties file
+#
+# This is a SAMPLE file which you can use to specify characteristics of
+# a particular server system used in your SPECjava tests. You should
+# copy this file to another file which you name, and edit the reporting
+# fields appropriately.  All of this can still be edited in the SpecJava
+# harness at the time you run the test, but putting the values in here
+# can save you some typing for attributes which do not change from test
+# to test.
+#
+
+# server hardware
+spec.server.hw.vendor=IBM Corporation
+spec.server.hw.model=PowerPC 604
+spec.server.hw.processor=PowerPC 604
+spec.server.hw.MHz=133
+spec.server.hw.ncpu=1
+spec.server.hw.memory=128
+spec.server.hw.fileSystem=NFS
+spec.server.hw.disk=2 x 4GB SCSI
+spec.server.hw.other=
+spec.server.hw.available=Jan-97
+
+# server software
+spec.server.sw.OS=AIX 4.1.5
+spec.server.sw.OSavailable=Aug-98
+spec.server.sw.webServer=http://fixit/javanet/jvm98/
+spec.server.sw.webAvailable=Jan-97
+spec.server.sw.tuning=none
+spec.server.sw.other=none
+spec.server.sw.otherAvailable=n/a
+

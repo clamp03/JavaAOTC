@@ -1,0 +1,26 @@
+FloatingPointCheck
+        tiny:             1.0E-323
+        tiny/small:       0.0
+        (tiny/small)*big: 0.0
+        MIN_VALUE*big:    1.265E-321
+        (tiny*big)/small: 3.16E-322
+        huge:             8.988465674311579E307
+        huge*small:       Infinity
+        (huge*small)/big: Infinity
+        eps:    1.1102230246251565E-16
+        eps:    0x3ca0000000000000
+        1+eps:  1.0
+        (1+eps)-1:      0.0
+        tiny:             2.8E-45
+        tiny/small:       0.0
+        (tiny/small)*big: 0.0
+        MIN_VALUE*big:    3.59E-43
+        (tiny*big)/small: 9.0E-44
+        huge:             1.7014117E38
+        huge*small:       Infinity
+        (huge*small)/big: Infinity
+        eps:    5.9604645E-8
+        eps:    0x33800000
+        1+eps:  1.0
+        (1+eps)-1:      0.0
+OK

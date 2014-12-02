@@ -1,0 +1,49 @@
+#
+# Client properties file
+# This is a SAMPLE file which you can use to specify characteristics of
+# a particular client system under test, and to control benchmark
+# operation. You should copy this file to
+# another file which you name, and edit the reporting fields appropriately.
+# All of this can still be edited in the SpecJava harness at the time
+# you run the test, but putting the values in here can save you some
+# typing for attributes which do not change from test to test.
+#
+
+# client hardware
+spec.client.hw.vendor=SAMPLE client file - Read documentation for more info
+spec.client.hw.vendor.url=http://www.turboblaster.com
+spec.client.hw.model=TurboBlaster 2
+spec.client.hw.processor=Turbochip
+spec.client.hw.MHz=300
+spec.client.hw.ncpu=1
+spec.client.hw.memory=64
+spec.client.hw.primaryCache=4KBI+4KBD
+spec.client.hw.secondaryCache=64KB(I+D)
+spec.client.hw.otherCache=
+spec.client.hw.memoryConfig=
+spec.client.hw.fileSystem=UFS
+spec.client.hw.disk=REQUIRED
+spec.client.hw.nonVolatile=
+spec.client.hw.other=
+spec.client.hw.network=10Base-T
+spec.client.hw.available=REQUIRED
+
+# client software
+spec.client.sw.vendor=Phobos Ltd
+spec.client.sw.vendor.url=http://www.phobos.com.uk
+spec.client.sw.JVM=Phobic Java
+spec.client.sw.JVMavailable=REQUIRED
+spec.client.sw.JVMmemory=28
+spec.client.sw.OS=Phob/OS 3.14
+spec.client.sw.OSavailable=REQUIRED
+spec.client.sw.systemState=normal
+spec.client.sw.other=Neptune JIT Accelerator 2.3b6
+spec.client.sw.otherAvailable=REQUIRED
+
+# test information
+spec.test.testedBy=Neptune Corp.
+spec.testx.testedByName=Willie the Mailboy
+spec.test.internalReference=http://pluto.eng/specpubs/mar97/
+spec.test.specLicense=REQUIRED
+spec.test.location=REQUIRED
+

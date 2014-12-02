@@ -1,0 +1,128 @@
+This file provides an overview of how the user can handle error
+messages instead of using the default reporting mechanisms generated
+by Jack.  Jack generated files report error messages at two places -
+in the generated lexical analyzer and the generated parser.
+
+Customizing Parser Error Messages:
+
+The generated parser contains a method called "token_error" with no
+parameters with a standard implementation.  You can create a
+subclass of the generated parser and override this method to customize
+error reporting.  To facilitate the writing of your customized error
+routines, the following primitives are available for you use (from
+the generated parser class):
+
+	int error_line;
+	// The line where the error was detected.
+
+	int error_column;
+	// The column where the error was detected.
+
+	String error_string;
+	// The offending string.
+
+	String[] expected_tokens;
+	// The list of tokens that were expected instead of
+	// the offending string.
+
+When you subclass the parser, you will also have to provide constructors
+with parameters similar to the ones you use in the parser class.
+
+As an example, here is how you may customize error reporting for the
+Simple1 parser in the examples directory:
+
+	// First subclass the parser class.
+	public class MySimple1 extends Simple1 {
+
+	  // Now define the constructor you wish to use and call
+	  // the corresponding constructor in the parser class.
+	  public MySimple1(java.io.InputStream stream) {
+	    super(stream);
+	  }
+
+	  // Your main program which replaces the one in the parser
+	  // class.  Note this calls the constructor in this class.
+	  public static void main(String args[]) throws ParseError {
+	    MySimple1 parser = new MySimple1(System.in);
+	    parser.Input();
+	  }
+
+	  // Finally the customized error reporting mechanism.  In this case
+	  // we simply report the error in a more abrupt way.
+	  protected void token_error() {
+	    System.out.println("Line: " + error_line);
+	    System.out.println("Column: " + error_column);
+	    System.out.println("Encountered: \"" + error_string + "\"");
+	    System.out.print("Expected: ");
+	    for (int i = 0; i < expected_tokens.length; i++) {
+	      System.out.print(expected_tokens[i] + "; ");
+	    }
+	    System.out.println("");
+	  }
+
+	}
+
+You can try adding this file to the examples directory, and do the following:
+
+	jack Simple1.jack
+	javac *.java
+	java MySimple
+
+
+Customizing Lexical Analyzer Error Messages:
+
+The generated lexical analyzer contains a method called "LexicalError"
+with no parameters with a standard implementation.  You can create a
+subclass of the generated lexer and override this method to customize
+lexical error reporting. You have the following info available:
+
+	int error_line;
+	// The line where the error was detected.
+
+	int error_column;
+	// The column where the error was detected.
+
+	String error_after;
+	// The partial string that is seen AFTER the previous matched token (note
+	// that this can also be a IGNORE_IN_BNF token).
+
+	char curChar;
+	// The offending character.
+
+The lexer subclass should also have all the different constructors
+that the generated lexer has with identical parameters.
+
+As an example, here is how you may customize error reporting for the
+Simple1TokenManager in the examples directory:
+
+	// First subclass the lexer class.
+	public class MySimple1TokenManager extends Simple1TokenManager {
+
+	  // Now define the constructor you wish to use and call
+	  // the corresponding constructor in the lexer class.
+	  public MyLexer(ASCII_CharStream stream) {
+	    super(stream);
+	  }
+
+	  // Customized error reporting.
+	  protected void LexicalError() {
+	    System.out.println("Lexical error at line " + error_line + ", column " + error_column);
+	    System.out.println("Encountered: \"" + String.valueOf(curChar) + "\"");
+	  }
+
+	}
+
+	// Your main program which replaces the one in the parser
+	// class.  Note this calls the constructor in this class.
+	public static void main(String args[]) throws ParseError {
+	  Simple1TokenManager tm = new MySimple1TokenManager(
+	                           new ASCII_CharStream(System.in, 1, 1));
+	  Simple1 parser = new Simple1(tm);
+	  parser.Input();
+	}
+
+You can try adding this file to the examples directory, and do the following:
+
+	jack Simple1.jack
+	javac *.java
+	java Simple1

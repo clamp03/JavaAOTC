@@ -1,0 +1,67 @@
+
+                          LICENSE AGREEMENT
+
+Jess, the Java Expert System Shell is Copyright (C) 1997 by Ernest J.
+Friedman-Hill and the Sandia Corporation. 
+
+Sandia Corporation (hereinafter "Sandia") manages and operates a
+federally-owned facility known as Sandia National Laboratories for the
+United States Department of Energy (Hereinafter "DOE") under Contract
+DE-AC04-94AL85000. By using and/or downloading the attached Sandia
+software, titled "Jess", which is a limited clone of the CLIPS expert system
+shell written in the Java language, you and/or your company (hereinafter
+"Licensee") are agreeing to be bound by the following licensing terms and
+conditions: 
+
+  1. Jess is free for non-commercial use world-wide, including academic
+     use. Commercial use of Jess in products substantially manufactured
+     in the the United States is also free. Licenses for the commercial use
+     of Jess outside of the United States may be negotiated by contacting
+     C.V. (Subra) Subramanian at (510) 294-2311 or
+     cvsubra@sandia.gov. 
+
+  2. Under the terms of Contract DE-AC04-94AL85000, there is a
+     non-exclusive license for the use of this work by or on behalf of the
+     U.S. Government. The United States Government is granted for itself
+     and others acting on its behalf a paid-up, nonexclusive, irrevocable
+     worldwide license in this data to reproduce, prepare derivitive
+     works, and perform publicly and display publicly. Beginning five (5)
+     years after July 1, 1997, The United States Government is granted
+     for itself and others acting on its behalf a paid-up, nonexclusive,
+     irrevocable worldwide license in this data to reproduce, prepare
+     derivitive works, and perform publicly and display publicly, and to
+     permit others to do so. 
+
+  3. Sandia makes no warranty, express or implied, as to the accuracy or
+     utility of Jess. Sandia further makes no warranty, express or implied,
+     that the use of Jess as made available herein under this License
+     Agreement will not infringe any United States or foreign patent,
+     copyright or trade secret. Under this License Agreement, Jess is
+     made available to the Licensee on an "AS-IS" basis. Sandia and the
+     Government and their agents, officers and employees shall not be
+     liable for any loss, damage (including incidental, consequential and
+     special), injury or other casualty of whatsoever kind, or by
+     whomsoever caused, to the person or property of anyone, including
+     the Licensee and its Affiliates, arising out of or resulting from the
+     license granted to the Licensee herein, or the accuracy and validity of
+     Jess, or from any system or component thereof made, used, sold,
+     leased or transferred by the Licensee, and the Licensee agrees for
+     itself, its successors and assigns, to defend, indemnify and hold
+     Sandia and the Government, harmless from and against all claims,
+     demands, liabilities, suits or actions (including all reasonable expenses
+     and attorney's fees incurred by or imposed on the Licensee or its
+     Affiliates in connection therewith) for such loss, damage (including
+     incidental, consequential and special), injury or other casualty. 
+
+  4. NEITHER THE UNITED STATES GOVERNMENT, NOR THE
+     UNITED STATES DEPARTMENT OF ENERGY, NOR
+     SANDIA CORPORATION, NOR ANY OF THEIR
+     EMPLOYEES, MAKE ANY WARRANTY, EXPRESS OR
+     IMPLIED, OR ASSUMES ANY LEGAL LIABILITY OF
+     RESPONSIBILITY FOR THE ACCURACY,
+     COMPLETENESS, OR USEFULNESS OF ANY
+     INFORMATION, APPARATUS, PRODUCT, OR PROCESS
+     DISCLOSED, OR REPRESENTS THAT ITS USE WOULD
+     NOT INFRINGE PRIVATELY OWNED RIGHTS. 
+
+

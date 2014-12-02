@@ -1,0 +1,84 @@
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0x924200,0xb24200)
+	First semispace      = [0x924200,0xa24200)
+	Second semispace     = [0xa24200,0xb24200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0xb24200,0x2a24200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0x924008,0x2a24208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0x551008,0x593008)
+exc_check : 20983716, exc_non_aotc : 4407, gc_check : 20990008, all_check : 20992301, exc_exit : 14, exc_gen : 7, try_setjmp : 4083, prol_setjmp : 4787, volatile var read : 60571, volatile var write : 22387, exc_cp_read : 0, exc_cp_write : 0
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xc30200,0xe30200)
+	First semispace      = [0xc30200,0xd30200)
+	Second semispace     = [0xd30200,0xe30200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0xe30200,0x2d30200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xc30008,0x2d30208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0x73c008,0x77e008)
+exc_check : 67123284, exc_non_aotc : 2616158, gc_check : 66665132, all_check : 71028462, exc_exit : 20, exc_gen : 10, try_setjmp : 20957, prol_setjmp : 1244114, volatile var read : 2564245, volatile var write : 86990, exc_cp_read : 0, exc_cp_write : 0
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf35200,0x1135200)
+	First semispace      = [0xf35200,0x1035200)
+	Second semispace     = [0x1035200,0x1135200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0x1135200,0x3035200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf35008,0x3035208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0xd42008,0xd84008)
+exc_check : 93239583, exc_non_aotc : 371079, gc_check : 93099134, all_check : 93474763, exc_exit : 18, exc_gen : 9, try_setjmp : 159670, prol_setjmp : 53370665, volatile var read : 98837428, volatile var write : 8674013, exc_cp_read : 0, exc_cp_write : 0
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xd6f200,0xf6f200)
+	First semispace      = [0xd6f200,0xe6f200)
+	Second semispace     = [0xe6f200,0xf6f200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0xf6f200,0x2e6f200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xd6f008,0x2e6f208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0x164008,0x1a6008)
+exc_check : 62135299, exc_non_aotc : 3320186, gc_check : 61002885, all_check : 69405152, exc_exit : 22446, exc_gen : 22409, try_setjmp : 1405402, prol_setjmp : 2222653, volatile var read : 7491738, volatile var write : 3854618, exc_cp_read : 0, exc_cp_write : 0
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xf75200,0x1175200)
+	First semispace      = [0xf75200,0x1075200)
+	Second semispace     = [0x1075200,0x1175200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0x1175200,0x3075200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xf75008,0x3075208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0x25a008,0x29c008)
+exc_check : 34796567, exc_non_aotc : 1151299, gc_check : 38675859, all_check : 42018677, exc_exit : 330120, exc_gen : 241934, try_setjmp : 3771659, prol_setjmp : 6981248, volatile var read : 35731938, volatile var write : 14014842, exc_cp_read : 0, exc_cp_write : 0
+GC[SS]: Initialized semi-space gen for generational GC
+	Size of *each* semispace in bytes=1048576
+	Limits of generation = [0xebd200,0x10bd200)
+	First semispace      = [0xebd200,0xfbd200)
+	Second semispace     = [0xfbd200,0x10bd200)
+GC[MC]: Initialized mark-compact gen for generational GC
+	Size of the space in bytes=32505856
+	Limits of generation = [0x10bd200,0x2fbd200)
+GC[generational]: Auxiliary data structures
+	heapBaseMemoryArea=[0xebd008,0x2fbd208)
+	cardTable=[0x8bd92d0,0x8be9ad0)
+	objectHeaderTable=[0x8be9ad8,0x8bfa2d8)
+	summaryTable=[0x54c008,0x58e008)
+exc_check : 270635337, exc_non_aotc : 197416, gc_check : 263815037, all_check : 272068974, exc_exit : 14, exc_gen : 7, try_setjmp : 109923, prol_setjmp : 33785, volatile var read : 1730784, volatile var write : 598676, exc_cp_read : 0, exc_cp_write : 0

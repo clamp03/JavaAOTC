@@ -1,0 +1,38 @@
+11st bounds test:	OK
+1Super: Class Super, public=34, protected=33, private=32
+1Sub: Class Super, public=804, protected=803, private=802
+1Super: prot=33, priv=32
+1Sub:  prot=111, priv=105
+11 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 
+11 1 2 3 5 8 666 666 13 13 21 21 
+12nd bounds test:	OK
+1testIf:     OK
+1testArray:  OK
+1testBitOps: OK
+1testFor:    OK
+1testDiv:    OK
+1testTableSwitch:  OK
+1testLookupSwitch: OK
+1testHiddenField:  OK
+1checkRemainders:  long double OK
+1checkMathFcts: OK
+1Primes less than 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+1testExc1(simple throw/catch):  OK
+1testExc2(skip catch clauses):  OK
+1testExc3(catch in inner):      OK
+1testExc4(catch in outer):      OK
+1testExc5(rethrow):             OK
+1testExc6(throw accross call):  OK
+1testExc7(throw accr. 2 calls): OK
+1loopExitContinueInExceptionHandler: OK
+1testStringHash:  OK
+1testClone:       OK
+1testObjectArray: OK
+1checkInstanceOf: OK
+1checkInterfaceInstanceOf: OK
+1testWaitNull: OK
+1testVarAndMethodNameClash: OK
+1testMisk: OK
+1testGC: OK
+1****** PepTest completed ******
+1File output byte count = 0 checksum = 0

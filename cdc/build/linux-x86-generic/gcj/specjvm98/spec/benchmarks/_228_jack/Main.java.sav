@@ -1,0 +1,53 @@
+package benchmarks.Jack;
+
+import specpack.*;
+
+public class Main implements Program {
+	private boolean standalone = true;
+
+  /**
+   * A main program that exercises the parser.
+   */
+  public static void main(String arg[])
+   {
+     (new Main()).inst_main(arg);
+   }
+
+
+  public long inst_main(String[] argv) {
+    String[] argx;
+
+    if (argv.length == 2 && argv[1].equals("harness")) {
+      argx = (new Config()).readConfig(argv[0]);
+	  standalone = false;
+	}
+    else {
+      argx = argv;
+	}
+
+    System.out.println("db benchmark starting...");
+    long starttime = System.currentTimeMillis();
+		run(argx);
+    long stoptime = System.currentTimeMillis();
+    long total_ms = stoptime - starttime;
+    System.out.println("finished.");
+    System.out.println("Total time:  "
+		       + (total_ms/1000.0) + " secs");
+
+	System.gc();
+
+	return total_ms;
+  }
+
+public void run(String[] args) {
+    System.out.println("Jack Version 0.1:  Reading from standard input . . .");
+    Jack_the_Parser_Generator parser = new Jack_the_Parser_Generator(new java.io.DataInputStream(System.in));
+    try {
+      parser.jack_input();
+      System.out.println("Jack Version 0.1:  Parser has been generated successfully.");
+    } catch (Exception e) {
+      System.out.println("Jack Version 0.1:  Encountered errors during parser generation.");
+    }
+  }
+
+}

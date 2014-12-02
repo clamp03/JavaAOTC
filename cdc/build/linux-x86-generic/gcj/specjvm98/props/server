@@ -1,0 +1,33 @@
+#
+# Server properties file
+#
+# This is a SAMPLE file which you can use to specify characteristics of
+# a particular server system used in your SPECjava tests. You should
+# copy this file to another file which you name, and edit the reporting
+# fields appropriately.  All of this can still be edited in the SpecJava
+# harness at the time you run the test, but putting the values in here
+# can save you some typing for attributes which do not change from test
+# to test.
+#
+
+# server hardware
+spec.server.hw.vendor=SAMPLE server file - Read the comments for more info
+spec.server.hw.model=Enterprise 6000/12
+spec.server.hw.processor=UltraSPARC-II
+spec.server.hw.MHz=250
+spec.server.hw.ncpu=12
+spec.server.hw.memory=4GB
+spec.server.hw.fileSystem=UFS
+spec.server.hw.disk=30 x 4GB SCSI
+spec.server.hw.other=
+spec.server.hw.available=REQUIRED
+
+# server software
+spec.server.sw.OS=Solaris 2.6
+spec.server.sw.OSavailable=REQUIRED
+spec.server.sw.webServer=Netscape Enterprise 2.0
+spec.server.sw.webAvailable=REQUIRED
+spec.server.sw.tuning=none
+spec.server.sw.other=none
+spec.server.sw.otherAvailable=REQUIRED
+

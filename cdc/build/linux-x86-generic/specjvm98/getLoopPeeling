@@ -1,0 +1,6 @@
+../bin/cvm -Xms32m SpecApplication _201_compress 2> compress_profile_info
+../bin/cvm -Xms32m SpecApplication _202_jess 2> jess_profile_info
+../bin/cvm -Xms32m SpecApplication _209_db 2> db_profile_info
+../bin/cvm -Xms32m SpecApplication _213_javac 2> javac_profile_info
+../bin/cvm -Xms32m SpecApplication _227_mtrt 2> mtrt_profile_info
+../bin/cvm -Xms32m SpecApplication _228_jack 2> jack_profile_info

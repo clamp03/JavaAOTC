@@ -1,0 +1,71 @@
+# This is not a properties file. Sequence of lines and blocks of lines
+# is significant. It is used to generate a properties object
+# Format of Table entries is: group column
+# It is expected that browsers will break pages between groups
+# Version @(#)report	1.5 04/14/98
+
+Title Client Hardware
+Table 0 0 0
+spec.client.hw.vendor
+spec.client.hw.vendor.url
+spec.client.hw.model
+spec.client.hw.processor
+spec.client.hw.MHz
+spec.client.hw.ncpu
+spec.client.hw.memory
+spec.client.hw.primaryCache
+spec.client.hw.secondaryCache
+spec.client.hw.otherCache
+spec.client.hw.memoryConfig
+spec.client.hw.fileSystem
+spec.client.hw.disk
+spec.client.hw.nonVolatile
+spec.client.hw.network
+spec.client.hw.other
+
+Title Client Software
+Table 0 1 0
+spec.client.sw.vendor
+spec.client.sw.vendor.url
+spec.client.sw.JVM
+spec.client.sw.JVMmemory
+spec.client.sw.OS
+spec.client.sw.systemState
+spec.client.sw.other
+
+Title Tuning Notes
+Table 0 1 1
+spec.test.notes
+
+Title Server Hardware
+Table 1 0 0
+spec.server.hw.vendor
+spec.server.hw.model
+spec.server.hw.processor
+spec.server.hw.MHz
+spec.server.hw.ncpu
+spec.server.hw.memory
+spec.server.hw.fileSystem
+spec.server.hw.disk
+spec.server.hw.other
+
+Title Server Software
+Table 1 0 0
+spec.server.sw.OS
+spec.server.sw.webServer
+spec.server.sw.other
+
+Title Test Information
+Table 1 1 0
+spec.test.testedBy
+spec.test.specLicense
+spec.test.location
+spec.test.date
+spec.client.hw.available
+spec.client.sw.JVMavailable
+spec.client.sw.OSavailable
+spec.client.sw.otherAvailable
+spec.server.hw.available
+spec.server.sw.OSavailable
+spec.server.sw.webAvailable
+spec.server.sw.otherAvailable

@@ -1,0 +1,84 @@
+# titles for properties - @(#)title	1.10 07/28/98
+
+# property editor parameters
+spec.initial.clientFile=Client property file
+spec.initial.serverFile=Server property file
+spec.initial.maxRows=# of fields per edit panel
+
+# The fields below are recorded to document the run
+# Titles enclosed in parentheses indicate information saved in the raw file
+# but not printed on the reporting page.  E.g., the name of the person
+# who ran the test This information is optional, and intended for the
+# convenience of the tester to facilitate recording and reproducing test
+# results.
+
+# client hardware
+spec.client.hw.vendor=CLIENT Hardware Vendor
+spec.client.hw.vendor.url=Vendor URL
+spec.client.hw.model=Model
+spec.client.hw.processor=Processor
+spec.client.hw.MHz=MHz
+spec.client.hw.ncpu=# of Procs
+spec.client.hw.memory=Memory (MB)
+spec.client.hw.primaryCache=Primary cache
+spec.client.hw.secondaryCache=Secondary cache
+spec.client.hw.otherCache=Other cache
+spec.client.hw.memoryConfig=Memory configuration
+spec.client.hw.fileSystem=Filesystem
+spec.client.hw.disk=Disks
+spec.client.hw.nonVolatile=Non-volatile storage
+spec.client.hw.other=Other hardware
+spec.client.hw.network=Network
+spec.client.hw.available=Client h/w available
+
+# client software
+spec.client.sw.vendor=CLIENT Software Vendor
+spec.client.sw.vendor.url=Vendor URL
+spec.client.sw.JVM=JVM Version
+spec.client.sw.JVMavailable=JVM available
+spec.client.sw.JVMmemory=JVM Heap Memory (MB)
+spec.client.sw.OS=OS Version
+spec.client.sw.OSavailable=Client OS available
+spec.client.sw.systemState=System state
+spec.client.sw.other=Other software
+spec.client.sw.otherAvailable=Other client s/w available
+
+# server hardware
+spec.server.hw.vendor=SERVER Hardware Vendor
+spec.server.hw.model=Model
+spec.server.hw.processor=Processor
+spec.server.hw.MHz=MHz
+spec.server.hw.ncpu=# of Procs
+spec.server.hw.memory=Memory (MB)
+spec.server.hw.fileSystem=Filesystem
+spec.server.hw.disk=Disks
+spec.server.hw.other=Other hardware
+spec.server.hw.available=Server h/w available
+
+# server software
+spec.server.sw.OS=SERVER OS Version
+spec.server.sw.OSavailable=Server OS available
+spec.server.sw.webServer=Web server version
+spec.server.sw.webAvailable=Web server available
+spec.server.sw.other=Other software
+spec.server.sw.otherAvailable=Other server s/w available
+
+# test information printed on reporting page
+spec.test.testedBy=Tested by
+spec.test.specLicense=SPEC license #
+spec.test.location=Test location
+spec.test.date=Test date
+
+# test information not printed on reporting page
+spec.testx.emailTo=Mail test results to
+spec.testx.emailReturn=Your return email address
+spec.testx.mailHost=Outgoing SMTP mail server
+spec.testx.testedByName=Tested by (person)
+spec.testx.internalReference=Internal Reference
+
+# other information, not normally printed on results page
+spec.other.testTime=Test time
+spec.other.version=SPEC version
+spec.other.versionDate=SPEC release date
+spec.other.reportDate=Date report generated
+

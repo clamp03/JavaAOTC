@@ -1,0 +1,1 @@
+../bin/cvm -Xms16m SpecApplication -s10 _201_compress  _202_jess _209_db _213_javac _228_jack _222_mpegaudio

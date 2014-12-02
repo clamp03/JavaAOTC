@@ -1,0 +1,49 @@
+#
+# Client properties file
+# This is a SAMPLE file which you can use to specify characteristics of
+# a particular client system under test, and to control benchmark
+# operation. You should copy this file to
+# another file which you name, and edit the reporting fields appropriately.
+# All of this can still be edited in the SpecJava harness at the time
+# you run the test, but putting the values in here can save you some
+# typing for attributes which do not change from test to test.
+#
+
+# client hardware
+spec.client.hw.vendor=IBM Corporation
+spec.client.hw.vendor.url=http://www.ibm.com
+spec.client.hw.model=PowerPC 603e
+spec.client.hw.processor=603e
+spec.client.hw.MHz=200
+spec.client.hw.ncpu=1
+spec.client.hw.memory=64MB
+spec.client.hw.primaryCache=16K(I)+16K(D)
+spec.client.hw.secondaryCache=512K(I+D)
+spec.client.hw.otherCache=none
+spec.client.hw.memoryConfig=
+spec.client.hw.fileSystem=n/a
+spec.client.hw.disk=0
+spec.client.hw.nonVolatile=none
+spec.client.hw.other=none
+spec.client.hw.network=10mB e/n
+spec.client.hw.available=Jan-98
+
+# client software
+spec.client.sw.vendor=NCDI
+spec.client.sw.vendor.url=http://www.ibm.com
+spec.client.sw.JVM=NCDI
+spec.client.sw.JVMavailable=Jun-98
+spec.client.sw.JVMmemory=2MB+
+spec.client.sw.OS=NCDOS Release 3.0
+spec.client.sw.OSavailable=Mar-98
+spec.client.sw.systemState=normal
+spec.client.sw.other="JDK1.1.4"
+spec.client.sw.otherAvailable=Jun 98
+
+# test information
+spec.test.testedBy=IBM Corporation
+spec.testx.testedByName=kaivalya M. Dixit 
+spec.test.internalReference=http://fixit.austin.ibm.com
+spec.test.specLicense=11
+spec.test.location=Austin, Texas
+
